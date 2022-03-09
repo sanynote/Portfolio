@@ -3,35 +3,88 @@
  <head>
 	<title>footer</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        li{list-style-type:none;}
+		a:link, a:visited{text-decoration:none; color:#000;}
+
+		/*########## 전체사용영역 #########*/
+			#wrap{min-width:700px; width:100%;}
+            #footer{width:1025px;}
+            #title{width:100%; text-align:center;}
+
+        /*######### 이미지영역 ########*/
+            #img{width:100%;}  
+            #img img{width:100%;}
+
+        /*####### 지도영역 #######*/
+            #mapArea{width:100%; background-color:#101326;}
+            #mapArea p{width:100px;}
+            #mapArea p img{width:100%;}
+
+        /*######## center #######*/
+            #main{width:100%; background-color:#101326;}
+            #center{width:1025px; height:300px;}
+
+        /*########### center logo #########*/
+            #center .logo{width:168px; height:186px; padding-top:114px; padding-left:57px; float:left;}
+            /* 300-72 == 228 / 2 == 114 */
+            /* 전체영역 225 로 설계, 로고 111px, 양쪽 57씩,  225-57 == 168 */
+            #center .logo p{width:111px;}
+            #center .logo p a img{width:100%;}
+
+
+        /*###### center sns ######*/
+            #center .sns{width:500px; height:200px; padding-top:100px; float:left;}
+            #center .sns ul{width:100%;}
+            #center .sns li{width:60px; padding-left:40px; height:40px; padding-top:20px; float:left;}
+            #center .sns li a{display:block; width:20px;}
+            #center .sns li a img{width:100%;}
+
+            #center .sns p{width:100%; height:40px; line-height:40px; text-align:center; clear:both;}
+            #center .sns p a{color:#ddd;}
+
+        /*########## center copyright #########*/
+            #center .copyright{width:300px; height:200px; padding-top:100px; float:left;}
+            #center .copyright ul{width:100%; height:175px;}
+            #center .copyright li{width:100%; line-height:25px; text-align:center;}
+            #center .copyright a{color:#ddd;}
+
+
+
+
+    </style>
 	
  </head>
 
  <body>
     <div id="wrap">
         <div id="footer">
-            <div>canada</div>
+            <div id="title">canada</div>
             <div id="img"><img src="img/footer/sea.jpg" alt="푸터이미지"></div>
             <div id="mapArea">
-                <p id="map"><img src="img/footer/map.png" alt=""/></p>
+                <p><img src="img/footer/map.png" alt="지도이미지"/></p>
             </div>
             <div id="main">
                 <div id="center">
                     <div class="logo">
                         <p>
-                            <a href="#" title="">
-                                <img src="img/" alt=""/>
+                            <a href="#" title="로고">
+                                <img src="img/footer/logo.png" alt="캐나다 관광청 로고"/>
                             </a>
                         </p>
                     </div>
                     <div class="sns">
                         <ul>
-                            <li>
-                                <a href="#" title=""><img src="img/" alt=""/></a>
-                            </li>
+                            <li><a href="#" title="facebook"><img src="img/footer/sns0.png" alt="facebook"/></a></li>
+                            <li><a href="#" title="twitter"><img src="img/footer/sns1.png" alt="twitter"/></a></li>
+                            <li><a href="#" title="instagram"><img src="img/footer/sns2.png" alt="instagram"/></a></li>
+                            <li><a href="#" title="tiktok"><img src="img/footer/sns3.png" alt="tiktok"/></a></li>
+                            <li><a href="#" title="whatsapp"><img src="img/footer/sns4.png" alt="whatsapp"/></a></li>
                         </ul>
                         <p><a href="#" title="">All rights reserved</a></p>
                     </div>
-                    <div>
+                    <div class="copyright">
                         <ul>
                             <li><a href="#" title="">contact</a></li>
                             <li><a href="#" title="">about us</a></li>
