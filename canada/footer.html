@@ -9,45 +9,46 @@
 		a:link, a:visited{text-decoration:none; color:#000;}
 
 		/*########## 전체사용영역 #########*/
-			#wrap{min-width:700px; width:100%;}
-            #footer{width:1025px;}
+			#wrap{min-width:700px; width:100%; font-size:12px;}
+            #footer{width:1903px; background-color:#F7F7F7; margin:0 auto;}
             #title{width:100%; text-align:center;}
 
         /*######### 이미지영역 ########*/
-            #img{width:100%;}  
+            #img{width:100%;}
             #img img{width:100%;}
 
         /*####### 지도영역 #######*/
             #mapArea{width:100%; background-color:#101326;}
-            #mapArea p{width:100px;}
+            #mapArea p{width:80px; margin:0 auto;}
             #mapArea p img{width:100%;}
 
         /*######## center #######*/
-            #main{width:100%; background-color:#101326;}
-            #center{width:1025px; height:300px;}
+            #main{width:100%; height:216px; background-color:#101326;}
+            #center{width:1140px; height:168px; padding:24px 0; margin:0 auto;}
 
         /*########### center logo #########*/
-            #center .logo{width:168px; height:186px; padding-top:114px; padding-left:57px; float:left;}
-            /* 300-72 == 228 / 2 == 114 */
-            /* 전체영역 225 로 설계, 로고 111px, 양쪽 57씩,  225-57 == 168 */
-            #center .logo p{width:111px;}
+            #center .logo{width:380px; height:100%; float:left;}
+            /* 전체높이 168 로 설계, 로고 높이 72px, 168-72 == 96 /2 == 48 */
+            #center .logo p{width:111px; padding-top:48px; margin:0 auto;}
             #center .logo p a img{width:100%;}
 
 
         /*###### center sns ######*/
-            #center .sns{width:500px; height:200px; padding-top:100px; float:left;}
-            #center .sns ul{width:100%;}
-            #center .sns li{width:60px; padding-left:40px; height:40px; padding-top:20px; float:left;}
-            #center .sns li a{display:block; width:20px;}
+            #center .sns{width:350px; height:124px; padding-top:44px; padding:44px 15px 0; float:left;}
+            /* 168-80(로고들이랑 글씨 높이 합친 크기) == 88 /2 == 44 */
+            #center .sns ul{width:100%; height:30px;}
+            #center .sns li{width:26px; padding:0 22px; float:left;}
+            
+            
             #center .sns li a img{width:100%;}
 
-            #center .sns p{width:100%; height:40px; line-height:40px; text-align:center; clear:both;}
+            #center .sns p{width:100%; height:70px; line-height:70px; text-align:center;}
             #center .sns p a{color:#ddd;}
 
         /*########## center copyright #########*/
-            #center .copyright{width:300px; height:200px; padding-top:100px; float:left;}
-            #center .copyright ul{width:100%; height:175px;}
-            #center .copyright li{width:100%; line-height:25px; text-align:center;}
+            #center .copyright{width:350px; padding:0 15px; height:100%; float:left;}
+            #center .copyright ul{width:100%; height:140px;}
+            #center .copyright li{width:100%; height:24px; line-height:24px; text-align:center;}
             #center .copyright a{color:#ddd;}
 
 
@@ -61,7 +62,7 @@
     <div id="wrap">
         <div id="footer">
             <div id="title">canada</div>
-            <div id="img"><img src="img/footer/sea.jpg" alt="푸터이미지"></div>
+            <div id="img"><img src="img/footer/sea.jpg" alt="푸터이미지"/></div>
             <div id="mapArea">
                 <p><img src="img/footer/map.png" alt="지도이미지"/></p>
             </div>

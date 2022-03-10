@@ -10,30 +10,30 @@
 
 		/*########## 전체사용영역 #########*/
 			#wrap{min-width:700px; width:100%;}
-            #headerWrap{width:100%;}
+            #headerWrap{width:1903px;}
 
         /*####### 실제사용영역 / 로고 ########*/
-            #header{width:1091px; height:84px; margin:0 auto;}
-            #header h1{width:100px; height:74px; padding-top:10px; float:left;}
+            #header{width:1603px; padding:0 150px; height:84px; margin:0 auto;}
+            #header h1{width:60px; height:62px; padding-top:22px; float:left;}
+            /* 84-39(로고높이) ==45 /2 == 22 or 23 */
             #header a img{width:100%;}
-            #header .text {width:120px; padding-left:30px; padding-top:26px; height:58px; float:left;}
-            /* 150-90 == 60 / 2 == 30 */
-            /* 84-32 == 52px / 2 == 26px*/
-            #header .text span{font-size:12px;}
+            #header .text {width:203px; padding-top:26px; height:58px; float:left;}
+            #header .text p{width:90px; font-size:12px; margin:0 auto;}
 
         /*####### gnb / main #######*/
-            #gnb{width:840px; height:84px; float:left;}
-            #gnb .main{width:600px; height:100%; float:left;}
-            #gnb .main li{width:150px; height:100%; line-height:84px; float:left; text-align:center;}
-            #gnb .main li a{ text-transform:uppercase; font-weight:700;}
+            #gnb{width:1340px; height:84px; float:left;}
+            #gnb .main{width:1100px; height:100%; float:left; position:relative;}
+            #gnb .main ul{width:700px; height:100%; position:absolute; top:0; right:0;}
+            #gnb .main li{width:120px; height:100%; line-height:84px; float:left; text-align:center;}
+            #gnb .main li a{text-transform:uppercase; font-size:14px; font-weight:700;}
 
         /* 기능만들기 */
             #gnb .main li:hover{border-bottom:2px solid #f00;}
 
         /*######### gnb / search (전체영역 70으로 설계) #########*/
-            #gnb .search{width:50px; height:57px; padding-top:27px; padding-left:20px; float:left;}
-            /* 84-30 == 54 / 2 == 27 */
-            #gnb .search p{width:30px; line-height:84px;}
+            #gnb .search{width:50px; height:52px; padding-top:32px; padding-left:20px; float:left;}
+            /* 84-20 == 64 / 2 == 32 */
+            #gnb .search p{width:20px; line-height:84px;}
             #gnb .search a img{width:100%;}
 
         /*########## gnb / langArea ###########*/
@@ -63,30 +63,32 @@
                         <img src="img/header/logo.png" alt="캐나다 로고 이미지"/>
                     </a>
                 </h1>
-                <div class="text"><span>Canada's official tourism website</span></div>
+                <div class="text"><p>Canada's official tourism website</p></div>
                 <div id="gnb">
-                    <ul class="main">
-                        <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
-                        <li><a href="#" title="What to do"><span>What to do</span></a></li>
-                        <!--<li>
-                            What to do
-                            <div>
-                                <h2><strong>Activities</strong>to suit all tastes</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#" title="">
-                                            <span class="img">
-                                                <img src="img/header/" alt=""/>
-                                            </span>
-                                            <span class="text">Art and culture</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>-->
-                        <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
-                        <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
-                    </ul>
+                    <div class="main">
+                        <ul>
+                            <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
+                            <li><a href="#" title="What to do"><span>What to do</span></a></li>
+                            <!--<li>
+                                What to do
+                                <div>
+                                    <h2><strong>Activities</strong>to suit all tastes</h2>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="">
+                                                <span class="img">
+                                                    <img src="img/header/" alt=""/>
+                                                </span>
+                                                <span class="text">Art and culture</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>-->
+                            <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
+                            <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
+                        </ul>
+                    </div>
                     <div class="search">
                         <p>
                             <a href="https://www.spain.info/en/" title="돋보기">
@@ -124,9 +126,9 @@
                                 <option value="日本語">日本語</option>
                             </select>
                         </div>    
-                    </div>
+                    </div>-->
                 </div>
--->
+
 
 
             </div>
