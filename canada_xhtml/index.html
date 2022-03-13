@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang= "ko">
  <head>
-	<title>canada</title>
-	<meta charset="utf-8"/>
-	<style>
+    <title>canada</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<style type="text/css">
 		*{margin:0; padding:0;}
         li{list-style-type:none;}
         a:link,a:visited{text-decoration:none; color:#333;}
@@ -11,7 +11,6 @@
 
         /*######### wrap #########*/
             #wrap{min-width:1025px; width:100%;}
-            h2{position:absolute; left:-9999px; width:1px; height:1px; line-height:0; font-size:1px; overflow:hidden;}
             
         /*########### header ##########*/
             #headerWrap{width:1903px;}
@@ -37,12 +36,12 @@
         /*######### gnb / search (전체영역 70으로 설계) #########*/
             #gnb .search{width:50px; height:52px; padding-top:32px; padding-left:20px; float:left;}
             /* 84-20 == 64 / 2 == 32 */
-            #gnb .search p{width:20px;}
+            #gnb .search p{width:20px; line-height:84px;}
             #gnb .search a img{width:100%;}
 
         /*########## gnb / langArea ###########*/
             #gnb #langArea{width:170px; height:40px; padding:22px 0; float:left;}
-            #langArea .lang{width:168px; height:38px; text-align:center; border:1px solid #ccc;}
+            #langArea .lang{width:168px; height:38; text-align:center; border:1px solid #ccc;}
             #langArea .lang p{width:100%; height:100%; line-height:40px;}
             #langArea .lang ul{width:100%; height:100%; line-height:40px;}
             #langArea .lang li{width:100%; height:100%;}
@@ -199,7 +198,7 @@
             #title{width:100%; text-align:center;}
 
         /*######### 이미지영역 ########*/
-            #img{width:100%; height:476px;}
+            #img{width:100%;}
             #img img{width:100%;}
 
         /*####### 지도영역 #######*/
@@ -244,14 +243,14 @@
  <body>
     <div id="wrap">
         <div id="headerWrap">
-            <header id="header">
+            <div id="header">
                 <h1>
                     <a href="https://www.spain.info/en/" title="캐나다 로고">
                         <img src="img/index/header_logo.png" alt="캐나다 로고 이미지"/>
                     </a>
                 </h1>
                 <div class="text"><p>Canada's official tourism website</p></div>
-                <nav id="gnb">
+                <div id="gnb">
                     <div class="main">
                         <ul>
                             <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
@@ -259,7 +258,7 @@
                             <!--<li>
                                 What to do
                                 <div>
-                                    <h3><strong>Activities</strong>to suit all tastes</h3>
+                                    <h2><strong>Activities</strong>to suit all tastes</h2>
                                     <ul>
                                         <li>
                                             <a href="#" title="">
@@ -314,18 +313,19 @@
                             </select>
                         </div>    
                     </div>-->
-                </nav>
+                </div>
 
 
 
-            </header>
+            </div>
         </div>
         <div id="container">
 
-            <div id="visual"></div>
+            <div id="visual">
 
-            <section id="naturalArea">
-                <h2>natural</h2>
+            </div>
+
+            <div id="naturalArea">
                 <div id="natural">
                     <ul>
                         <li class="big">
@@ -365,10 +365,9 @@
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
 
-            <section id="mapArea">
-                <h2>map</h2>
+            <div id="mapArea">
                 <div id="map">
                     <div class="pro_name">
                         <ul>
@@ -403,10 +402,9 @@
                         </a>
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <section id="seaArea">
-                <h2>season</h2>
+            <div id="seaArea">
                 <div id="season">
                     <div class="title">
                         <h3><span>4 seasons</span> of Canada</h3>
@@ -483,10 +481,9 @@
                         </ul>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section id="cityArea">
-                <h2>city</h2>
+            <div id="cityArea">
                 <div id="city">
                     <ul>
                         <li>
@@ -533,10 +530,9 @@
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
 
-            <section id="festivalArea">
-                <h2>festival</h2>
+            <div id="festivalArea">
                 <div id="festival">
                     <ul>
                         <li>
@@ -605,10 +601,9 @@
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
 
-            <section id="snsArea">
-                <h2>sns</h2>
+            <div id="snsArea">
                 <div id="sns">
                     <ul>
                         <li>
@@ -797,9 +792,9 @@
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </div>
-        <footer id="footer">
+        <div id="footer">
             <div id="title">canada</div>
             <div id="img"><img src="img/index/sea.jpg" alt="푸터이미지"/></div>
             <div id="side_map">
@@ -839,7 +834,7 @@
                 </div>
             </div>
 
-        </footer>
+        </div>
     </div>
  </body>
 </html>
