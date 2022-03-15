@@ -67,9 +67,14 @@
 
             /* 큰 li의 크기 540 * 2 + margin:15 * 4 해서 width 1140px 로 설정 */
 
-            #natural ul{width:100%; height:100%;}
-            #natural li{width:350px; height:350px; float:left; margin-left:20px; overflow:hidden;}
+            #natural ul{width:100%; height:100%; color:#fff;}
+            #natural li{width:350px; height:350px; float:left; margin-left:20px; overflow:hidden; position:relative;}
             #natural .margin{margin-left:25px;}
+
+            /* li에 기능만들기 */
+            #natural li .box{display:none; width:320px; height:320px; padding:15px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0;}
+            #natural li:hover .box{display:block;}
+
             /* 한 쪽 방향으로 margin-left:20px 씩 주고 마지막 두 li에는 margin-left:25씩 주어서 총 넓이를 맞췄다. */
             #natural li p{width:100%;}
             #natural li a{width:100%;}
@@ -78,6 +83,9 @@
             /* natural 큰 li작업 */
             #natural .big{width:540px; height:540px; margin-bottom:30px; background-color:#7af;}
             #natural .big a{width:100%;}
+            /* 기능만들기 */
+            #natural .big .bigBox{display:none; width:500px; height:500px; padding:20px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0;}
+            #natural .big:hover .bigBox{display:block;}
 
 
         /*######## mapArea ##########*/
@@ -107,7 +115,7 @@
 
         /*######## season ##########*/
             #seaArea{width:100%; padding:100px 0;}
-            #season{width:1400px; height:680px; margin:0 auto; border-top:5px dashed #ccc; border-bottom:5px dashed #ccc; padding:100px 0 60px;}
+            #season{width:1400px; height:680px; margin:0 auto; border-top:5px dotted #eee; border-bottom:5px dotted #eee; padding:100px 0 60px;}
 
             /* season / title */
             #season .title{width:350px; height:640px; background-color:#efefef; float:left;}
@@ -203,9 +211,13 @@
             #img img{width:100%;}
 
         /*####### 지도영역 #######*/
-            #side_map{width:100%; background-color:#101326;}
-            #side_map p{width:80px; margin:0 auto;}
-            #side_map p img{width:100%;}
+            #side_map{width:100%; height:82px; background-color:gold;}
+            #side_map p{width:300px; height:82px; float:left; background-color:pink;}
+            
+            #side_map .img{width:80px;}
+            #side_map .img img{width:100%;}
+
+            
 
         /*######## center #######*/
             #main{width:100%; height:216px; background-color:#101326;}
@@ -330,37 +342,60 @@
                     <ul>
                         <li class="big">
                             <p>
-                                <a href="#" title="aurora">
+                                <a href="https://www.viator.com/tours/Yellowknife/Aurora-Tour/d23637-107890P1?m=28353&supag=68732029897&supca=1939178107&supsc=dsa-650389793948&supai=420120885798&supdv=c&supnt=g&suplp=1009871&supli=&supti=dsa-650389793948&tsem=true&supci=dsa-650389793948&supap1=&supap2=&gclid=Cj0KCQjwz7uRBhDRARIsAFqjull7tw1N0xkuNgO8JwrYOurqPdhV2Axww5kQkhHoXp1wpL5OvAoxTFUaAslOEALw_wcB" title="aurora">
                                     <img src="img/index/nat_00.jpg" alt="오로라 이미지"/>
                                 </a>
+                            </p>
+                            <p class="bigBox">
+                                Increase your chances of seeing the Aurora Borealis on a night tour from Yellowknife. Get picked up directly from your hotel or the airport, and stop at three spectacular lakes along the Ingraham Trail for optimal viewing. A professional photographer accompanies your driver-guide, with unlimited photos available after the tour. Step off the coach for a different background in each photo shoot, and enjoy warm beverages and cookies on board.<br/>
+                                [additional info]<br/>
+                                Confirmation will be received at time of booking Not wheelchair accessible Children must be accompanied by an adult A minimum of 2 people per booking is required A maximum of 6 people per booking including children Most travelers can participate Please make sure to dress warm or renat winter clothing from any winter clothing rental stores in Yellowknife. This tour/activity will have a maximum of 16 travelers
                             </p>
                         </li>
                         <li class="big">
                             <p>
-                                <a href="#" title="banff">
+                                <a href="https://www.viator.com/en-CA/tours/Banff/Lake-Louise-and-the-Icefield-Parkway-sightseeing-tour/d611-47552P2" title="banff">
                                     <img src="img/index/nat_01.jpg" alt="밴프 이미지"/>
                                 </a>
+                            </p>
+                            <p class="bigBox">
+                                The Rockies boast some of Canada’s most spectacular scenery, but the rugged mountain terrain poses a unique set of challenges. On this full-day sightseeing tour, enjoy round-trip travel from Banff and reach far-flung attractions including Lake Louise and the Icefield Parkway in comfort. Stop at picturesque spots including Bow Falls and Moraine Lake, and enjoy personal attention from your guide on this small-group tour—limited to 15 people.<br/>
+                                additional info<br/>
+                                Confirmation will be received at time of booking Not wheelchair accessible All tours provided in English Minimum age is 9 years Service animals allowed Near public transportation Most travelers can participate This tour/activity will have a maximum of 13 travelers
                             </p>
                         </li>
                         <li>
                             <p>
-                                <a href="#" title="rocky">
+                                <a href="https://www.viator.com/en-CA/Vancouver-attractions/Rocky-Mountaineer-Train/overview/d616-a11358" title="rocky">
                                     <img src="img/index/nat_02.jpeg" alt="록키 이미지"/>
                                 </a>
                             </p>
-                        </li>
-                        <li class="margin">
-                            <p>
-                                <a href="#" title="niagara falls">
-                                    <img src="img/index/nat_03.jpg" alt="나이아가라 이미지"/>
-                                </a>
+                            <p class="box">
+                                The Rocky Mountaineer runs along four different routes. The Coastal Passage route runs from Seattle in the US to Vancouver in British Columbia, and on to the Canadian Rockies. The Rainforest to Gold Rush route runs from Vancouver through Whistler, Quesnel, and on to Jasper. The Journey Through the Clouds route departs from Vancouver and travels through the Coast Mountains and Fraser Canyon, passing through Kamloops en route to Jasper. The final route, First Passage to the West, connects Vancouver to Banff and Lake Louise, passing through Kamloops on the way.<br/>
+                                More than 60 different package options are available along these four routes, ranging from short 2-day trips to several-weeks-long train and cruise combination packages.     
                             </p>
                         </li>
                         <li class="margin">
                             <p>
-                                <a href="#" title="polar bear">
+                                <a href="https://www.viator.com/en-CA/Niagara-Falls-and-Around-attractions/Niagara-Falls-Ontario/d773-a1487" title="niagara falls">
+                                    <img src="img/index/nat_03.jpg" alt="나이아가라 이미지"/>
+                                </a>
+                            </p>
+                            <p class="box">
+                                With limited time at Niagara Falls, this half-day tour ensures you take in all the highlights. Enjoy spectacular views of Niagara Falls on a Hornblower boat cruise and sail close to the mighty American Falls. Then, follow the Niagara River to landmarks such as the Whirlpool Rapids, the Floral Clock, and Fort George, and have free time to explore Niagara-on-the-Lake.<br/>
+                                additional info<br/>
+                                Confirmation will be received at time of booking Not wheelchair accessible Minimum drinking age is 19 years Stroller accessible Service animals allowed Infants must sit on laps Infants do not occupy a seat. If you wish to have your child occupy a seat, you must purchase a child ticket. In the event that the Hornblower Niagara cruises not in operation, we will substitute it with the Journey Behind the Falls. Typically the boat operates between May and October although circumstances beyond our control may prevent this from happening. Itinerary is subject to change without notice All timings are approximate Vehicle type is subject to change based on passenger volumes Tour is subject to cancellation if we do not meet the minimum required amount of participants Most travelers can participate This tour/activity will have a maximum of 50 travelers
+                            </p>
+                        </li>
+                        <li class="margin">
+                            <p>
+                                <a href="https://cwf-fcf.org/en/resources/encyclopedias/fauna/?gclid=Cj0KCQjwz7uRBhDRARIsAFqjullaFhpooHf-toRNLTH42GxqgCgi0LQ6glVrFoMlZPs70IXvmDNr33gaAkSrEALw_wcB" title="polar bear">
                                     <img src="img/index/nat_04.jpg" alt="곰 이미지"/>
                                 </a>
+                            </p>
+                            <p class="box">
+                                BLACK BEAR<br/>
+                                The black bear Ursus americanus is one of the most familiar wild animals in North America today. The black bear is a bulky and thickset mammal. Approximately 150 cm long and with a height at the shoulder that varies from 100 to 120 cm, an adult black bear has a moderate-sized head with a rather straight facial profile and a tapered nose with long nostrils. The ears are rounded and the eyes small. The tail is very short and inconspicuous. A black bear has feet that are well furred on which it can walk. Each foot has five curved claws, which the bear cannot sheathe, or hide. These are very strong and are used for digging and tearing out roots, stumps, and old logs when searching for food.
                             </p>
                         </li>
                     </ul>
@@ -803,7 +838,9 @@
             <div id="title">canada</div>
             <div id="img"><img src="img/index/sea.jpg" alt="푸터이미지"/></div>
             <div id="side_map">
-                <p><img src="img/index/map.png" alt="지도이미지"/></p>
+                <p class="left">────────────</p>
+                <p class="img"><img src="img/index/map.png" alt="지도이미지"/></p>
+                <p class="right">────────────</p>
             </div>
             <div id="main">
                 <div id="center">
