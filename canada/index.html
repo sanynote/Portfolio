@@ -168,17 +168,31 @@
 
         /*####### festival ########*/
             #festivalArea{width:100%; overflow:hidden; padding:100px 0;}
-            #festival{width:100%; height:550px; margin:0 auto; background-color:pink;}
+            #festival{width:100%; height:525px; margin:0 auto; background-color:pink;}
             /* 각 li의 크기 350 * 8 + margin-left:20 * 8 + 중앙 맞추기 위해 + 20px 해서 width 2980px 로 설정 */
 
             #festival ul{width:2980px; height:100%;}
-            #festival li{width:350px; height:100%; float:left; margin-left:20px; overflow:hidden;}
+            #festival li{width:350px; height:100%; float:left; margin-left:20px; position:relative;}
 
-            /* li 내부 float으로 붙이기 */
+            /* li안의 img */
+            #festival .img{width:100%; height:100%; float:left; overflow:hidden;}
+            #festival .img a img{height:100%;}
 
-            #festival .title{width:100%; height:50px; float:left;}
-            #festival .img{width:100%; height:500px; float:left;overflow: hidden;}
-            #festival .img img{height:100%;}
+            /* 노란 박스(dateBox) position 띄우기 */
+            #festival .dateBox{width:50px; padding:0 10px 5px; background-color:gold; position:absolute; left:15px; top:-15px;}
+            #festival .dateBox div{width:100%; text-align:center; font-weight:700;}
+            #festival .dateBox .list-marker__index{width:100%; height:40px; font-size:35px;}
+            #festival .dateBox .list-marker__total{width:100%; height:20px; font-size:13px; text-transform:uppercase;}
+
+            /* 투명 박스(textBox) position 띄우기 */
+            #festival .textBox{width:320px; padding:15px; color:#efefef; font-size:20px;position:absolute; left:0; bottom:0;}
+
+            #festival .textBox .date{width:100%; height:40px; line-height:40px; font-weight:700; letter-spacing:-1px;}
+            #festival .textBox .desc{width:100%; padding:3px 0; font-size:16px;}
+            #festival .textBox .name{width:100%; height:25px; line-height:25px; font-size:12px;}
+
+
+
 
 
         /*######## sns ##########*/
@@ -211,11 +225,14 @@
             #img img{width:100%;}
 
         /*####### 지도영역 #######*/
-            #side_map{width:100%; height:82px; background-color:gold;}
-            #side_map p{width:300px; height:82px; float:left; background-color:pink;}
+            #side_map{width:100%; height:82px; background-color:#101326;}
+            #side_map .wide{width:1000px; height:82px; position:relative; margin:0 auto;}
             
-            #side_map .img{width:80px;}
-            #side_map .img img{width:100%;}
+            #side_map p{width:82px; margin:0 auto;}
+            #side_map p img{width:100%;}
+
+            #side_map .wide p:before{content:""; width:40%; height:2px; background:#979797; position:absolute; left:0; top:40px;}
+            #side_map .wide p:after{content:""; width:40%; height:2px; background:#979797; position:absolute; right:0; top:40px;}
 
             
 
@@ -574,70 +591,157 @@
                 <h2>festival</h2>
                 <div id="festival">
                     <ul>
+                        <!--
+                           
+                            Winterlude, Ottawa
+                        -->
                         <li>
-                            <a href="#" title="Christmas light ,Victoria" class="title">
-                                Christmas light ,Victoria
-                            </a>
-                            <a href="#" title="Christmas light ,Victoria" class="img">
-                                <img src="img/index/fes_00.jpg" alt="Christmas light 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Christmas light ,Victoria">
+                                    <img src="img/index/fes_00.jpg" alt="Christmas light 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">26</p>
+                                    <p class="list-marker__total">APR</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">16 February 2022 - 15 May 2022</p>
+                                <p class="desc">often on display throughout the Christmas season including Advent and Christmastide.</p>
+                                <p class="name">Christmas light, Victoria</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="Quebec Winter Carnival, Quebec City" class="title">
-                                Quebec Winter Carnival, Quebec City  
-                            </a>
-                            <a href="#" title="Quebec Winter Carnival, Quebec City" class="img">
-                                <img src="img/index/fes_01.jpg" alt="Quebec Winter Carnival 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Edmonton Folk Festival, Edmonton">
+                                    <img src="img/index/fes_01.jpg" alt="Edmonton Folk Festival 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">12</p>
+                                    <p class="list-marker__total">aug</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">12 August 2022 - 17 August 2022</p>
+                                <p class="desc">annual four-day outdoor music event held the second weekend of August in Edmonton, Alberta, Canada, established in 1980 by Don Whalen.</p>
+                                <p class="name">Edmonton Folk Festival, Edmonton</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="The Calgary Stampede, Calgary" class="title">
-                                The Calgary Stampede, Calgary 
-                            </a>
-                            <a href="#" title="The Calgary Stampede, Calgary" class="img">
-                                <img src="img/index/fes_02.jpg" alt="The Calgary Stampede 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Halloween, Toronto">
+                                    <img src="img/index/fes_02.jpg" alt="Halloween 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">31</p>
+                                    <p class="list-marker__total">oct</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">31 October 2022</p>
+                                <p class="desc">Halloween evolved into a day of activities like trick-or-treating, carving jack-o-lanterns, eating treats.</p>
+                                <p class="name">Halloween, Toronto</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="Canadian Tulip Festival, Ottawa" class="title">
-                                Canadian Tulip Festival, Ottawa   
-                            </a>
-                            <a href="#" title="Canadian Tulip Festival, Ottawa" class="img">
-                                <img src="img/index/fes_03.jpg" alt="Canadian Tulip Festival 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Canadian Tulip Festival">
+                                    <img src="img/index/fes_03.jpg" alt="Canadian Tulip Festival 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">03</p>
+                                    <p class="list-marker__total">may</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">3 May 2021 - 30 April 2022</p>
+                                <p class="desc">The festival claims to be the world's largest tulip festival, displaying over one million tulips</p>
+                                <p class="name">Canadian Tulip Festival, Ottawa</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="Edmonton Folk Festival, Edmonton" class="title">
-                                Edmonton Folk Festival, Edmonton
-                            </a>
-                            <a href="#" title="Edmonton Folk Festival, Edmonton" class="img">
-                                <img src="img/index/fes_04.jpg" alt="Edmonton Folk Festival, Edmonton 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Quebec Winter Carnival">
+                                    <img src="img/index/fes_04.jpg" alt="Quebec Winter Carnival 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">22</p>
+                                    <p class="list-marker__total">apr</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">22 April 2022 - 25 April 2022</p>
+                                <p class="desc">After being held intermittently since 1894, the Carnaval de Québec has been celebrated annually since 1955.</p>
+                                <p class="name">Quebec Winter Carnival, Quebec City</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="Celebration of Light, Vancouver" class="title">
-                                Celebration of Light, Vancouver 
-                            </a>
-                            <a href="#" title="Celebration of Light, Vancouver" class="img">
-                                <img src="img/index/fes_05.jpg" alt="Celebration of Light 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="Celebration of Light, Vancouver">
+                                    <img src="img/index/fes_05.jpg" alt="Celebration of Light 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">26</p>
+                                    <p class="list-marker__total">APR</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">25 December 2022</p>
+                                <p class="desc">Celebration of Light, a fireworks and light display in Vancouver, British Columbia</p>
+                                <p class="name">Celebration of Light, Vancouver</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="pumpkin patch, Vancouver" class="title">
-                                pumpkin patch, Vancouver
-                            </a>
-                            <a href="#" title="pumpkin patch, Vancouver" class="img">
-                                <img src="img/index/fes_06.jpg" alt="pumpkin patch 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="The Calgary Stampede, Calgary">
+                                    <img src="img/index/fes_06.jpg" alt="The Calgary Stampede 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">26</p>
+                                    <p class="list-marker__total">APR</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">26 June 2022 - 2 July 2022</p>
+                                <p class="desc">Calgary's national and international identity is tied to the event. It is known as the "Stampede City"</p>
+                                <p class="name">The Calgary Stampede, Calgary</p>
+                            </div>
                         </li>
                         <li>
-                            <a href="#" title="Winterlude, Ottawa" class="title">
-                                Winterlude, Ottawa
-                            </a>
-                            <a href="#" title="Winterlude, Ottawa" class="img">
-                                <img src="img/index/fes_07.jpg" alt="Winterlude 이미지"/>
-                            </a>
+                            <p class="img">
+                                <a href="#" title="pumpkin patch">
+                                    <img src="img/index/fes_07.jpg" alt="pumpkin patch 이미지"/>
+                                </a>
+                            </p>
+                            <div class ="dateBox">
+                                <div>
+                                    <p class="list-marker__index">26</p>
+                                    <p class="list-marker__total">sep</p>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <p class="date">26 Sep 2022 - 20 Nov 2022</p>
+                                <p class="desc">if you want to get in the fall spirit and go see some pumpkins, you would visit here</p>
+                                <p class="name">pumpkin patch, Vancouver</p>
+                            </div>
                         </li>
+                        
+                        
+                        
                     </ul>
                 </div>
             </section>
@@ -838,9 +942,9 @@
             <div id="title">canada</div>
             <div id="img"><img src="img/index/sea.jpg" alt="푸터이미지"/></div>
             <div id="side_map">
-                <p class="left">────────────</p>
-                <p class="img"><img src="img/index/map.png" alt="지도이미지"/></p>
-                <p class="right">────────────</p>
+                <div class="wide">
+                    <p><img src="img/index/map.png" alt="지도"/></p>
+                </div>
             </div>
             <div id="main">
                 <div id="center">
@@ -871,6 +975,7 @@
                             <li><a href="#" title="cookie policy">cookie policy</a></li>
                             <li><a href="#" title="accessibility">accessibility</a></li>
                         </ul>
+                        <!--#ced4da #dee2e6-->
                     </div>
 
                 </div>
