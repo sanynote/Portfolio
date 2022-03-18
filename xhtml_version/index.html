@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang= "ko">
+ <head>
+    <title>canada</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+        li{list-style-type:none;}
+        a:link,a:visited{text-decoration:none; color:#333;}
+        a:hover,a:focus a{text-decoration:underline;}
+
+        /*######### wrap #########*/
+            #wrap{min-width:1025px; width:100%;}
+            
+        /*########### header ##########*/
+            #headerWrap{width:1903px;}
+
+        /*####### 실제사용영역 / 로고 ########*/
+            #header{width:1603px; padding:0 150px; height:84px; margin:0 auto;}
+            #header h1{width:60px; height:62px; padding-top:22px; float:left;}
+            /* 84-39(로고높이) ==45 /2 == 22 or 23 */
+            #header a img{width:100%;}
+            #header .text {width:203px; padding-top:26px; height:58px; float:left;}
+            #header .text p{width:90px; font-size:12px; margin:0 auto;}
+
+        /*####### gnb / main #######*/
+            #gnb{width:1340px; height:84px; float:left;}
+            #gnb .main{width:1100px; height:100%; float:left; position:relative;}
+            #gnb .main ul{width:700px; height:100%; position:absolute; top:0; right:0;}
+            #gnb .main li{width:120px; height:100%; line-height:84px; float:left; text-align:center;}
+            #gnb .main li a{text-transform:uppercase; font-size:14px; font-weight:700;}
+
+        /* 기능만들기 */
+            #gnb .main li:hover{border-bottom:2px solid #f00;}
+
+        /*######### gnb / search (전체영역 70으로 설계) #########*/
+            #gnb .search{width:50px; height:52px; padding-top:32px; padding-left:20px; float:left;}
+            /* 84-20 == 64 / 2 == 32 */
+            #gnb .search p{width:20px; line-height:84px;}
+            #gnb .search a img{width:100%;}
+
+        /*########## gnb / langArea ###########*/
+            #gnb #langArea{width:170px; height:40px; padding:22px 0; float:left;}
+            #langArea .lang{width:168px; height:38; text-align:center; border:1px solid #ccc;}
+            #langArea .lang p{width:100%; height:100%; line-height:40px;}
+            #langArea .lang ul{width:100%; height:100%; line-height:40px;}
+            #langArea .lang li{width:100%; height:100%;}
+
+            /* 기능 만들기 */
+            #langArea .lang ul{display:none;}
+            #langArea .lang:hover ul{display:block;}
+            #langArea .lang:hover li{border-top:1px solid #ccc;}
+
+
+        /*######### container #########*/
+            #container{width:100%;}
+
+        /*######## visual ##########*/     
+            #visual{width:100%; height:800px; background-image:url("img/index/visual_00.jpg"); background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
+
+        /*########### natural ###########*/
+
+            #naturalArea{width:100%; padding:100px 0;}
+
+            #natural{width:1140px; height:920px; margin:0 auto;}
+
+            /* 큰 li의 크기 540 * 2 + margin:15 * 4 해서 width 1140px 로 설정 */
+
+            #natural ul{width:100%; height:100%;}
+            #natural li{width:350px; height:350px; float:left; margin-left:20px; overflow:hidden;}
+            #natural .margin{margin-left:25px;}
+            /* 한 쪽 방향으로 margin-left:20px 씩 주고 마지막 두 li에는 margin-left:25씩 주어서 총 넓이를 맞췄다. */
+            #natural li p{width:100%;}
+            #natural li a{width:100%;}
+            #natural li a img{width:100%;}
+
+            /* natural 큰 li작업 */
+            #natural .big{width:540px; height:540px; margin-bottom:30px; background-color:#7af;}
+            #natural .big a{width:100%;}
+
+
+        /*######## mapArea ##########*/
+            #mapArea{width:100%;}
+            #map{width:1200px; height:505px; margin:0 auto;}
+
+            /*######## map / pro_name #########*/
+            #map .pro_name{width:200px; height:100%;  background-color:pink; float:left;}
+            #map .pro_name ul{width:100%; height:100%;}
+            #map .pro_name li{width:100%; height:30px; line-height:30px; font-size:18px; text-align:center;float:left;}
+            #map .pro_name .first{padding-top:40px;}
+
+            /*######## map / city_info #########*/
+            #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
+            #map .city_info .title{width:100%; height:75px; line-height:75px; font-size:30px;}
+
+            /* city_info 안의 city_image 설계 */
+            #map .city_info .city_image{width:100%; height:430px; overflow:hidden;}
+            #map .city_info .city_image a{width:100%;}
+            #map .city_image img{width:100%;}
+
+            /*######## map / map_img #########*/
+            #map .map_img{width:600px; height:100%; float:left;}
+            #map .map_img img{width:100%;}
+
+
+
+        /*######## season ##########*/
+            #seaArea{width:100%; padding:100px 0;}
+            #season{width:1400px; height:680px; margin:0 auto; border-top:5px dashed #ccc; border-bottom:5px dashed #ccc; padding:100px 0 60px;}
+
+            /* season / title */
+            #season .title{width:350px; height:640px; background-color:#efefef; float:left;}
+            #season .title h3{font-size:30px;}
+            #season .title h3 span{font-size:60px; font-weight:700;}
+            #season .title p{font-size:20px; line-height:100px; color:#a00;}
+
+            /* season / cont */
+            #season .cont{width:1000px; height:100%; margin-left:50px; float:left;}
+
+            #season .cont ul{width:100%; height:680px;}
+            #season .cont li{width:430px; height:300px; margin-right:50px; margin-bottom:40px; float:left; overflow:hidden;}
+            /* .img 200px + .text 200px + margin-left 30px ==430px */
+            #season .cont li a{display:block; width:100%; height:100%;}
+
+            /* season / cont / li */
+            #season .cont  a .img{width:200px; float:left; overflow:hidden;}
+            #season .cont  a .img img{width:150%;}
+
+            /* season li text */
+            #season .cont a .text{width:200px; margin-left:30px; float:left;
+            padding:20px 0; font-size:15px; display:block;}
+
+            #season a .text i{width:35px; padding:5px 0 20px; display:block;}
+            #season a .text i img{width:100%;}
+
+            #season a .text strong{font-size:20px;}
+            #season a .text b{display:block; padding:10px 0; font-weight:400;
+                border-bottom:1px solid #ccc;}
+                
+            #season a .text span{display:block; padding-top:10px;}
+
+
+
+
+
+
+        /*######## city ##########*/
+            #cityArea{width:100%; background-image:url("img/index/city_bg.jpg"); background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
+
+            #city{width:1520px; height:400px; padding-top:100px; margin:0 auto;}
+            /* 각 li 230px + margin-left:20 == 220 * 6 ==1500 +20 ==1520 */
+            #city ul{width:100%; height:300px;}
+            #city li{width:230px; height:100%; float:left; overflow:hidden; background-color:#aef; margin-left:20px;}
+
+            #city li .img{width:100%;}
+            #city li .img a{width:100%;}
+            #city .img a img{width:100%;}
+
+
+        /*####### festival ########*/
+            #festivalArea{width:100%; overflow:hidden; padding:100px 0;}
+            #festival{width:100%; height:550px; margin:0 auto; background-color:pink;}
+            /* 각 li의 크기 350 * 8 + margin-left:20 * 8 + 중앙 맞추기 위해 + 20px 해서 width 2980px 로 설정 */
+
+            #festival ul{width:2980px; height:100%;}
+            #festival li{width:350px; height:100%; float:left; margin-left:20px; overflow:hidden;}
+
+            /* li 내부 float으로 붙이기 */
+
+            #festival .title{width:100%; height:50px; float:left;}
+            #festival .img{width:100%; height:500px; float:left;overflow: hidden;}
+            #festival .img img{height:100%;}
+
+
+        /*######## sns ##########*/
+            #snsArea{width:100%;}
+            #sns {width:1600px; height:1000px; margin:0 auto; background-color:#ddf;}
+            #sns ul{width:1370px; height:400px; padding-top:60px; margin:0 auto;}
+            #sns li{width:240px; height:350px; margin-left:20px; margin-top:30px; padding-left:10px; background-color:#fff; float:left;}
+
+            /* sns li안의 img 작업 */
+            #sns .img{width:230px; height:180px; padding-top:10px; overflow:hidden;}
+            #sns .img a{width:100%;}
+            #sns .img a img{width:100%;}
+
+            /* sns li안의 textBox 작업 */
+            #sns .textBox{width:210px; height:130px; font-size:13px; padding:10px; background-color:#efefef;}
+            #sns .logoArea{width:100%; height:35px; padding-top:10px;}
+            #sns .logo{width:30px; float:left;}
+            #sns .logo img{width:100%;}
+            #sns .insta{width:145px; padding-left:15px; float:left;}
+
+            #sns .cont{font-size:16px; padding-top:15px;}
+
+
+        /*########## footer ##########*/
+            #footer{width:1903px; background-color:#F7F7F7; margin:0 auto;}
+            #title{width:100%; text-align:center;}
+
+        /*######### 이미지영역 ########*/
+            #img{width:100%;}
+            #img img{width:100%;}
+
+        /*####### 지도영역 #######*/
+            #side_map{width:100%; background-color:#101326;}
+            #side_map p{width:80px; margin:0 auto;}
+            #side_map p img{width:100%;}
+
+        /*######## center #######*/
+            #main{width:100%; height:216px; background-color:#101326;}
+            #center{width:1140px; height:168px; padding:24px 0; margin:0 auto;}
+
+        /*########### center logo #########*/
+            #center .logo{width:380px; height:100%; float:left;}
+            /* 전체높이 168 로 설계, 로고 높이 72px, 168-72 == 96 /2 == 48 */
+            #center .logo p{width:111px; padding-top:48px; margin:0 auto;}
+            #center .logo p a img{width:100%;}
+
+
+        /*###### center sns ######*/
+            #center .sns{width:350px; height:124px; padding-top:44px; padding:44px 15px 0; float:left;}
+            /* 168-80(로고들이랑 글씨 높이 합친 크기) == 88 /2 == 44 */
+            #center .sns ul{width:100%; height:30px;}
+            #center .sns li{width:26px; padding:0 22px; float:left;}
+            
+            
+            #center .sns li a img{width:100%;}
+
+            #center .sns p{width:133px; height:70px; line-height:70px; margin:0 auto;}
+            #center .sns p a{color:#ddd;}
+
+        /*########## center copyright #########*/
+            #center .copyright{width:350px; padding:0 15px; height:100%; float:left;}
+            #center .copyright ul{width:100%; height:140px;}
+            #center .copyright li{width:100%; height:24px; line-height:24px; text-align:center;}
+            #center .copyright a{color:#ddd;}
+            
+
+	</style>
+	
+ </head>
+
+ <body>
+    <div id="wrap">
+        <div id="headerWrap">
+            <div id="header">
+                <h1>
+                    <a href="https://www.spain.info/en/" title="캐나다 로고">
+                        <img src="img/index/header_logo.png" alt="캐나다 로고 이미지"/>
+                    </a>
+                </h1>
+                <div class="text"><p>Canada's official tourism website</p></div>
+                <div id="gnb">
+                    <div class="main">
+                        <ul>
+                            <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
+                            <li><a href="#" title="What to do"><span>What to do</span></a></li>
+                            <!--<li>
+                                What to do
+                                <div>
+                                    <h2><strong>Activities</strong>to suit all tastes</h2>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="">
+                                                <span class="img">
+                                                    <img src="img/header/" alt=""/>
+                                                </span>
+                                                <span class="text">Art and culture</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>-->
+                            <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
+                            <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <p>
+                            <a href="https://www.spain.info/en/" title="돋보기">
+                                <img src="img/index/search.png" alt="돋보기 이미지"/>
+                            </a>
+                        </p>
+                    </div>
+                    <div id="langArea">
+                        <div class="lang">
+                            <p><a href="#" title="English">English</a></p>
+                            <ul>
+                                <li><a href="#" title="Español">Español</a></li>
+                                <li><a href="#" title="Deutsch">Deutsch</a></li>
+                                <li><a href="#" title="Français">Français</a></li>
+                                <li><a href="#" title="Italiano">Italiano</a></li>
+                                <li><a href="#" title="Português">Português</a></li>
+                                <li><a href="#" title="русский">русский</a></li>
+                                <li><a href="#" title="日本語">日本語</a></li>
+                                <li><a href="#" title="中国">中国</a></li>
+                            </ul>
+                        </div>
+                    </div>
+<!--
+                    <div class="langArea">
+                        <div class="lang">
+                            <select>
+                                <option value="English" selected="selected">English</option>
+                                <option value="Español">Español</option>
+                                <option value="Deutsch">Deutsch</option>
+                                <option value="Français">Français</option>
+                                <option value="Italiano">Italiano</option>
+                                <option value="Português">Português</option>
+                                <option value="русский">русский</option>
+                                <option value="مجلس التعاون الخليجي (عربي)">مجلس التعاون الخليجي (عربي)</option>
+                                <option value="日本語">日本語</option>
+                            </select>
+                        </div>    
+                    </div>-->
+                </div>
+
+
+
+            </div>
+        </div>
+        <div id="container">
+
+            <div id="visual">
+
+            </div>
+
+            <div id="naturalArea">
+                <div id="natural">
+                    <ul>
+                        <li class="big">
+                            <p>
+                                <a href="#" title="aurora">
+                                    <img src="img/index/nat_00.jpg" alt="오로라 이미지"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="big">
+                            <p>
+                                <a href="#" title="banff">
+                                    <img src="img/index/nat_01.jpg" alt="밴프 이미지"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#" title="rocky">
+                                    <img src="img/index/nat_02.jpeg" alt="록키 이미지"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="margin">
+                            <p>
+                                <a href="#" title="niagara falls">
+                                    <img src="img/index/nat_03.jpg" alt="나이아가라 이미지"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="margin">
+                            <p>
+                                <a href="#" title="polar bear">
+                                    <img src="img/index/nat_04.jpg" alt="곰 이미지"/>
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mapArea">
+                <div id="map">
+                    <div class="pro_name">
+                        <ul>
+                            <li class="first"><a href="#" title="Yukon">Yukon</a></li>
+                            <li><a href="#" title="Northwest Territories">Northwest Territories</a></li>
+                            <li><a href="#" title="Nunavut">Nunavut</a></li>
+                            <li><a href="#" title="British Columbia">British Columbia</a></li>
+                            <li><a href="#" title="Alberta">Alberta</a></li>
+                            <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
+                            <li><a href="#" title="Manitoba">Manitoba</a></li>
+                            <li><a href="#" title="Ontario">Ontario</a></li>
+                            <li><a href="#" title="Quebec">Quebec</a></li>
+                            <li><a href="#" title="Newfoundland">Newfoundland<!--and Laprador--></a></li>
+                            <li><a href="#" title="Newbrunswick">Newbrunswick</a></li>
+                            <li><a href="#" title="Nova Scotia">Nova Scotia</a></li>
+                            <li><a href="#" title="Prince Edward Island">Prince Edward Island</a></li>
+                        </ul>
+                    </div>
+                    <div class="city_info">
+                        <a href="#" title="Yukon" class="title">
+                            Yukon
+                        </a>
+                        <p class="city_image">
+                            <a href="#" title="Yukon">
+                                <img src="img/index/yukon.jpg" alt="유콘이미지"/>
+                            </a>
+                        </p>
+                    </div>
+                    <p class="map_img">
+                        <a href="#" title="canada map">
+                            <img src="img/index/map.jpg" alt="캐나다 지도"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="seaArea">
+                <div id="season">
+                    <div class="title">
+                        <h3><span>4 seasons</span> of Canada</h3>
+                        <p>more information &gt;</p>
+                    </div>
+                    <div class="cont">
+                        <ul>
+                            <li>
+                                <a href="https://www.10x10.co.kr/" title="spring">
+                                    <span class="img">
+                                        <img src="img/index/season0.jpg" alt="spring"/>
+                                    </span>
+                                    <span class="text">
+                                        <i><img src="img/index/i0.png" alt="spring"/></i>
+                                        <strong>Spring</strong>
+                                        <b>Tulips in bloom</b>
+                                        <span>
+                                            all Canadians wait for this season.  
+                                            Winter is finished and no more snow, no cold days, so now we can see 
+                                            beautiful colours everywhere as life comes back around.
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.10x10.co.kr/" title="summer">
+                                    <span class="img">
+                                        <img src="img/index/season1.jpg" alt="summer"/>
+                                    </span>
+                                    <span class="text">
+                                        <i><img src="img/index/i1.png" alt="summer"/></i>
+                                        <strong>Summer</strong>
+                                        <b>Hot, humid weather</b>
+                                        <span>
+                                            the temperature can rise and fall dramatically. It can be really hot 
+                                            during the day and as the sun goes down it feels very cool in the evening.
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.10x10.co.kr/" title="fall">
+                                    <span class="img">
+                                        <img src="img/index/season2.jpg" alt="fall"/>
+                                    </span>
+                                    <span class="text">
+                                        <i><img src="img/index/i2.png" alt="fall"/></i>
+                                        <strong>fall</strong>
+                                        <b>Good time to travel to Canada</b>
+                                        <span>
+                                            Every fall I'm excited to watch the changing colors of green 
+                                            leaves into yellow, orange, red and brown carpet.
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.10x10.co.kr/" title="Winter">
+                                    <span class="img">
+                                        <img src="img/index/season3.jpg" alt="Winter"/>
+                                    </span>
+                                    <span class="text">
+                                        <i><img src="img/index/i3.png" alt="Winter"/></i>
+                                        <strong>Winter</strong>
+                                        <b>Lots of snow</b>
+                                        <span>
+                                            I have learned that to enjoy the cold weather in canada
+                                            you have to learn how to love it. 
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cityArea">
+                <div id="city">
+                    <ul>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Yellowknife">
+                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Quebec">
+                                    <img src="img/index/city_01.jpg" alt="Quebec"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Vancouver">
+                                    <img src="img/index/city_02.jpg" alt="Vancouver"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Toronto">
+                                    <img src="img/index/city_03.jpg" alt="Toronto"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Ottawa">
+                                    <img src="img/index/city_04.jpg" alt="Ottawa"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="Montreal">
+                                    <img src="img/index/city_05.jpg" alt="Montreal"/>
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="festivalArea">
+                <div id="festival">
+                    <ul>
+                        <li>
+                            <a href="#" title="Christmas light ,Victoria" class="title">
+                                Christmas light ,Victoria
+                            </a>
+                            <a href="#" title="Christmas light ,Victoria" class="img">
+                                <img src="img/index/fes_00.jpg" alt="Christmas light 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Quebec Winter Carnival, Quebec City" class="title">
+                                Quebec Winter Carnival, Quebec City  
+                            </a>
+                            <a href="#" title="Quebec Winter Carnival, Quebec City" class="img">
+                                <img src="img/index/fes_01.jpg" alt="Quebec Winter Carnival 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="The Calgary Stampede, Calgary" class="title">
+                                The Calgary Stampede, Calgary 
+                            </a>
+                            <a href="#" title="The Calgary Stampede, Calgary" class="img">
+                                <img src="img/index/fes_02.jpg" alt="The Calgary Stampede 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Canadian Tulip Festival, Ottawa" class="title">
+                                Canadian Tulip Festival, Ottawa   
+                            </a>
+                            <a href="#" title="Canadian Tulip Festival, Ottawa" class="img">
+                                <img src="img/index/fes_03.jpg" alt="Canadian Tulip Festival 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Edmonton Folk Festival, Edmonton" class="title">
+                                Edmonton Folk Festival, Edmonton
+                            </a>
+                            <a href="#" title="Edmonton Folk Festival, Edmonton" class="img">
+                                <img src="img/index/fes_04.jpg" alt="Edmonton Folk Festival, Edmonton 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Celebration of Light, Vancouver" class="title">
+                                Celebration of Light, Vancouver 
+                            </a>
+                            <a href="#" title="Celebration of Light, Vancouver" class="img">
+                                <img src="img/index/fes_05.jpg" alt="Celebration of Light 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="pumpkin patch, Vancouver" class="title">
+                                pumpkin patch, Vancouver
+                            </a>
+                            <a href="#" title="pumpkin patch, Vancouver" class="img">
+                                <img src="img/index/fes_06.jpg" alt="pumpkin patch 이미지"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Winterlude, Ottawa" class="title">
+                                Winterlude, Ottawa
+                            </a>
+                            <a href="#" title="Winterlude, Ottawa" class="img">
+                                <img src="img/index/fes_07.jpg" alt="Winterlude 이미지"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="snsArea">
+                <div id="sns">
+                    <ul>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns0.jpg" alt="sns 이미지0"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        instagram<br/>
+                                        gastown in vancouver
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns1.jpg" alt="sns 이미지1"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        Sunnyside’s Winter Magic
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns2.jpg" alt="sns 이미지2"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        12 Hours: Celebrate Indigenous Culture
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns3.jpg" alt="sns 이미지3"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        Indigenous Art in Toronto
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns4.jpg" alt="sns 이미지4"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        Behind the Scenes at TIFF Bell Lightbox
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns5.jpg" alt="sns 이미지5"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        Explore Parkdale with a Street Art
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns6.jpg" alt="sns 이미지6"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        Snap your Next Instagram Photo
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns7.jpg" alt="sns 이미지7"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        instagram<br/>
+                                        Along King Street West
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns8.jpg" alt="sns 이미지8"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        instagram<br/>
+                                        Local in Gerrard East
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <a href="#" title="sns">
+                                    <img src="img/index/sns9.jpg" alt="sns 이미지0"/>
+                                </a>
+                            </p>
+                            <div class="textBox">
+                                <div class="logoArea">
+                                    <p class="logo">
+                                        <img src="img/index/insta_logo.jfif" alt="인스타 로고"/>
+                                    </p>
+                                    <p class="insta">
+                                        instagram<br/>
+                                        Shop Local in Little Italy
+                                    </p>
+                                </div>
+                                <a href="#" title="cont" class="cont">Did you know Canada is one of the safest countries to travel to right now</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="title">canada</div>
+            <div id="img"><img src="img/index/sea.jpg" alt="푸터이미지"/></div>
+            <div id="side_map">
+                <p><img src="img/index/map.png" alt="지도이미지"/></p>
+            </div>
+            <div id="main">
+                <div id="center">
+                    <div class="logo">
+                        <p>
+                            <a href="#" title="로고">
+                                <img src="img/index/foo_logo.png" alt="캐나다 관광청 로고"/>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#" title="facebook"><img src="img/index/sns0.png" alt="facebook"/></a></li>
+                            <li><a href="#" title="twitter"><img src="img/index/sns1.png" alt="twitter"/></a></li>
+                            <li><a href="#" title="instagram"><img src="img/index/sns2.png" alt="instagram"/></a></li>
+                            <li><a href="#" title="tiktok"><img src="img/index/sns3.png" alt="tiktok"/></a></li>
+                            <li><a href="#" title="whatsapp"><img src="img/index/sns4.png" alt="whatsapp"/></a></li>
+                        </ul>
+                        <p><a href="#" title="All rights reserved">All rights reserved</a></p>
+                    </div>
+                    <div class="copyright">
+                        <ul>
+                            <li><a href="#" title="contact">contact</a></li>
+                            <li><a href="#" title="about us">about us</a></li>
+                            <li><a href="#" title="site map">site map</a></li>
+                            <li><a href="#" title="legal notice">legal notice</a></li>
+                            <li><a href="#" title="use of the information">use of the information</a></li>
+                            <li><a href="#" title="cookie policy">cookie policy</a></li>
+                            <li><a href="#" title="accessibility">accessibility</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+ </body>
+</html>
