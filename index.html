@@ -60,11 +60,8 @@
             #visual{width:100%; height:800px; background-image:url("img/index/visual_00.jpg"); background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
 
         /*########### natural ###########*/
-
             #naturalArea{width:100%; padding:100px 0;}
-
             #natural{width:1140px; height:920px; margin:0 auto;}
-
             /* 큰 li의 크기 540 * 2 + margin:15 * 4 해서 width 1140px 로 설정 */
 
             #natural ul{width:100%; height:100%; color:#fff;}
@@ -78,14 +75,19 @@
             /* 한 쪽 방향으로 margin-left:20px 씩 주고 마지막 두 li에는 margin-left:25씩 주어서 총 넓이를 맞췄다. */
             #natural li p{width:100%;}
             #natural li a{width:100%;}
-            #natural li a img{width:100%;}
+            #natural li a img{width:100%; transform:scale(1); transition:transform 15s linear;}
+
+            #natural li:hover a img{transform:scale(2);}
 
             /* natural 큰 li작업 */
             #natural .big{width:540px; height:540px; margin-bottom:30px; background-color:#7af;}
             #natural .big a{width:100%;}
             /* 기능만들기 */
-            #natural .big .bigBox{display:none; width:500px; height:500px; padding:20px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0;}
-            #natural .big:hover .bigBox{display:block;}
+
+            #natural .big .bigBox{ width:500px; height:500px; padding:20px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; opacity:0; transition:opacity 0.5s linear;}
+
+
+            #natural .big:hover .bigBox{opacity:1;}
 
 
         /*######## mapArea ##########*/
@@ -132,40 +134,49 @@
             #season .cont li a{display:block; width:100%; height:100%;}
 
             /* season / cont / li */
-            #season .cont  a .img{width:200px; float:left; overflow:hidden;}
-            #season .cont  a .img img{width:150%;}
+            #season .cont  a .img{width:200px; float:left; overflow:hidden; transform:translatex(50px);
+			transition:transform 0.3s ease-in;}
+
+			#season .cont li a:hover .img{transform:translatex(0);}
+
+            #season .cont  a .img img{width:150%; border-radius:20px 0 0 20px;}
 
             /* season li text */
-            #season .cont a .text{width:200px; margin-left:30px; float:left;
-            padding:20px 0; font-size:15px; display:block;}
+            #season .cont a .text{width:200px;  height:260px; float:left; background-color:#fff;
+			position:relative; z-index:1;
+            padding:20px 0 20px 30px; font-size:15px; display:block; box-shadow:-5px 0 10px rgba(0,0,0,0.5);}
 
             #season a .text i{width:35px; padding:5px 0 20px; display:block;}
             #season a .text i img{width:100%;}
 
-            #season a .text strong{font-size:20px;}
+            #season a .text strong{font-size:20px; color:rgba(0,0,0,1); transition:color 0.5s linear 0.1s;}
+
+			#season a:hover .text strong{ color:rgba(255,0,0,1); }
+
             #season a .text b{display:block; padding:10px 0; font-weight:400;
                 border-bottom:1px solid #ccc;}
                 
             #season a .text span{display:block; padding-top:10px;}
 
 
-
-
-
-
         /*######## city ##########*/
-            #cityArea{width:100%; height:900px; background-color:#ededed;}
+        #cityArea{width:100%; height:600px; background-color:#ededed;}
 
-            #city{width:1130px; padding-top:100px; margin:0 auto; margin:0 auto;}
-            /* 각 li 350px + margin-left:20 == 370 * 3 == 1110+20 ==1130 */
-            #city ul{width:100%;}
-            #city li{width:350px; height:350px; float:left; overflow:hidden; background-color:#aef; margin-left:20px; margin-top:20px; border-radius:175px;}
+        #city{width:1760px; padding-top:100px; margin:0 auto;}
+        /* 각 li 270px + margin-left:20 == 290 * 6 ==1740 +20 ==1760 */
+        #city ul{width:100%;}
+        #city li{width:270px; height:360px; float:left; overflow:hidden; background-color:#aef; margin-left:20px; 
+        transition:all 0.5s linear;  margin-top:100px;}
 
-            #city li .img{}
-            #city li .img a{}
-            #city .img a img{}
+        #cityArea:hover li{ margin-top:0;}
 
-            #city ul:after{content:""; display:block; clear:both;}
+        #city li:hover{border-radius:50px 50px 50px 0; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
+
+        #city li .img{width:100%;}
+        #city li .img a{width:100%;}
+        #city .img a img{width:100%;}
+
+        #city ul:after{content:""; display:block; clear:both;}
 
 
         /*####### festival ########*/
