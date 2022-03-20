@@ -5,7 +5,21 @@
 	<meta charset="utf-8"/>
     <style>
         *{margin:0; padding:0;}
+        li{list-style-type:none;}
+        a:link, a:visited{text-decoration:none;}
 
+        /*###### 전체사용영역 ######*/
+            #wrap{min-width:1025px; width:100%;}
+            #container{width:100%;}
+            
+        /*######### visual ########*/
+            #visual{width:100%; height:800px; background-image:url("img/deserve/bg.jpg");}
+            #visual .textBox{width:670px; background-color:orange; font-size:50px; color:#fff; font-weight:700;}
+            #visual .textBox .small{width:100%; text-align:right;}
+            #visual .textBox .big{width:100%; font-size:200px; text-align:center;}
+
+        /*########### videoArea ##########*/
+        
     </style>
 	
  </head>
@@ -14,10 +28,12 @@
     <div id="wrap">
         <div id="container">
             <div id="visual">
-
+                <div class="textBox">
+                    <p class="small">you deserve</p> 
+                    <p class="big">canada</p>
+                </div>
             </div>
-            <section>
-                <h2>video</h2>
+            <div id="videoArea">
                 <div id="video">
 
                 </div>
@@ -28,7 +44,33 @@
                     </p>
                     <p class="text">After spending so many days within the same four walls, you deserve to bathe in the sun and the sea.</p>
                 </div>
-            </section>
+            </div>
+            <h3>discover what canada has to offer</h3>
+            <div id="content">
+                <ul>
+                    <li>
+                        <p><img src="img/deserve/beach0.jpg" alt="해변이미지0"/></p>
+                        <h3>
+                            <a href="https://www.spain.info/youdeservespain.html" title="beaches"><span>canada : enjoy world class beaches</span></a>
+                        </h3>
+                        <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                    </li>
+                    <li>
+                        <p><img src="img/deserve/beach1.jpg" alt="해변이미지1"/></p>
+                        <h3>
+                            <a href="https://www.spain.info/youdeservespain.html" title="beaches"><span>Two seas and an ocean for enjoying the coast</span></a>
+                        </h3>
+                        <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                    </li>
+                    <li>
+                        <p><img src="img/deserve/beach2.jpg" alt="해변이미지2"/></p>
+                        <h3>
+                            <a href="https://www.spain.info/youdeservespain.html" title="beaches"><span>Laze on some of Spain’s most pristine beaches</span></a>
+                        </h3>
+                        <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
  </body>
