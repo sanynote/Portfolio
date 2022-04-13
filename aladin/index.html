@@ -4,6 +4,128 @@
 	<title>aladin</title>
 	<meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <style>
+        *{margin:0; padding:0;}
+        *{color:#000;}
+        body,header,section, footer, nav, div, p, ul li{margin:0; padding:0;}
+        header, section, footer, nav{display:block;}
+
+        a:link, a:visited{text-decoration:none;}
+        a:hover, a:focus{text-decoration:underline; color:#f00;}
+
+        li{list-style:none;}
+        img{border:none;}
+
+		 #wrap{width:100%;}
+
+
+        /*############### 스마트폰 세로버전 #################*/
+		@media all and (min-width:320px) and (max-width:480px){
+            /*########## header #########*/
+               
+                #headerWrap{width:100%; overflow:hidden;}
+                #header{width:100%; position:relative; background-color:gold;}
+                #header h1{width:70px;}
+                #header h1 img{width:100%;}
+
+                #header form{width:200px;  position:absolute; left:75px; top:0; margin-top:4px;}
+                #header form input{width:100%; height:30px; border-radius:30px; border:none;}
+                #header form .search{width:30px; position:absolute; right:0; top:0;}
+                #header form .search img{width:100%;}
+                #header form .basket{width:30px; position:absolute; right:-40px; top:0;}
+                #header form .basket img{width:100%;}
+
+                #gnb{width:100%;}
+                #gnb ul{width:700px;}
+                #gnb ul li{display:inline-block; height:35px; line-height:35px;}
+                #gnb ul li a{padding:0 5px; color:#000;}
+
+                #gnb li:hover{border-bottom:1px solid #000;}
+
+            /*########## container #########*/
+                #container{width:100%;}
+
+            /* # visual */
+                #visual{width:100%; height:325px; overflow:hidden;}
+                #visual ul{width:1300px; height:100%;}
+                #visual li{width:300px; float:left; position:relative;}
+                #visual .img{width:290px; margin-left:10px;}
+                #visual .img img{width:100%;}
+                #visual .text{position:absolute; left:115px; bottom:25px; color:#333; text-align:center;}
+                #visual .text .name{font-size:16px; padding-bottom:3px;}
+                #visual .text .book{font-size:14px;}
+
+                #visual ul:after{display:block; clear:both; overflow:hidden;}
+
+            /* # editor */
+                #editor{width:100%; overflow:hidden;}
+                #editor h3{width:100%; height:40px;}
+                #editor .imgArea{width:800px; height:220px;}
+                #editor .imgArea .img{width:150px; margin:0 25px; float:left;}
+                #editor .imgArea .img img{width:100%;}
+
+                #editor .textArea{width:1280px; height:120px; overflow:hidden;}
+                #editor .textArea .textBox{width:280px; font-size:12px; text-align:center; padding:0 10px; float:left;}
+                #editor .textArea .textBox .purple{color:#0af;}
+                #editor .textArea .textBox .title{font-weight:700; font-size:15px; padding:3px 0;}
+
+
+            /* # topTen */
+                #topTen{width:100%;}
+                #topTen h3{width:100%; height:40px;}
+                #topTen ul{width:100%;}
+                #topTen li{width:300px; height:40px; padding:0 10px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
+
+                /*####### img 영역 ########*/
+                /*전체 300 중에서 , 50+ 10 해서 60*/
+                #topTen a{display:block; position:relative;}
+                #topTen a .img{display:block; width:50px; height:40px; margin-left:10px; overflow:hidden; float:left;}
+                #topTen a .img img{width:100%;}
+
+
+                /*####### name 영역 ########*/
+                /* name 영역크기 : 300-60== 240px */
+                #topTen a .name{width:230px; height:100%; font-size:14px; line-height:40px; padding-left:10px; float:left;}
+
+                /* title padding-left:10px로 "620px" 사용가능 */
+                /* 검사를 확인해보면 620px 사용가능함을 알 수 있음 */
+                /*
+                    전체높이는 110px 사용가능
+                */
+                #topTen a .rank{width:30px; height:40px; line-height:40px; position:absolute; right:0; top:0; color:#d00;}
+
+
+            /* # hashTag */
+
+                #hashTag{width:100%; font-size:14px;}
+                #hashTag ul{width:280px; margin:0 auto;}
+                #hashTag li{background-color:#caf; height:30px; line-height:25px; border-radius:15px; margin-top:5px; display:inline-block;}
+                #hashTag li a{padding:0 13px; font-size:11px; text-transform:uppercase;}
+                    }
+
+
+			/* #bookfund */
+                #bookFund{width:100%; height:400px; overflow:hidden; position:relative;}
+                #bookFund .blue{width:100%; height:50%; background-color:#00c;}
+                #bookFund .blue .title{padding:10px;}
+                #bookFund .blue .title a{color:#efefef; font-weight:500;}
+                #bookFund .gray{width:100%; height:50%; background-color:#efefef;}
+
+                #bookFund ul{width:1280px; height:265px; position:absolute; left:0; top:70px;}
+                #bookFund li{width:320px; float:left;}
+                #bookFund li .img{width:120px; margin:0 auto;}
+                #bookFund li .img img{width:100%;}
+
+                #bookFund li .textArea{width:170px; font-size:13px; background-color:pink; text-align:center; margin:0 auto;}
+                #bookFund .textArea .title{font-weight:600;}
+                #bookFund .textArea .line{font-weight:700;}
+                #bookFund .textArea .goal{color:#00c; font-size:10px;}
+                #bookFund .textArea .now{padding-top:10px;}
+
+
+
+    </style>
+
 	
  </head>
 
@@ -16,8 +138,8 @@
                 </h1>
                 <form action="#" method="get">
                     <input id="search" type="text" name="search" placeholder="국내 최초 완영 <롤랑의 노래>"/>
-                    <p><img src="img/header/search.jpeg" alt="돋보기 이미지"/></p>
-                    <p><img src="img/header/basket.jpeg" alt="장바구니 이미지"/></p>
+                    <p class="search"><img src="img/header/search.jpg" alt="돋보기 이미지"/></p>
+                    <p class="basket"><img src="img/header/basket.jpg" alt="장바구니 이미지"/></p>
                 </form>
             </header>
             <nav id="gnb">
@@ -77,39 +199,42 @@
                 </ul>
             </div>
             <div id="editor">
-                <h3>편집장의 선택</h3>
-                <ul>
-                    <li>
-                        <p class="imgs"><img src="img/index/editor00.jpg" alt="오리부리이야기"/></p>
-                        <div class="textBox">
-                            <p class="purple">"제 11회 비룡소 문학상 수상작"</p>
-                            <p class="title">오리 부리 이야기</p>
-                            <p class="desc">오리부리는 "물에 빠지면 부리만 둥둥 뜨겠구나." 라는 말을 많이 듣는다. 잠자는 시간을 빼놓곤 늘 말을 하기 때문이다. 오죽하면 몸에서 부리만 따로 분리되어 동네방네 돌아다니는 오리부리가 되었을까. 이야기를 몹시 좋아하는 오리 부리 ...</p>
-                        </div>
+                <h3>편집자의 선택</h3>
+                <ul class="imgArea">
+                    <li class="img">
+                        <img src="img/index/editor00.jpg" alt="오리부리이야기"/>
                     </li>
-                    <li>
-                        <p class="imgs"><img src="img/index/editor01.jpg" alt="10배의 법칙"/></p>
-                        <div class="textBox">
-                            <p class="purple">"‘보통’은 실패 공식이다!"</p>
-                            <p class="title">10배의 법칙</p>
-                            <p class="desc">우리는 엄청난 행동력을 타고났다. 아이들을 보라. 그들은 한시도 가만있지를 않는다. 그러나 나이를 먹어 가면서, 우리는 보통의 행동이 만들어 내는 보통의 삶에 익숙해진다. 물론 그런 상황에 충분히 만족하면서 살 수 있다. 실제 열에 아홉, ...</p>
-                        </div>
+                    <li class="img">
+                        <img src="img/index/editor01.jpg" alt="10배의 법칙"/>
+                        
                     </li>
-                    <li>
-                        <p class="imgs"><img src="img/index/editor02.jpg" alt="도파민네이션"/></p>
-                        <div class="textBox">
-                            <p class="purple">"중독에서 자유로워질 수 있을까"</p>
-                            <p class="title">도파민네이션</p>
-                            <p class="desc">다음 중 당신이 중독된 대상을 고르시오. 술, sns, 담배, 인터넷 쇼핑, 디저트, 커피, 매운 음식, 일, 게임, 과자. 이 모두를 피해 갔다면, 축하할 일이다! 그러나 항목들마다 덜컹덜컹 걸린 이들이 많을 것이라 예상한다. 중독에 관한 책과 이 책들을 ...</p>
-                        </div>
+                    <li class="img">
+                        <img src="img/index/editor02.jpg" alt="도파민네이션"/>
                     </li>
-                    <li>
-                        <p class="img"><img src="img/index/editor03.jpg" alt="나보코프 단편전집"/></p>
-                        <div class="textBox">
-                            <p class="purple">"나보코프 공식 완전판 단편 전집"</p>
-                            <p class="title">나보코프 단편전집</p>
-                            <p class="desc">러시아에서 태어난 나보코프는 혁명으로 임시정부가 붕괴되자 서유럽으로 망명했고 영국, 독일, 프랑스를 거쳐 미국에 정착했다. 이 시기는 작가 나보코프의 작품세계에 있어서도 망명의 시기였다. 러시아어에서 프랑스어를 거쳐 영어에 정...</p>
-                        </div>
+                    <li class="img">
+                        <img src="img/index/editor03.jpg" alt="나보코프 단편전집"/>
+                    </li>
+                </ul>
+                <ul class="textArea">
+                    <li class="textBox">
+                        <p class="purple">"제 11회 비룡소 문학상 수상작"</p>
+                        <p class="title">오리 부리 이야기</p>
+                        <p class="desc">오리부리는 "물에 빠지면 부리만 둥둥 뜨겠구나." 라는 말을 많이 듣는다. 잠자는 시간을 빼놓곤 늘 말을 하기 때문이다. 오죽하면 몸에서 부리만 따로 분리되어 동네방네 돌아다니는 오리부리가 되었을 ...</p>
+                    </li>
+                    <li class="textBox">
+                        <p class="purple">"‘보통’은 실패 공식이다!"</p>
+                        <p class="title">10배의 법칙</p>
+                        <p class="desc">우리는 엄청난 행동력을 타고났다. 아이들을 보라. 그들은 한시도 가만있지를 않는다. 그러나 나이를 먹어 가면서, 우리는 보통의 행동이 만들어 내는 보통의 삶에 익숙해진다. 물론 그런 상황에 충분히 ...</p>
+                    </li>
+                    <li class="textBox">
+                        <p class="purple">"중독에서 자유로워질 수 있을까"</p>
+                        <p class="title">도파민네이션</p>
+                        <p class="desc">다음 중 당신이 중독된 대상을 고르시오. 술, sns, 담배, 인터넷 쇼핑, 디저트, 커피, 매운 음식, 일, 게임, 과자. 이 모두를 피해 갔다면, 축하할 일이다! 그러나 항목들마다 덜컹덜컹 걸린 이들이 많을 것 ...</p>
+                    </li>
+                    <li class="textBox">
+                        <p class="purple">"나보코프 공식 완전판 단편 전집"</p>
+                        <p class="title">나보코프 단편전집</p>
+                        <p class="desc">러시아에서 태어난 나보코프는 혁명으로 임시정부가 붕괴되자 서유럽으로 망명했고 영국, 독일, 프랑스를 거쳐 미국에 정착했다. 이 시기는 작가 나보코프의 작품세계에 있어서도 망명의 시기였다. 러시 ...</p>
                     </li>
                 </ul>
                 
@@ -121,41 +246,53 @@
                         <a href="#" title="탑텐0">
                             <span class="img"><img src="img/index/top00.jpg" alt="파친코"/></span>
                             <span class="name">1. 파친코</span>
+                            <span class="rank">new</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" title="탑텐1">
                             <span class="img"><img src="img/index/top01.jpg" alt="아하한글"/></span>
                             <span class="name">2. 아하한글</span>
+                            <span class="rank">new</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" title="탑텐2">
                             <span class="img"><img src="img/index/top02.jpg" alt="롤랑의노래"/></span>
                             <span class="name">3. 롤랑의노래</span>
+                            <span class="rank">new</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" title="탑텐3">
                             <span class="img"><img src="img/index/top03.jpg" alt="왕 없는 왕국"/></span>
                             <span class="name">4. 왕 없는 왕국</span>
+                            <span class="rank">new</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" title="탑텐4">
                             <span class="img"><img src="img/index/top04.jpg" alt="럭키 드로우"/></span>
                             <span class="name">5. 럭키 드로우</span>
+                            <span class="rank">new</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="hashTag">
-                <p>#이수지</p><p>#파친코</p><p>#젊은작가상</p>
-                <p>#주술회전</p><p>#그해우리는</p><p>#과학의달</p>
+                <ul>
+                    <li><a href="#" title="해시태그0">#vancouver</a></li>
+                    <li><a href="#" title="해시태그1">#toronto</a></li>
+                    <li><a href="#" title="해시태그2">#quebec</a></li>
+                    <li><a href="#" title="해시태그3">#montreal</a></li>
+                    <li><a href="#" title="해시태그4">#ottawa</a></li>
+                    <li><a href="#" title="해시태그5">#yellowknife</a></li>
+                </ul>
+                
             </div>
             <div id="bookFund">
                 <div class="blue">
-                    <p>좋은책에 투자하는 당신의 안목,북펀드</p>
+                    <p class="title"><a href="#" title="북펀드">좋은 책에 투자하는 당신의 안목,<br/>북펀드</a></p>
                 </div>
                 <div class="gray">
 
@@ -165,37 +302,49 @@
                         <p class="img">
                             <img src="img/index/fund00.jpg" alt="물고기는 존재하지 않는다"/>
                         </p>
-                        <p class="title">물고기는 존재하지 않는다</p>
-                        <p class="goal"> 목표금액 1,500,000원</p>
-                        <p class="now">300명 펀딩 5,100,960원</p>
+                        <div class="textArea">
+                            <p class="title">물고기는 존재하지 않는다</p>
+                            <p class="line">────────────</p>
+                            <p class="goal"> 목표금액 1,500,000원</p>
+                            <p class="now">300명 펀딩 5,100,960원</p>
+                        </div>
                     </li>
                     <li>
                         <p class="img">
                             <img src="img/index/fund01.jpg" alt="물고기는 존재하지 않는다"/>
                         </p>
-                        <p class="title">물고기는 존재하지 않는다</p>
-                        <p class="goal"> 목표금액 2,000,000원</p>
-                        <p class="now">190명 펀딩 4,240,800원</p>
+                        <div class="textArea">
+                            <p class="title">물고기는 존재하지 않는다</p>
+                            <p class="line">────────────</p>
+                            <p class="goal"> 목표금액 1,500,000원</p>
+                            <p class="now">300명 펀딩 5,100,960원</p>
+                        </div>
                     </li>
                     <li>
                         <p class="img">
                             <img src="img/index/fund02.jpg" alt="물고기는 존재하지 않는다"/>
                         </p>
-                        <p class="title">물고기는 존재하지 않는다</p>
-                        <p class="goal"> 목표금액 2,000,000원</p>
-                        <p class="now">329명 펀딩 3,553,200원</p>
+                        <div class="textArea">
+                            <p class="title">물고기는 존재하지 않는다</p>
+                            <p class="line">────────────</p>
+                            <p class="goal"> 목표금액 1,500,000원</p>
+                            <p class="now">300명 펀딩 5,100,960원</p>
+                        </div>
                     </li>
                     <li>
                         <p class="img">
                             <img src="img/index/fund03.jpg" alt="물고기는 존재하지 않는다"/>
                         </p>
-                        <p class="title">물고기는 존재하지 않는다</p>
-                        <p class="goal"> 목표금액 1,500,000원</p>
-                        <p class="now">64명 펀딩 1,267,200원</p>
+                        <div class="textArea">
+                            <p class="title">물고기는 존재하지 않는다</p>
+                            <p class="line">────────────</p>
+                            <p class="goal"> 목표금액 1,500,000원</p>
+                            <p class="now">300명 펀딩 5,100,960원</p>
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div><!--
         <footer id="footer">
             <ul>
                 <li><a href="#" title="로그인">로그인</a></li>
@@ -223,7 +372,7 @@
                 <li><a href="#" title="청소년보호정책">청소년보호정책</a></li>
                 <li><a href="#" title="사업자정보">사업자정보</a></li>
             </ul>
-        </footer>
+        </footer>-->
     </div>
  </body>
 </html>

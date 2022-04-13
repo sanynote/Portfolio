@@ -86,6 +86,9 @@
             /* li에 기능만들기 */
             #natural li .box{display:none; width:320px; height:320px; padding:15px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0;}
             #natural li:hover .box{display:block;}
+            #natural li .box .title{width:100%; height:50px; font-size:30px; text-align:center; text-transform:uppercase;}
+            #natural li .box .desc{width:280px; font-size:20px; padding:0 20px;}
+
 
             /* 한 쪽 방향으로 margin-left:20px 씩 주고 마지막 두 li에는 margin-left:25씩 주어서 총 넓이를 맞췄다. */
             #natural li p{width:100%;}
@@ -97,6 +100,8 @@
             /* natural 큰 li작업 */
             #natural .big{width:540px; height:540px; margin-bottom:30px; background-color:#7af;}
             #natural .big a{width:100%;}
+            #natural li .bigBox .title{width:100%; height:70px; font-size:40px; text-align:center; text-transform:uppercase;}
+            #natural li .bigBox .desc{width:460px; padding:0 20px; font-size:25px;}
             /* 기능만들기 */
 
             #natural .big .bigBox{ width:500px; height:500px; padding:20px; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; opacity:0; transition:opacity 0.5s linear;}
@@ -407,69 +412,69 @@
                 <div id="natural">
                     <ul>
                         <li class="big">
-                            <p>
+                            <p class="img">
                                 <a href="https://www.viator.com/tours/Yellowknife/Aurora-Tour/d23637-107890P1?m=28353&supag=68732029897&supca=1939178107&supsc=dsa-650389793948&supai=420120885798&supdv=c&supnt=g&suplp=1009871&supli=&supti=dsa-650389793948&tsem=true&supci=dsa-650389793948&supap1=&supap2=&gclid=Cj0KCQjwz7uRBhDRARIsAFqjull7tw1N0xkuNgO8JwrYOurqPdhV2Axww5kQkhHoXp1wpL5OvAoxTFUaAslOEALw_wcB" title="">
                                     <img src="img/index/nat_00.jpg" alt="오로라 이미지"/>
                                 </a>
                             </p>
-                            <p class="bigBox">
+                            <div class="bigBox">
                                 <p class="title">aurora</p>
                                 <p class="desc">
                                     Increase your chances of seeing the Aurora Borealis on a night tour from Yellowknife. Get picked up directly from your hotel or the airport, and stop at three spectacular lakes along the Ingraham Trail for optimal viewing. A professional photographer accompanies your driver-guide, with unlimited photos available after the tour. Step off the coach for a different background in each photo shoot, and enjoy warm beverages and cookies on board.
                                 </p>
-                            </p>
+                            </div>
                         </li>
                         <li class="big">
-                            <p>
+                            <p class="img">
                                 <a href="https://www.viator.com/en-CA/tours/Banff/Lake-Louise-and-the-Icefield-Parkway-sightseeing-tour/d611-47552P2" title="banff">
                                     <img src="img/index/nat_01.jpg" alt="밴프 이미지"/>
                                 </a>
                             </p>
-                            <p class="bigBox">
+                            <div class="bigBox">
                                 <p class="title">banff</p>
                                 <p class="desc">
                                     The Rockies boast some of Canada’s most spectacular scenery, but the rugged mountain terrain poses a unique set of challenges. On this full-day sightseeing tour, enjoy round-trip travel from Banff and reach far-flung attractions including Lake Louise and the Icefield Parkway in comfort. Stop at picturesque spots including Bow Falls and Moraine Lake, and enjoy personal attention from your guide on this small-group tour—limited to 15 people.
                                 </p>
-                            </p>
+                            </div>
                         </li>
                         <li>
-                            <p>
+                            <p class="img">
                                 <a href="https://www.viator.com/en-CA/Vancouver-attractions/Rocky-Mountaineer-Train/overview/d616-a11358" title="rocky">
                                     <img src="img/index/nat_02.jpeg" alt="록키 이미지"/>
                                 </a>
                             </p>
-                            <p class="box">
+                            <div class="box">
                                 <p class="title">rocky</p>
                                 <p class="desc">
-                                    The Rocky Mountaineer runs along four different routes. The Coastal Passage route runs from Seattle in the US to Vancouver in British Columbia, and on to the Canadian Rockies. The Rainforest to Gold Rush route runs from Vancouver through Whistler, Quesnel, and on to Jasper. The Journey Through the Clouds route departs from Vancouver and travels through the Coast Mountains and Fraser Canyon, passing through Kamloops en route to Jasper. The final route, First Passage to the West, connects Vancouver to Banff and Lake Louise, passing through Kamloops on the way.
+                                    The Rocky Mountaineer runs along four different routes. The Coastal Passage route runs from Seattle in the US to Vancouver in British Columbia, and on to the Canadian Rockies. The Rainforest to Gold Rush route runs from Vancouver through Whistler, Quesnel, and on to Jasper. <!--The Journey Through the Clouds route departs from Vancouver and travels through the Coast Mountains and Fraser Canyon, passing through Kamloops en route to Jasper. The final route, First Passage to the West, connects Vancouver to Banff and Lake Louise, passing through Kamloops on the way.-->
                                 </p>
-                            </p>
+                            </div>
                         </li>
                         <li class="margin">
-                            <p>
+                            <p class="img">
                                 <a href="https://www.viator.com/en-CA/Niagara-Falls-and-Around-attractions/Niagara-Falls-Ontario/d773-a1487" title="niagara falls">
                                     <img src="img/index/nat_03.jpg" alt="나이아가라 이미지"/>
                                 </a>
                             </p>
-                            <p class="box">
+                            <div class="box">
                                 <p class="title">niagara falls</p>
                                 <p class="desc">
-                                    With limited time at Niagara Falls, this half-day tour ensures you take in all the highlights. Enjoy spectacular views of Niagara Falls on a Hornblower boat cruise and sail close to the mighty American Falls. Then, follow the Niagara River to landmarks such as the Whirlpool Rapids, the Floral Clock, and Fort George, and have free time to explore Niagara-on-the-Lake.
+                                    With limited time at Niagara Falls, this half-day tour ensures you take in all the highlights. Enjoy spectacular views of Niagara Falls on a Hornblower boat cruise and sail close to the mighty American Falls. Then, follow the Niagara River to landmarks such as the Whirlpool ... <!--Rapids, the Floral Clock, and Fort George, and have free time to explore Niagara-on-the-Lake.-->
                                 </p>
-                            </p>
+                            </div>
                         </li>
                         <li class="margin">
-                            <p>
+                            <p class="img">
                                 <a href="https://cwf-fcf.org/en/resources/encyclopedias/fauna/?gclid=Cj0KCQjwz7uRBhDRARIsAFqjullaFhpooHf-toRNLTH42GxqgCgi0LQ6glVrFoMlZPs70IXvmDNr33gaAkSrEALw_wcB" title="polar bear">
                                     <img src="img/index/nat_04.jpg" alt="곰 이미지"/>
                                 </a>
                             </p>
-                            <p class="box">
+                            <div class="box">
                                 <p class="title">polar bear</p>
                                 <p class="desc">
-                                    The black bear Ursus americanus is one of the most familiar wild animals in North America today. The black bear is a bulky and thickset mammal. Approximately 150 cm long and with a height at the shoulder that varies from 100 to 120 cm, an adult black bear has a moderate-sized head with a rather straight facial profile and a tapered nose with long nostrils. The ears are rounded and the eyes small. The tail is very short and inconspicuous. A black bear has feet that are well furred on which it can walk. Each foot has five curved claws, which the bear cannot sheathe, or hide. These are very strong and are used for digging and tearing out roots, stumps, and old logs when searching for food.
+                                    The polar bear Ursus americanus is one of the most familiar wild animals in North America today. The polar bear is a bulky and thickset mammal. Approximately 150 cm long and with a height at the shoulder that varies from 100 to 120 cm, an adult polar bear has ... <!--a moderate-sized head with a rather straight facial profile and a tapered nose with long nostrils. The ears are rounded and the eyes small. The tail is very short and inconspicuous. A polar bear has feet that are well furred on which it can walk. Each foot has five curved claws, which the bear cannot sheathe, or hide. These are very strong and are used for digging and tearing out roots, stumps, and old logs when searching for food.-->
                                 </p>
-                            </p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -517,7 +522,7 @@
                 <h2>season</h2>
                 <div id="season">
                     <div class="title">
-                        <h3><span>4 seasons</span> of Canada</h3>
+                        <h3><span>4 seasons</span><br/> of Canada</h3>
                         <p>more information &gt;</p>
                     </div>
                     <div class="cont">
