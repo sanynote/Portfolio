@@ -11,12 +11,13 @@
         header, section, footer, nav{display:block;}
 
         a:link, a:visited{text-decoration:none;}
-        a:hover, a:focus{text-decoration:underline; color:#f00;}
+        a:hover, a:focus{text-decoration:none; color:#f00;}
 
         li{list-style:none;}
         img{border:none;}
 
-		 #wrap{width:100%;}
+		#wrap{width:100%;}
+        h3{width:100%; height:45px; line-height:45px; text-indent:15px;}
 
 
         /*############### 스마트폰 세로버전 #################*/
@@ -24,32 +25,30 @@
             /*########## header #########*/
                
                 #headerWrap{width:100%; overflow:hidden;}
-                #header{width:100%; position:relative; background-color:gold;}
+                #header{width:300px; position:relative; background-color:gold;}
                 #header h1{width:70px;}
                 #header h1 img{width:100%;}
 
-                #header form{width:200px;  position:absolute; left:75px; top:0; margin-top:4px;}
+                #header form{width:180px; position:absolute; left:75px; top:0; margin-top:4px;}
                 #header form input{width:100%; height:30px; border-radius:30px; border:none;}
                 #header form .search{width:30px; position:absolute; right:0; top:0;}
                 #header form .search img{width:100%;}
                 #header form .basket{width:30px; position:absolute; right:-40px; top:0;}
                 #header form .basket img{width:100%;}
 
-                #gnb{width:100%;}
+                #gnb{width:100%; overflow:hidden;}
                 #gnb ul{width:700px;}
                 #gnb ul li{display:inline-block; height:35px; line-height:35px;}
                 #gnb ul li a{padding:0 5px; color:#000;}
 
-                #gnb li:hover{border-bottom:1px solid #000;}
-
             /*########## container #########*/
-                #container{width:100%;}
+                #container{width:300px;}
 
             /* # visual */
-                #visual{width:100%; height:325px; overflow:hidden;}
+                #visual{width:100%; height:300px; overflow:hidden;}
                 #visual ul{width:1300px; height:100%;}
                 #visual li{width:300px; float:left; position:relative;}
-                #visual .img{width:290px; margin-left:10px;}
+                #visual .img{width:100%;}
                 #visual .img img{width:100%;}
                 #visual .text{position:absolute; left:115px; bottom:25px; color:#333; text-align:center;}
                 #visual .text .name{font-size:16px; padding-bottom:3px;}
@@ -59,7 +58,6 @@
 
             /* # editor */
                 #editor{width:100%; overflow:hidden;}
-                #editor h3{width:100%; height:40px;}
                 #editor .imgArea{width:800px; height:220px;}
                 #editor .imgArea .img{width:150px; margin:0 25px; float:left;}
                 #editor .imgArea .img img{width:100%;}
@@ -72,9 +70,8 @@
 
             /* # topTen */
                 #topTen{width:100%;}
-                #topTen h3{width:100%; height:40px;}
                 #topTen ul{width:100%;}
-                #topTen li{width:300px; height:40px; padding:0 10px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
+                #topTen li{width:300px; height:40px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
 
                 /*####### img 영역 ########*/
                 /*전체 300 중에서 , 50+ 10 해서 60*/
@@ -97,7 +94,7 @@
 
             /* # hashTag */
 
-                #hashTag{width:100%; font-size:14px;}
+                #hashTag{width:100%; font-size:14px; padding:15px 0 25px;}
                 #hashTag ul{width:280px; margin:0 auto;}
                 #hashTag li{background-color:#caf; height:30px; line-height:25px; border-radius:15px; margin-top:5px; display:inline-block;}
                 #hashTag li a{padding:0 13px; font-size:11px; text-transform:uppercase;}
@@ -105,7 +102,7 @@
 
 
 			/* #bookfund */
-                #bookFund{width:100%; height:400px; overflow:hidden; position:relative;}
+                #bookFund{width:100%; height:400px; overflow:hidden; position:relative; margin-bottom:35px;}
                 #bookFund .blue{width:100%; height:50%; background-color:#00c;}
                 #bookFund .blue .title{padding:10px;}
                 #bookFund .blue .title a{color:#efefef; font-weight:500;}
@@ -189,7 +186,7 @@
                     </li>
                     <li>
                         <p class="img">
-                            <img src="img/index/goods03.jpg" alt="알라딘굿즈4"/>
+                            <img src="img/index/goods00.jpg" alt="알라딘굿즈4"/>
                         </p>
                         <div class="text">
                             <p class="name">은하계 구슬 램프</p>
