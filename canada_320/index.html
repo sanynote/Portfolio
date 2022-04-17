@@ -30,7 +30,7 @@
             /*########## header #########*/
                
                 #headerWrap{width:100%; overflow:hidden;}
-                #header{width:300px; position:relative; background-color:gold;}
+                #header{width:300px; position:relative;}
                 #header h1{width:70px;}
                 #header h1 img{width:100%;}
 
@@ -154,6 +154,147 @@
 
 
 
+        /*############### 스마트폰 가로버전 #################*/
+        @media all and (min-width:481px) and (max-width:767px){
+            
+            /*########## header #########*/
+                #header{width:460px;}
+                #header h1{width:40px;}
+
+                #header form{width:180px; position:absolute; left:75px; top:0; margin-top:4px;}
+                #header form input{width:100%; height:30px; border-radius:30px; border:none;}
+                #header form .search{width:30px; position:absolute; right:0; top:0;}
+                #header form .search img{width:100%;}
+                #header form .basket{width:30px; position:absolute; right:-40px; top:0;}
+                #header form .basket img{width:100%;}
+
+                #gnb{width:100%; overflow:hidden;}
+                #gnb ul{width:420px;}
+                #gnb ul li{display:inline-block; height:35px; line-height:35px;}
+                #gnb ul li a{padding:0 10px; color:#000; font-size:16px; font-weight:700;}
+
+            /*########## container #########*/
+                #container{width:300px;}
+
+            /* #visual*/
+                #visual{width:300px; height:200px; background-image:url("img/index/visual_00.jpg"); background-size:100%;}
+
+            /* # season */
+                #season{width:100%;}
+                #season ul{width:300px; height:100%;}
+                #season li{width:150px; float:left; position:relative;}
+                #season .img{width:100%; height:150px;}
+                #season .img img{width:100%;}
+                #season .text{width:130px; height:130px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; bottom:0; display:none;}
+                #season li:hover .text{display:block;}
+                
+                #season .text .name{font-size:18px; padding-bottom:3px; color:#efefef;}
+                #season .text .title{font-size:13px; color:#efefef;}
+                #season .text .desc{width:100%; font-size:11px; color:#efefef; padding-top:10px; font-weight:500;}
+                #season .text .icon{width:20px; position:absolute; left:10px; top:10px;}
+                #season .text .icon img{width:100%;}
+
+                #season ul:after{display:block; clear:both; overflow:hidden;}
+                
+
+            /* # natural */
+                #natural{width:100%; overflow:hidden;}
+                #natural .imgArea{width:800px; height:220px;}
+                #natural .imgArea .img{width:150px; margin:0 25px; float:left;}
+                #natural .imgArea .img img{width:100%;}
+
+                #natural .textArea{width:1280px; height:120px; overflow:hidden;}
+                #natural .textArea .textBox{width:280px; font-size:12px; text-align:center; padding:0 10px; float:left;}
+                #natural .textArea .textBox .purple{color:#0af;}
+                #natural .textArea .textBox .title{font-weight:700; font-size:15px; padding:3px 0;}
+
+
+            /* # topTen */
+                #topTen{width:100%;}
+                #topTen ul{width:100%;}
+                #topTen li{width:300px; height:40px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
+
+                /*####### img 영역 ########*/
+                /*전체 300 중에서 , 50+ 10 해서 60*/
+                #topTen a{display:block; position:relative;}
+                #topTen a .img{display:block; width:50px; height:40px; margin-left:10px; overflow:hidden; float:left;}
+                #topTen a .img img{width:100%;}
+
+
+                /*####### name 영역 ########*/
+                /* name 영역크기 : 300-60== 240px */
+                #topTen a .name{width:230px; height:100%; font-size:14px; line-height:40px; padding-left:10px; float:left;}
+
+                /* title padding-left:10px로 "620px" 사용가능 */
+                /* 검사를 확인해보면 620px 사용가능함을 알 수 있음 */
+                /*
+                    전체높이는 110px 사용가능
+                */
+                #topTen a .rank{width:30px; height:40px; line-height:40px; position:absolute; right:0; top:0; color:#d00;}
+
+
+            /* # city */
+
+                #city{width:100%; font-size:14px; padding:15px 0 25px;}
+                #city ul{width:280px; margin:0 auto;}
+                #city li{background-color:#caf; height:30px; line-height:25px; border-radius:15px; margin-top:5px; display:inline-block;}
+                #city li a{padding:0 13px; font-size:11px; text-transform:uppercase;}
+                
+
+
+			/* #fes */
+                #fes{width:100%; height:400px; overflow:hidden; position:relative; margin-bottom:20px;}
+                #fes .red{width:100%; height:50%; background-color:#a00;}
+                #fes .red .title{padding:10px;}
+                #fes .red .title a{color:#efefef;}
+                #fes .gray{width:100%; height:50%; background-color:#efefef;}
+
+                #fes ul{width:1280px; height:265px; position:absolute; left:0; top:70px;}
+                #fes li{width:300px; float:left;}
+                #fes li .img{width:120px; margin:0 auto;}
+                #fes li .img img{width:100%;}
+
+                #fes li .textArea{width:170px; font-size:16px; text-align:center; margin:0 auto;}
+                #fes .textArea .title{font-weight:600;}
+                #fes .textArea .line{font-weight:700;}
+                #fes .textArea .goal{color:#c00; font-size:13px;}
+                #fes .textArea .now{padding-top:10px; font-size:12px;}
+
+            /* footer */
+
+                #footer{width:100%;}
+                #footer .top{width:100%;}
+                #footer .top li{display:inline-block; height:30px;}
+                #footer .top li a{line-height:30px; padding:0 7px;}
+                #footer .logoArea{width:100%; padding-top:5px;}
+                #footer .logoArea .img{width:70px; margin:0 auto;}
+                #footer .logoArea .img img{width:100%;}
+                #footer .logoArea h4{font-weight:600; font-size:16px; text-align:center;}
+                #footer .question{width:100%; height:30px; margin:10px 0;}
+                #footer .question p{width:135px; height:100%; margin-left:10px; border:1px solid #ccc; float:left;}
+                #footer .question p a{display:block; text-align:center; line-height:30px;}
+                #footer .address{width:100%;}
+                #footer .address li{display:inline-block; height:30px;}
+                #footer .address li a{line-height:30px; padding:0 6px;}
+
+
+            }
+
+        /*############### 태블릿 pc버전 #################*/
+        @media all and (min-width:768px) and (max-width:1024px){
+                
+    
+            }
+
+        /*############### 일반 pc버전 #################*/
+        @media all and (min-width:1025px) {
+                
+
+            }
+
+
+
+
 
     </style>
 
@@ -187,6 +328,7 @@
                 
             </div>
             <div id="season">
+                <h3>4 seasons of canada</h3>
                 <ul>
                     <li>
                         <p class="img">
