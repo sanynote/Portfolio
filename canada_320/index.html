@@ -30,20 +30,13 @@
             /*########## header #########*/
                
                 #headerWrap{width:100%; overflow:hidden;}
-                #header{width:300px; position:relative;}
-                #header h1{width:70px;}
+                #header{width:300px; position:relative; padding-top:20px;}
+                #header h1{width:70px; margin:0 auto;}
                 #header h1 img{width:100%;}
 
-                #header form{width:180px; position:absolute; left:75px; top:0; margin-top:4px;}
-                #header form input{width:100%; height:30px; border-radius:30px; border:none;}
-                #header form .search{width:30px; position:absolute; right:0; top:0;}
-                #header form .search img{width:100%;}
-                #header form .basket{width:30px; position:absolute; right:-40px; top:0;}
-                #header form .basket img{width:100%;}
-
-                #gnb{width:100%; overflow:hidden;}
-                #gnb ul{width:420px;}
-                #gnb ul li{display:inline-block; height:35px; line-height:35px;}
+                #gnb{width:200px; overflow:hidden; border:1px solid red; position:absolute; left:-220px; top:84px; z-index:5; background-color:#fff;}
+                #gnb ul{width:100%;}
+                #gnb ul li{display:block; height:35px; line-height:35px; border-bottom:1px solid red;}
                 #gnb ul li a{padding:0 10px; color:#000; font-size:16px; font-weight:700;}
 
             /*########## container #########*/
@@ -53,7 +46,7 @@
                 #visual{width:300px; height:200px; background-image:url("img/index/visual_00.jpg"); background-size:100%;}
 
             /* # season */
-                #season{width:100%;}
+                #season{width:100%; padding-top:50px;}
                 #season ul{width:300px; height:100%;}
                 #season li{width:150px; float:left; position:relative;}
                 #season .img{width:100%; height:150px;}
@@ -62,7 +55,7 @@
                 #season li:hover .text{display:block;}
                 
                 #season .text .name{font-size:18px; padding-bottom:3px; color:#efefef;}
-                #season .text .title{font-size:13px; color:#efefef;}
+                #season .text .title{font-size:13px; color:#efefef; }
                 #season .text .desc{width:100%; font-size:11px; color:#efefef; padding-top:10px; font-weight:500;}
                 #season .text .icon{width:20px; position:absolute; left:10px; top:10px;}
                 #season .text .icon img{width:100%;}
@@ -71,7 +64,7 @@
                 
 
             /* # natural */
-                #natural{width:100%; overflow:hidden;}
+                #natural{width:100%; overflow:hidden; background-color:#e3fff6; padding:50px 0;}
                 #natural .imgArea{width:800px; height:220px;}
                 #natural .imgArea .img{width:150px; margin:0 25px; float:left;}
                 #natural .imgArea .img img{width:100%;}
@@ -79,11 +72,11 @@
                 #natural .textArea{width:1280px; height:120px; overflow:hidden;}
                 #natural .textArea .textBox{width:280px; font-size:12px; text-align:center; padding:0 10px; float:left;}
                 #natural .textArea .textBox .purple{color:#0af;}
-                #natural .textArea .textBox .title{font-weight:700; font-size:15px; padding:3px 0;}
+                #natural .textArea .textBox .title{font-weight:700; font-size:15px; padding:13px 0;}
 
 
             /* # topTen */
-                #topTen{width:100%;}
+                #topTen{width:100%; padding-top:30px;}
                 #topTen ul{width:100%;}
                 #topTen li{width:300px; height:40px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
 
@@ -137,19 +130,16 @@
 
                 #footer{width:100%;}
                 #footer .top{width:100%;}
-                #footer .top li{display:inline-block; height:30px;}
+                #footer .top li{display:block; height:40px; line-height:40px; text-align:center; border-bottom:1px solid #ccc;}
                 #footer .top li a{line-height:30px; padding:0 7px;}
-                #footer .logoArea{width:100%; padding-top:5px;}
+                #footer .logoArea{width:100%; padding:50px 0 30px;}
                 #footer .logoArea .img{width:70px; margin:0 auto;}
                 #footer .logoArea .img img{width:100%;}
                 #footer .logoArea h4{font-weight:600; font-size:16px; text-align:center;}
                 #footer .question{width:100%; height:30px; margin:10px 0;}
                 #footer .question p{width:135px; height:100%; margin-left:10px; border:1px solid #ccc; float:left;}
                 #footer .question p a{display:block; text-align:center; line-height:30px;}
-                #footer .address{width:100%;}
-                #footer .address li{display:inline-block; height:30px;}
-                #footer .address li a{line-height:30px; padding:0 6px;}
-
+                
             }
 
 
@@ -393,7 +383,7 @@
                 #footer .question{width:100%; height:30px; margin:10px 0;}
                 #footer .question p{width:360px; height:100%; margin-left:10px; border:1px solid #ccc; float:left;}
                 #footer .question p a{display:block; text-align:center; line-height:30px;}
-                #footer .address{width:100%;}
+                #footer .address{width:300px; margin:0 auto;}
                 #footer .address li{display:inline-block; height:30px;}
                 #footer .address li a{line-height:30px; padding:0 6px;}
 
@@ -418,11 +408,7 @@
                 <h1>
                     <img src="img/header/header_logo.png" alt="로고"/>
                 </h1>
-                <form action="#" method="get">
-                    <input id="search" type="text" name="search" placeholder="국내 최초 완영"/>
-                    <p class="search"><img src="img/header/search.jpg" alt="돋보기 이미지"/></p>
-                    <p class="basket"><img src="img/header/basket.jpg" alt="장바구니 이미지"/></p>
-                </form>
+                
             </header>
             <nav id="gnb">
                 <ul>
@@ -665,12 +651,7 @@
                     <a href="#" title="faq">FAQ</a>
                 </p>
             </div>
-            <ul class="address">
-                <li><a href="#" title="map">map</a></li>
-                <li><a href="#" title="notice">notice</a></li>
-                <li><a href="#" title="policy">policy</a></li>
-                <li><a href="#" title="accessibility">accessibility</a></li>
-            </ul>
+        
         </footer>
     </div>
  </body>
