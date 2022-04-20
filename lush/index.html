@@ -5,10 +5,16 @@
 	<meta charset="utf-8"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
+        @font-face{
+			font-family:"Lush";
+			src:url("font/Lush.ttf");
+		}
+
         *{margin:0; padding:0;}
         body{margin:0; padding:0;}
         li{list-style-type:none;}
         a:link, a:visited{text-decoration:none; color:#000;}
+
 
 
         /*###################### header #######################*/ 
@@ -27,10 +33,12 @@
         /*####################### visual #######################*/
             #container{width:100%;}
             #visual{width:100%; height:1050px; padding-top:50px; background-image:url("img/index/visual.jpg");
-            background-repeat:no-repeat; background-size:100%; font-family:handwritten, hn-display, HelveticaNeue, Helvetica, helvetica, sans-serif;}
+            background-repeat:no-repeat; background-size:100%;}
+
+            #visual .textBox{font-family:"Lush";}
 
             #menu{width:1200px; overflow:hidden; margin:0 auto;}
-            #menu ul{width:1661px;}
+            #menu ul{width:1670px;}
             #menu ul li{height:40px; line-height:40px; display:inline-block; background-color:#efefef; border-radius:20px; border:1px solid rgba(0,0,0,0); margin-left:10px;}
             #menu ul li a{padding:0 20px;}
 
@@ -38,8 +46,50 @@
 
 
         /*#################### care ###################*/
-            #care{width:100%; height:1000px; background-image:url("img/index/care_bg.jpg");
+            #careArea{width:100%; height:900px; background-image:url("img/index/care_bg.jpg");
             background-repeat:no-repeat; background-size:100%;}
+
+            #care{width:1700px; margin:0 auto; padding-top:50px;}
+            #care .textArea{width:430px; font-size:18px; padding-right:30px; float:left;}
+            #care .textArea h3{font-weight:700; font-size:60px; padding-bottom:30px;}
+           
+
+            #care ul{width:1240px; height:655px; float:left;}
+            #care li{width:570px; padding-left:50px; float:left;}
+            #care li .img{width:567px;}
+            #care li .img img{width:100%;}
+
+            #care li .text{width:400px; text-align:center; margin:0 auto;}
+            #care li .text h4{font-size:40px; padding:20px 0; font-weight:700;}
+            #care li .text .link{padding:30px 0; font-weight:700;}
+            #care li .text .link a{font-size:20px; font-weight:700px;text-decoration:underline;}
+
+            
+            #care:after{content:""; display:block; clear:both;}
+
+
+        /*#################### sleepArea ###################*/
+            #sleepArea{width:100%; height:460px; padding:40px 0;}
+            #sleepMore{width:330px; height:100%; background-color:pink;}
+            #sleepMore .icon{}
+            #sleepMore .icon img{}
+            #sleepMore h3{}
+            #sleepMore .desc{}
+            #sleepMore .match{}
+            #sleepMore .match a{}
+
+            #sleep{}
+            #sleep ul{}
+            #sleep ul li{}
+            #sleep .product{}
+            #sleep .product a{}
+            #sleep .product a .img{}
+            #sleep .product a .img img{}
+            #sleep .product a .name{}
+            #sleep .product a .type{}
+            #sleep .product a .desc{}
+            #sleep .product a .price{}
+
 
 
     </style>
@@ -84,7 +134,79 @@
             
         </div>
 
-        <div id="care">
+        <div id="careArea">
+            <div id="care">
+                <div class="textArea">
+                    <h3>Give your skin barrier a break</h3>
+                    <p>
+                        With forty-five years of skincare expertise, Helen, our co-founder, has developed <strong>new self-preserving skincare that doesn't use synthetic preservatives </strong>- giving you fresher products that nourish both your complexion and the protective microorganisms that live there
+                    </p>
+                </div>
+                <ul>
+                    <li>
+                        <p class="img">
+                            <img src="img/index/care00.avif" alt="케어이미지0"/>
+                        </p>
+                        <div class="text">
+                            <h4>Cleanse</h4>
+                            <p class="desc">From gentle natural scrubs to fresh buttery polishes that cleanse, hydrate and refresh</p>
+                            <p class="link"><a href="#" title="샵 링크">Shop Cleansers</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="img">
+                            <img src="img/index/care01.avif" alt="케어이미지1"/>
+                        </p>
+                        <div class="text">
+                            <h4>Moisturise</h4>
+                            <p class="desc">Boost your skin's defence against the elements with our natural moisturisers for a healthy glow</p>
+                            <p class="link"><a href="#" title="샵 링크">Shop Moisturisers</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="sleepArea">
+            <div id="sleepMore">
+                <p class="icon">
+                    <img src="img/index/sleep_icon.png" alt="잠자는아이콘"/>
+                </p>
+                <h3>Great skin needs some beauty sleep</h3>
+                <p class="desc">Relax with our lavender-infused naturally sleep-inducing Sleepy range</p>
+                <p class="match">
+                    <a href="#none">
+                        Meet your match
+                    </a>
+                </p>
+
+            </div>
+            <div id="sleep">
+                <ul>
+                    <li>
+                        <div class="product">
+                            <a href="#none" title="상품공간">
+
+                                <em class="img">
+                                    <img src="img/index/sleep00.avif" alt=""/>
+                                </em>
+                                <b class="name">A French Kiss</b>
+                                <span class="type">BUBBLE BAR</span>
+                                <span class="desc">A calming kiss goodnight</span>
+                                <i class="price">£5.50</i>
+
+
+                            </a>
+                        </div>
+                        <div class="bag">
+                            <a href="#none" title="장바구니">
+                                <span class="img"><img src="img/index/" alt="장바구니"/></span>
+                                <span class="text">Add to bag</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
         </div>
 
