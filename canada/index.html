@@ -3,9 +3,11 @@
  <head>
 	<title>canada</title>
 	<meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=M+PLUS+Rounded+1c:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&family=M+PLUS+Rounded+1c:wght@300;500&display=swap" rel="stylesheet">
+    
 
 	<style>
 		*{margin:0; padding:0;}
@@ -70,9 +72,6 @@
 			#visual .textBox .title{font-size:150px; font-weight:400; color:red;}
 			#visual .textBox .desc{font-size:26px; color:rgba(255,255,255,1); position:absolute; left:0; bottom:-5px;
 			transition:color 0.5s linear 0.7s;}
-
-			#visual:hover .textBox{left:400px;}
-            #visual:hover .desc{color:#00a;}
 
         /*########### natural ###########*/
             #naturalArea{width:100%; padding:100px 0;}
@@ -312,6 +311,17 @@
             
 
 	</style>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#visual").mouseover(function(){
+                $("#visual .textBox").css({"left":"400px"});
+                $("#visual .desc").css({"color":"#00a"});
+            })
+
+        })
+    </script>
 	
  </head>
 
