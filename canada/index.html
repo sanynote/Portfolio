@@ -129,8 +129,9 @@
             #map .city_image img{width:100%;}
 
             /*######## map / map_img #########*/
-            #map .map_img{width:600px; height:100%; float:left;}
-            #map .map_img img{width:100%;}
+            #map .map_img{width:600px; height:505px; float:left;}
+            #map .map_img a iframe{width:100%; height:100%; border:0;}
+       
 
 
 
@@ -179,39 +180,45 @@
 
 
         /*######## city ##########*/
-            #cityArea{width:100%; height:600px; background-color:#ededed;}
+            #cityArea{width:100%; height:900px; position:relative;}
 
-            #city{width:1760px; padding-top:100px; margin:0 auto;}
+            #city{width:1800px; height:100%; margin:0 auto; background-color:#ededed;}
+            #city .cover{width:50%; height:100%; background-color:#caf; float:left;}
+            #city .desc{width:50%; height:100%;background-color:pink; float:left;}
+
+            #city :after{content:""; display:block; clear:both;}
+
             /* 각 li 270px + margin-left:20 == 290 * 6 ==1740 +20 ==1760 */
-            #city ul{width:100%;}
-            #city li{width:270px; height:360px; float:left; overflow:hidden; background-color:#aef; margin-left:20px;
-            border-radius:0 0 0 0; box-shadow:0 0 0 rgba(255,255,255,0); 
-            transition:border 0.5s linear, box-shadow 0.5s linear; margin-top:100px;}
+            #cityArea #city_ul{width:100%; position:absolute; left:0; top:0;}
+            #city_ul ul{width:1020px; margin:0 auto; }
+            #city_ul li{width:150px; height:150px; float:left; overflow:hidden; background-color:#aef; margin-left:20px;
+            border-radius:0 0 0 0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
+            transition:border 0.5s linear, box-shadow 0.5s linear;}
 
 
-            #city li:hover{border-radius:50px 50px 50px 0; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
+            #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
 
             /* li delay 개별작업 */
-            #cityArea .city00{transition:margin 0.5s linear 0.5s;}
-            #cityArea .city01{transition:margin 0.5s linear 1s;}
-            #cityArea .city02{transition:margin 0.5s linear 1.5s;}
-            #cityArea .city03{transition:margin 0.5s linear 2s;}
-            #cityArea .city04{transition:margin 0.5s linear 2.5s;}
-            #cityArea .city05{transition:margin 0.5s linear 3s;}
+            #city_ul .city00{transition:margin 1.5s linear 0.5s;}
+            #city_ul .city01{transition:margin 1.5s linear 1s;}
+            #city_ul .city02{transition:margin 1.5s linear 1.5s;}
+            #city_ul .city03{transition:margin 1.5s linear 2s;}
+            #city_ul .city04{transition:margin 1.5s linear 2.5s;}
+            #city_ul .city05{transition:margin 1.5s linear 3s;}
 
-            #cityArea:hover li{margin-top:0;}
+            
 
 
-            #city li .img{width:100%;}
-            #city li .img a{width:100%;}
-            #city .img a img{width:100%;}
+            #city_ul li .img{width:100%;}
+            #city_ul li .img a{width:100%;}
+            #city_ul .img a img{width:100%;}
 
-            #city ul:after{content:""; display:block; clear:both;}
+            #city_ul ul:after{content:""; display:block; clear:both;}
 
 
         /*####### festival ########*/
             #festivalArea{width:100%; overflow:hidden; padding:100px 0;}
-            #festival{width:100%; height:525px; margin:0 auto; font-family: 'M PLUS Rounded 1c', sans-serif;}
+            #festival{width:1903px; height:525px; margin:0 auto; font-family: 'M PLUS Rounded 1c', sans-serif; position:relative;}
             /* 각 li의 크기 350 * 8 + margin-left:20 * 8 + 중앙 맞추기 위해 + 20px 해서 width 2980px 로 설정 */
 
             #festival ul{width:2980px; height:100%;}
@@ -228,11 +235,18 @@
             #festival .dateBox .list-marker__total{width:100%; height:20px; font-size:13px; text-transform:uppercase;}
 
             /* 투명 박스(textBox) position 띄우기 */
-            #festival .textBox{width:320px; padding:15px; color:#efefef; font-size:20px;position:absolute; left:0; bottom:0;}
+            #festival .textBox{width:320px; padding:15px; color:#efefef; font-size:20px; position:absolute; left:0; bottom:0;}
 
             #festival .textBox .date{width:100%; height:40px; line-height:40px; font-weight:700; letter-spacing:-1px;}
             #festival .textBox .desc{width:100%; padding:3px 0; font-size:16px;}
             #festival .textBox .name{width:100%; height:25px; line-height:25px; font-size:12px;}
+
+            #fesBtn p{width:50px; height:100px;  position:absolute; top:50%;
+            transform:translatey(-50%); z-index:1; cursor:pointer;/*left:0;*/}
+            #fesBtn p img{width:100%; height:100%;}
+
+            #fesBtn .prevBtn{left:360px;}
+            #fesBtn .nextBtn{right:390px;}
 
 
 
@@ -314,11 +328,53 @@
 
     <script>
         $(document).ready(function(){
-
+            //visual
             $("#visual").mouseover(function(){
                 $("#visual .textBox").css({"left":"400px"});
                 $("#visual .desc").css({"color":"#00a"});
             })
+			
+            // city
+/*
+			$("#city .img a img").click(function(){
+				$("#cityArea").css({"backgroundImage":"url("+$(this).attr('src')+")","backgroundSize":"50% 100%"});
+
+				return false;
+			});*/
+
+            $("#cityArea").mouseover(function(){
+                $("#city_ul li").css({"marginTop":"0px"});
+            })
+
+
+
+
+            //festival
+
+            $("#festival ul").prepend($("#festival ul li:last"));
+			$("#festival ul").css({"marginLeft":"-370px"})
+
+			$(".nextBtn").click(function(){
+				$("#festival ul").animate({"marginLeft":"-=370px"},500,"swing",function(){
+					
+					$("#festival ul").append( $("#festival ul li:eq(0)") );
+
+					$("#festival ul").css({"marginLeft":"-370px"});
+				});
+			
+			});
+
+
+            $(".prevBtn").click(function(){
+				$("#festival ul").animate({"marginLeft":"+=370px"},500,"swing",function(){
+					$("#festival ul").prepend( $("#festival ul li:last") );
+					$("#festival ul").css({"marginLeft":"-370px"});
+				});
+			
+			});
+
+			
+
 
         })
     </script>
@@ -522,7 +578,7 @@
                     </div>
                     <p class="map_img">
                         <a href="#" title="canada map">
-                            <img src="img/index/map.jpg" alt="캐나다 지도"/>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17543.99846559061!2d-114.44353284251204!3d62.47097438148618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53d1f12ca34682c9%3A0xb4c137244371ef81!2z7LqQ64KY64ukIOy6kOuCmOuLpCDrtoHshJzrtoAg7Jew67CpIOynge2VoOyngCDsmJDroZzrgpjsnbTtlIQ!5e0!3m2!1sko!2skr!4v1651119103992!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </a>
                     </p>
                 </div>
@@ -610,7 +666,64 @@
 
             <section id="cityArea">
                 <h2>city</h2>
+                <!--
                 <div id="city">
+                    <ul>
+                        <li class="city00">
+                            <p class="img">
+                                <a href="#" title="Yellowknife">
+                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city01">
+                            <p class="img">
+                                <a href="#" title="Quebec">
+                                    <img src="img/index/city_01.jpg" alt="Quebec"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city02">
+                            <p class="img">
+                                <a href="#" title="Vancouver">
+                                    <img src="img/index/city_02.jpg" alt="Vancouver"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city03">
+                            <p class="img">
+                                <a href="#" title="Toronto">
+                                    <img src="img/index/city_03.jpg" alt="Toronto"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city04">
+                            <p class="img">
+                                <a href="#" title="Ottawa">
+                                    <img src="img/index/city_04.jpg" alt="Ottawa"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city05">
+                            <p class="img">
+                                <a href="#" title="Montreal">
+                                    <img src="img/index/city_05.jpg" alt="Montreal"/>
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                -->
+                <div id="city">
+                    <div class="cover">
+
+                    </div>
+                    <div class="desc">
+                        
+                    </div>
+                    
+                </div>
+                <div id="city_ul">
                     <ul>
                         <li class="city00">
                             <p class="img">
@@ -661,11 +774,16 @@
             <section id="festivalArea">
                 <h2>festival</h2>
                 <div id="festival">
+                    <div id="fesBtn">
+                        <p class="nextBtn">
+                            <img src="img/index/next.png" alt="다음버튼"/>
+                        </p>
+                        <p class="prevBtn">
+                            <img src="img/index/prev.png" alt="이전버튼"/>
+                        </p>
+                    </div>
                     <ul>
-                        <!--
-                           
-                            Winterlude, Ottawa
-                        -->
+                        
                         <li>
                             <p class="img">
                                 <a href="#" title="Christmas light ,Victoria">
@@ -809,11 +927,11 @@
                                 <p class="desc">if you want to get in the fall spirit and go see some pumpkins, you would visit here</p>
                                 <p class="name">pumpkin patch, Vancouver</p>
                             </div>
+                            
                         </li>
                         
-                        
-                        
                     </ul>
+                    
                 </div>
             </section>
 
