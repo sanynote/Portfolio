@@ -117,7 +117,7 @@
             #map .pro_name{width:200px; height:100%;  background-color:pink; float:left;}
             #map .pro_name ul{width:100%; height:100%;}
             #map .pro_name li{width:100%; height:34px; line-height:34px; font-size:18px; transition:all 0.5s linear; float:left;}
-            #map .pro_name .first{padding-top:40px;}
+            #map .pro_name .first{margin-top:40px;}
 
             /*######## map / city_info #########*/
             #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
@@ -373,8 +373,12 @@
 			
 			});
 
+            //map
 
-			var mapLi = $("#map .pro_name li");
+
+            var mapLi = $("#map .pro_name li");
+			var cityImg = $("#map .city_info .city_image a img");
+            var mapImg = $("#map .map_img a iframe");
 
 			mapLi.click(function(){
 				
@@ -384,6 +388,13 @@
 				return false;
 			
 			});
+
+            $("mapLi:eq(1)").click(function () {
+                cityImg.attr("src", "img/index/map1.jpg");
+                // $(mapImg).attr("src", "");
+
+                // $(this).parent().attr("href", "#none"); 다른방식
+            });
 
 			
 
@@ -584,12 +595,12 @@
                         </a>
                         <p class="city_image">
                             <a href="#" title="Yukon">
-                                <img src="img/index/yukon.jpg" alt="유콘이미지"/>
+                                <img src="img/index/map0.jpg" alt="유콘이미지"/>
                             </a>
                         </p>
                     </div>
                     <p class="map_img">
-                        <a href="#" title="canada map">
+                        <a href="#none" title="canada map">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17543.99846559061!2d-114.44353284251204!3d62.47097438148618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53d1f12ca34682c9%3A0xb4c137244371ef81!2z7LqQ64KY64ukIOy6kOuCmOuLpCDrtoHshJzrtoAg7Jew67CpIOynge2VoOyngCDsmJDroZzrgpjsnbTtlIQ!5e0!3m2!1sko!2skr!4v1651119103992!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </a>
                     </p>
