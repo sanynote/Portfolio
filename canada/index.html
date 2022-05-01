@@ -48,7 +48,7 @@
 
         /*########## gnb / langArea ###########*/
             #gnb #langArea{width:170px; height:40px; padding:22px 0; float:left;}
-            #langArea .lang{width:168px; height:38px; text-align:center; border:1px solid #ccc;}
+            #langArea .lang{width:168px; height:38px; text-align:center; outline:1px solid #ccc;}
             #langArea .lang p{width:100%; height:100%; line-height:40px;}
             #langArea .lang ul{width:100%; height:100%; line-height:40px;}
             #langArea .lang li{width:100%; height:100%;}
@@ -56,7 +56,7 @@
             /* 기능 만들기 */
             #langArea .lang ul{display:none;}
             #langArea .lang:hover ul{display:block;}
-            #langArea .lang:hover li{border-top:1px solid #ccc;}
+            #langArea .lang:hover li{outline:1px solid #ccc; background-color:#fff;}
 
         /*######### container #########*/
             #container{width:100%;}
@@ -114,7 +114,7 @@
             #map{width:1200px; height:505px; margin:0 auto;}
 
             /*######## map / pro_name #########*/
-            #map .pro_name{width:200px; height:100%;  background-color:pink; float:left;}
+            #map .pro_name{width:200px; height:100%; float:left;}
             #map .pro_name ul{width:100%; height:100%;}
             #map .pro_name li{width:100%; height:34px; line-height:34px; font-size:18px; transition:all 0.5s linear; float:left;}
             #map .pro_name .first{margin-top:40px;}
@@ -154,10 +154,12 @@
             #season .cont li a{display:block; width:100%; height:100%;}
 
             /* season / cont / li */
+            /*
             #season .cont  a .img{width:200px; float:left; overflow:hidden; transform:translatex(50px);
 			transition:transform 0.3s ease-in;}
 
 			#season .cont li a:hover .img{transform:translatex(0);}
+            */
 
             #season .cont  a .img img{width:150%; border-radius:20px 0 0 20px;}
 
@@ -340,7 +342,9 @@
 				$("#cityArea").css({"backgroundImage":"url("+$(this).attr('src')+")","backgroundSize":"50% 100%"});
 
 				return false;
-			});*/
+			});
+            
+*/
 
             $("#cityArea").mouseover(function(){
                 $("#city_ul li").css({"marginTop":"0px"});
@@ -374,8 +378,6 @@
 			});
 
             //map
-
-
             var mapLi = $("#map .pro_name li");
 			var cityImg = $("#map .city_info .city_image a img");
             var mapImg = $("#map .map_img a iframe");
@@ -389,15 +391,36 @@
 			
 			});
 
-            $("mapLi:eq(1)").click(function () {
-                cityImg.attr("src", "img/index/map1.jpg");
+            $("mapLi:eq(2)").click(function () {
+                //cityImg.attr("src", "img/index/map1.jpg");
                 // $(mapImg).attr("src", "");
 
-                // $(this).parent().attr("href", "#none"); 다른방식
+                // $(this).css({"backgroundColor":"red"});
+
             });
 
-			
+			// season
 
+            $("#season .cont  a .img").css({"width":"200px","float":"left","overflow":"hidden","transform":"translatex(50px)"});
+            // transition:transform 0.3s ease-in;}
+
+
+            $("#season .cont li:eq(0) a").mouseover(function(){
+				$("#season .cont li:eq(0) a .img").css({"transform":"translatex(0)"
+				});
+			});
+            $("#season .cont li:eq(1) a").mouseover(function(){
+				$("#season .cont li:eq(1) a .img").css({"transform":"translatex(0)"
+				});
+			});
+            $("#season .cont li:eq(2) a").mouseover(function(){
+				$("#season .cont li:eq(2) a .img").css({"transform":"translatex(0)"
+				});
+			});
+            $("#season .cont li:eq(3) a").mouseover(function(){
+				$("#season .cont li:eq(3) a .img").css({"transform":"translatex(0)"
+				});
+			});
 
         })
     </script>
