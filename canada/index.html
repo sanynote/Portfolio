@@ -185,20 +185,24 @@
             #cityArea{width:100%; height:900px; position:relative;}
 
             #city{width:1800px; height:100%; margin:0 auto; background-color:#ededed;}
-            #city .cover{width:50%; height:100%; background-color:#caf; float:left;}
-            #city .desc{width:50%; height:100%;background-color:pink; float:left;}
-
-            #city :after{content:""; display:block; clear:both;}
+            
 
             /* 각 li 270px + margin-left:20 == 290 * 6 ==1740 +20 ==1760 */
             #cityArea #city_ul{width:100%; position:absolute; left:0; top:0;}
-            #city_ul ul{width:1020px; margin:0 auto; }
+            #city_ul ul{width:1360px; margin:0 auto; }
             #city_ul li{width:150px; height:150px; float:left; overflow:hidden; background-color:#aef; margin-left:20px;
             border-radius:0 0 0 0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
             transition:border 0.5s linear, box-shadow 0.5s linear;}
 
 
             #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
+/*
+            p{width:200px; height:200px; background-color:aqua; margin-bottom:20px; transition:transform 0.7s linear 0.3s;}
+
+
+
+        .translate1{transform:translate(0,0);}
+        .translate1:hover{transform:translate(200px, 50px);}*/
 
             /* li delay 개별작업 */
             #city_ul .city00{transition:margin 1.5s linear 0.5s;}
@@ -207,6 +211,8 @@
             #city_ul .city03{transition:margin 1.5s linear 2s;}
             #city_ul .city04{transition:margin 1.5s linear 2.5s;}
             #city_ul .city05{transition:margin 1.5s linear 3s;}
+            #city_ul .city06{transition:margin 1.5s linear 3.5s;}
+            #city_ul .city07{transition:margin 1.5s linear 4s;}
 
             
 
@@ -422,7 +428,7 @@
 				});
 			});
 
-        })
+        });
     </script>
 	
  </head>
@@ -810,6 +816,20 @@
                             <p class="img">
                                 <a href="#" title="Montreal">
                                     <img src="img/index/city_05.jpg" alt="Montreal"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city06">
+                            <p class="img">
+                                <a href="#" title="Yellowknife">
+                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
+                                </a>
+                            </p>
+                        </li>
+                        <li class="city07">
+                            <p class="img">
+                                <a href="#" title="Yellowknife">
+                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
                                 </a>
                             </p>
                         </li>
