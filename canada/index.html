@@ -62,16 +62,16 @@
             #container{width:100%;}
 
         /*######## visual ##########*/     
-            #visual{width:100%; height:800px; background-image:url("img/index/visual_00.jpg");
+            #visual{width:100%; height:800px; background-image:url("img/index/visual_08.jpg");
             background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
 
-            #visual .textBox{width:410px; position:absolute; left:-2000px; top:80px;
+            #visual .textBox{width:410px; position:absolute; left:-2000px; top:340px;
 			transition:left 0.7s linear; font-family: 'Dancing Script', cursive;}
                 
-            #visual .textBox .side{font-size:35px; position:absolute; left:20px; top:35px; color:red;}
-			#visual .textBox .title{font-size:150px; font-weight:400; color:red;}
-			#visual .textBox .desc{font-size:26px; color:rgba(255,255,255,1); position:absolute; left:0; bottom:-5px;
-			transition:color 0.5s linear 0.7s;}
+            #visual .textBox .side{font-size:35px; position:absolute; left:20px; top:35px; color:#a00;}
+			#visual .textBox .title{font-size:150px; font-weight:400; color:#a00;}
+			#visual .textBox .desc{font-size:26px; color:#00a; position:absolute; left:0; bottom:-5px;
+			transition:color 1s linear 1s;}
 
         /*########### natural ###########*/
             #naturalArea{width:100%; padding:100px 0;}
@@ -154,12 +154,7 @@
             #season .cont li a{display:block; width:100%; height:100%;}
 
             /* season / cont / li */
-            /*
-            #season .cont  a .img{width:200px; float:left; overflow:hidden; transform:translatex(50px);
-			transition:transform 0.3s ease-in;}
-
-			#season .cont li a:hover .img{transform:translatex(0);}
-            */
+            
 
             #season .cont  a .img img{width:150%; border-radius:20px 0 0 20px;}
 
@@ -184,25 +179,19 @@
         /*######## city ##########*/
             #cityArea{width:100%; height:900px; position:relative;}
 
-            #city{width:1800px; height:100%; margin:0 auto; background-color:#ededed;}
+            #city{width:1800px; height:100%; margin:0 auto; background-color:#C4D5E6;}
             
 
             /* 각 li 270px + margin-left:20 == 290 * 6 ==1740 +20 ==1760 */
-            #cityArea #city_ul{width:100%; position:absolute; left:0; top:0;}
+            #city_ul{width:100%; position:absolute; left:0; top:0;}
             #city_ul ul{width:1360px; margin:0 auto; }
-            #city_ul li{width:150px; height:150px; float:left; overflow:hidden; background-color:#aef; margin-left:20px;
+            #city_ul li{width:150px; height:150px; float:left; overflow:hidden; margin-left:20px;
             border-radius:0 0 0 0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
             transition:border 0.5s linear, box-shadow 0.5s linear;}
 
 
             #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
-/*
-            p{width:200px; height:200px; background-color:aqua; margin-bottom:20px; transition:transform 0.7s linear 0.3s;}
 
-
-
-        .translate1{transform:translate(0,0);}
-        .translate1:hover{transform:translate(200px, 50px);}*/
 
             /* li delay 개별작업 */
             #city_ul .city00{transition:margin 1.5s linear 0.5s;}
@@ -237,7 +226,7 @@
             #festival .img a img{height:100%;}
 
             /* 노란 박스(dateBox) position 띄우기 */
-            #festival .dateBox{width:50px; padding:0 10px 5px; background-color:gold; position:absolute; left:15px; top:-15px;}
+            #festival .dateBox{width:50px; padding:0 10px 5px; background-color:gold; box-shadow:-5px -5px 2px rgba(0,0,0,0.3); position:absolute; left:15px; top:-15px;}
             #festival .dateBox div{width:100%; text-align:center; font-weight:700;}
             #festival .dateBox .list-marker__index{width:100%; height:40px; font-size:35px;}
             #festival .dateBox .list-marker__total{width:100%; height:20px; font-size:13px; text-transform:uppercase;}
@@ -249,8 +238,8 @@
             #festival .textBox .desc{width:100%; padding:3px 0; font-size:16px;}
             #festival .textBox .name{width:100%; height:25px; line-height:25px; font-size:12px;}
 
-            #fesBtn p{width:50px; height:100px;  position:absolute; top:50%;
-            transform:translatey(-50%); z-index:1; cursor:pointer;/*left:0;*/}
+            #fesBtn p{width:100px; height:100px;  position:absolute; top:50%;
+            transform:translatey(-50%); z-index:1; cursor:pointer; opacity:0.4; /*left:0;*/}
             #fesBtn p img{width:100%; height:100%;}
 
             #fesBtn .prevBtn{left:360px;}
@@ -260,7 +249,7 @@
 
         /*######## sns ##########*/
             #snsArea{width:100%;}
-            #sns {width:100%; height:910px; margin:0 auto; background-color:#ddf;}
+            #sns {width:100%; height:910px; margin:0 auto; background-color:#F7F7F7;}
             #sns ul{width:1370px; height:400px; padding-top:60px; margin:0 auto;}
             #sns li{width:240px; height:350px; margin-left:20px; margin-top:30px; padding-left:10px; background-color:#fff; float:left;}
 
@@ -281,7 +270,7 @@
 
         /*########## footer ##########*/
             #footer{width:1903px; background-color:#F7F7F7; margin:0 auto;}
-            #title{width:100%; text-align:center;}
+            #title{font-size:60px; width:100%; text-align:center;}
 
         /*######### 이미지영역 ########*/
             #img{width:100%; height:476px;}
@@ -338,8 +327,8 @@
         $(document).ready(function(){
             //visual
             $("#visual").mouseover(function(){
-                $("#visual .textBox").css({"left":"400px"});
-                $("#visual .desc").css({"color":"#00a"});
+                $("#visual .textBox").css({"left":"600px"});
+                $("#visual .desc").css({"color":"#ccc"});
             })
 			
             // city
@@ -354,6 +343,11 @@
 
             $("#cityArea").mouseover(function(){
                 $("#city_ul li").css({"marginTop":"0px"});
+            })
+
+            $("#city_ul li").click(function(){
+                //$(this).css({"marginTop":"0px"});
+                //$("#city_ul li").css({"marginTop":"0px"});
             })
 
 
@@ -383,6 +377,11 @@
 			
 			});
 
+            $("#fesBtn p").click(function(){
+                $("#fesBtn p").css({"opacity":"0.4"})
+                $(this).css({"opacity":"1"})
+            })
+
             //map
             var mapLi = $("#map .pro_name li");
 			var cityImg = $("#map .city_info .city_image a img");
@@ -407,26 +406,15 @@
 
 			// season
 
-            $("#season .cont  a .img").css({"width":"200px","float":"left","overflow":"hidden","transform":"translatex(50px)"});
-            // transition:transform 0.3s ease-in;}
+            $("#season .cont  a .img").css({"width":"200px","float":"left","overflow":"hidden","transition":"transform 0.5s ease-in","transform":"translatex(50px)"});
 
+            $("#season .cont li a").mouseover(function(){
+				$(this).children(".img").css({"transform":"translatex(0)"
+				});
+			});
 
-            $("#season .cont li:eq(0) a").mouseover(function(){
-				$("#season .cont li:eq(0) a .img").css({"transform":"translatex(0)"
-				});
-			});
-            $("#season .cont li:eq(1) a").mouseover(function(){
-				$("#season .cont li:eq(1) a .img").css({"transform":"translatex(0)"
-				});
-			});
-            $("#season .cont li:eq(2) a").mouseover(function(){
-				$("#season .cont li:eq(2) a .img").css({"transform":"translatex(0)"
-				});
-			});
-            $("#season .cont li:eq(3) a").mouseover(function(){
-				$("#season .cont li:eq(3) a .img").css({"transform":"translatex(0)"
-				});
-			});
+           
+
 
         });
     </script>
@@ -767,12 +755,8 @@
                 </div>
                 -->
                 <div id="city">
-                    <div class="cover">
+                    
 
-                    </div>
-                    <div class="desc">
-                        
-                    </div>
                     
                 </div>
                 <div id="city_ul">
@@ -822,14 +806,14 @@
                         <li class="city06">
                             <p class="img">
                                 <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
+                                    <img src="img/index/city_06.jpg" alt="Yellowknife"/>
                                 </a>
                             </p>
                         </li>
                         <li class="city07">
                             <p class="img">
                                 <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
+                                    <img src="img/index/city_08.jpg" alt="Yellowknife"/>
                                 </a>
                             </p>
                         </li>
@@ -842,10 +826,10 @@
                 <div id="festival">
                     <div id="fesBtn">
                         <p class="nextBtn">
-                            <img src="img/index/next.png" alt="다음버튼"/>
+                            <img src="img/index/arrow1.png" alt="다음버튼"/>
                         </p>
                         <p class="prevBtn">
-                            <img src="img/index/prev.png" alt="이전버튼"/>
+                            <img src="img/index/arrow0.png" alt="이전버튼"/>
                         </p>
                     </div>
                     <ul>
