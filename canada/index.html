@@ -47,16 +47,17 @@
             #gnb .search a img{width:100%;}
 
         /*########## gnb / langArea ###########*/
-            #gnb #langArea{width:170px; height:40px; padding:22px 0; float:left;}
-            #langArea .lang{width:168px; height:38px; text-align:center; outline:1px solid #ccc;}
-            #langArea .lang p{width:100%; height:100%; line-height:40px;}
-            #langArea .lang ul{width:100%; height:100%; line-height:40px;}
-            #langArea .lang li{width:100%; height:100%;}
+            #gnb #langArea{width:170px; height:40px; float:left; padding-top:20px;}
+            #langArea .lang{width:100%; height:100%; text-align:center; }
+            
+            #langArea .lang p{width:100%; line-height:40px; border:1px solid #ccc; border-bottom:none;}
+            #langArea .lang ul{width:100%;  line-height:40px; border:1px solid #ccc; border-top:none;}
+            #langArea .lang li{width:100%; border-top:1px solid #ccc;}*/
 
             /* 기능 만들기 */
-            #langArea .lang ul{display:none;}
+      
             #langArea .lang:hover ul{display:block;}
-            #langArea .lang:hover li{outline:1px solid #ccc; background-color:#fff;}
+            #langArea .lang:hover li{ background-color:#fff; }
 
         /*######### container #########*/
             #container{width:100%;}
@@ -123,15 +124,16 @@
             #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
             #map .city_info .title{width:100%; height:75px; line-height:75px; font-size:30px;}
 
-            /* city_info 안의 city_image 설계 */
+            /* city_info 안의 city_image 설계*/
             #map .city_info .city_image{width:100%; height:430px; overflow:hidden;}
             #map .city_info .city_image a{width:100%;}
-            #map .city_image img{width:100%;}
+            #map .city_image img{width:100%;} 
+
+
 
             /*######## map / map_img #########*/
             #map .map_img{width:600px; height:505px; float:left;}
             #map .map_img a iframe{width:100%; height:100%; border:0;}
-       
 
 
 
@@ -186,29 +188,27 @@
             #city_ul{width:100%; position:absolute; left:0; top:0;}
             #city_ul ul{width:1360px; margin:0 auto; }
             #city_ul li{width:150px; height:150px; float:left; overflow:hidden; margin-left:20px;
-            border-radius:0 0 0 0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
-            transition:border 0.5s linear, box-shadow 0.5s linear;}
+            border-radius:0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
+            background-repeat:no-repeat; background-size:100%;
+            background-position:center 50%; /*transition:border-radius 0.5s linear;*/  
+        }
+            #city_ul ul li a{display:block; height:150px;text-indent:-9999px;}
 
 
             #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
 
 
             /* li delay 개별작업 */
-            #city_ul .city00{transition:margin 1.5s linear 0.5s;}
-            #city_ul .city01{transition:margin 1.5s linear 1s;}
-            #city_ul .city02{transition:margin 1.5s linear 1.5s;}
-            #city_ul .city03{transition:margin 1.5s linear 2s;}
-            #city_ul .city04{transition:margin 1.5s linear 2.5s;}
-            #city_ul .city05{transition:margin 1.5s linear 3s;}
-            #city_ul .city06{transition:margin 1.5s linear 3.5s;}
-            #city_ul .city07{transition:margin 1.5s linear 4s;}
+            #city_ul .city00{transition:margin 1.5s linear 0.5s,border-radius 0.3s linear; background-image:url("img/index/city_00.jpg");}
+            #city_ul .city01{transition:margin 1.5s linear 1s,border-radius 0.3s linear; background-image:url("img/index/city_01.jpg");}
+            #city_ul .city02{transition:margin 1.5s linear 1.5s,border-radius 0.3s linear; background-image:url("img/index/city_02.jpg");}
+            #city_ul .city03{transition:margin 1.5s linear 2s,border-radius 0.3s linear; background-image:url("img/index/city_03.jpg");}
+            #city_ul .city04{transition:margin 1.5s linear 2.5s,border-radius 0.3s linear; background-image:url("img/index/city_04.jpg");}
+            #city_ul .city05{transition:margin 1.5s linear 3s,border-radius 0.3s linear; background-image:url("img/index/city_05.jpg");}
+            #city_ul .city06{transition:margin 1.5s linear 3.5s,border-radius 0.3s linear; background-image:url("img/index/city_06.jpg");}
+            #city_ul .city07{transition:margin 1.5s linear 4s,border-radius 0.3s linear; background-image:url("img/index/city_07.jpg");}
+            /*#city_ul li{transition:,border-radius 0.5s linear;}*/
 
-            
-
-
-            #city_ul li .img{width:100%;}
-            #city_ul li .img a{width:100%;}
-            #city_ul .img a img{width:100%;}
 
             #city_ul ul:after{content:""; display:block; clear:both;}
 
@@ -325,6 +325,21 @@
 
     <script>
         $(document).ready(function(){
+				// header
+				$("#langArea .lang ul").hide();
+				$("#langArea .lang p").css({"borderBottom":"1px solid #ccc"});
+
+				$("#langArea .lang p").mouseover(function(){
+					$(this).css({"borderBottom":"none"});
+					$("#langArea .lang ul").stop().slideDown(1);
+				});
+				
+				$("#langArea .lang").mouseleave(function(){
+					$("#langArea .lang p").css({"borderBottom":"1px solid #ccc"});
+					$("#langArea .lang ul").stop().slideUp(1);
+				});
+
+
             //visual
             $("#visual").mouseover(function(){
                 $("#visual .textBox").css({"left":"600px"});
@@ -344,12 +359,6 @@
             $("#cityArea").mouseover(function(){
                 $("#city_ul li").css({"marginTop":"0px"});
             })
-
-            $("#city_ul li").click(function(){
-                //$(this).css({"marginTop":"0px"});
-                //$("#city_ul li").css({"marginTop":"0px"});
-            })
-
 
 
 
@@ -387,6 +396,17 @@
 			var cityImg = $("#map .city_info .city_image a img");
             var mapImg = $("#map .map_img a iframe");
 
+
+			// 지도 좌표
+			// 
+			var maps= ["map0","map1","map2"];
+
+
+			maps[0] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6908834.548220139!2d-141.3306530451577!3d64.99117237921472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51178198b4528b89%3A0x2e149cd561cc96ea!2z7LqQ64KY64ukIOycoOy9mCDthYzrpqzthqDrpqw!5e0!3m2!1sko!2skr!4v1651647435405!5m2!1sko!2skr"; 
+
+
+			maps[1] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28756542.23686375!2d-123.5315432503485!3d63.9018759248234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d0823492a24a5ed%3A0xffd371054ff1a9b6!2z7LqQ64KY64ukIOuIhOuCmOu2gO2KuA!5e0!3m2!1sko!2skr!4v1651647752695!5m2!1sko!2skr"; 
+
 			mapLi.click(function(){
 				
 				mapLi.css({"backgroundColor":"#fff","textIndent":"0"});
@@ -396,21 +416,30 @@
 			
 			});
 
-            $("mapLi:eq(2)").click(function () {
+            mapLi.click(function () {
+            //mapLi:eq(2).click(function () {
                 //cityImg.attr("src", "img/index/map1.jpg");
                 // $(mapImg).attr("src", "");
 
-                // $(this).css({"backgroundColor":"red"});
+                var title = $(this).find("a").attr("title");
+				alert(title);
 
+				if(title == "Yukon"){
+					mapImg.attr("src", maps[0]);
+				}
+				else if(title == "Nunavut"){
+					mapImg.attr("src", maps[1]);
+				}
+
+
+				return false;
             });
 
 			// season
-
             $("#season .cont  a .img").css({"width":"200px","float":"left","overflow":"hidden","transition":"transform 0.5s ease-in","transform":"translatex(50px)"});
 
             $("#season .cont li a").mouseover(function(){
-				$(this).children(".img").css({"transform":"translatex(0)"
-				});
+				$(this).children(".img").css({"transform":"translatex(0)"});
 			});
 
            
@@ -463,8 +492,10 @@
                             </a>
                         </p>
                     </div>
+    
                     <div id="langArea">
                         <div class="lang">
+                            
                             <p><a href="#" title="English">English</a></p>
                             <ul>
                                 <li><a href="#" title="Español">Español</a></li>
@@ -479,21 +510,6 @@
                         </div>
                     </div>
 
-                    <!--<div class="langArea">
-                        <div class="lang">
-                            <select>
-                                <option value="English" selected="selected">English</option>
-                                <option value="Español">Español</option>
-                                <option value="Deutsch">Deutsch</option>
-                                <option value="Français">Français</option>
-                                <option value="Italiano">Italiano</option>
-                                <option value="Português">Português</option>
-                                <option value="русский">русский</option>
-                                <option value="مجلس التعاون الخليجي (عربي)">مجلس التعاون الخليجي (عربي)</option>
-                                <option value="日本語">日本語</option>
-                            </select>
-                        </div>    
-                    </div>-->
                 </nav>
 
 
@@ -592,9 +608,9 @@
                     <div class="pro_name">
                         <ul>
                             <li class="first"><a href="#" title="Yukon">Yukon</a></li>
-                            <li><a href="#" title="Northwest Territories">Northwest Territories</a></li>
+                            <li><a href="#" title="Northwest_Territories">Northwest Territories</a></li>
                             <li><a href="#" title="Nunavut">Nunavut</a></li>
-                            <li><a href="#" title="British Columbia">British Columbia</a></li>
+                            <li><a href="#" title="British_Columbia">British Columbia</a></li>
                             <li><a href="#" title="Alberta">Alberta</a></li>
                             <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
                             <li><a href="#" title="Manitoba">Manitoba</a></li>
@@ -618,7 +634,7 @@
                     </div>
                     <p class="map_img">
                         <a href="#none" title="canada map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17543.99846559061!2d-114.44353284251204!3d62.47097438148618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53d1f12ca34682c9%3A0xb4c137244371ef81!2z7LqQ64KY64ukIOy6kOuCmOuLpCDrtoHshJzrtoAg7Jew67CpIOynge2VoOyngCDsmJDroZzrgpjsnbTtlIQ!5e0!3m2!1sko!2skr!4v1651119103992!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17543.99846559061!2d-114.44353284251204!3d62.47097438148618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53d1f12ca34682c9%3A0xb4c137244371ef81!2z7LqQ64KY64ukIOy6kOuCmOuLpCDrtoHshJzrtoAg7Jew67CpIOynge2VoOyngCDsmJDroZzrgpjsnbTtlIQ!5e0!3m2!1sko!2skr!4v1651119103992!5m2!1sko!2skr"></iframe>
                         </a>
                     </p>
                 </div>
@@ -706,117 +722,20 @@
 
             <section id="cityArea">
                 <h2>city</h2>
-                <!--
                 <div id="city">
-                    <ul>
-                        <li class="city00">
-                            <p class="img">
-                                <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city01">
-                            <p class="img">
-                                <a href="#" title="Quebec">
-                                    <img src="img/index/city_01.jpg" alt="Quebec"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city02">
-                            <p class="img">
-                                <a href="#" title="Vancouver">
-                                    <img src="img/index/city_02.jpg" alt="Vancouver"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city03">
-                            <p class="img">
-                                <a href="#" title="Toronto">
-                                    <img src="img/index/city_03.jpg" alt="Toronto"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city04">
-                            <p class="img">
-                                <a href="#" title="Ottawa">
-                                    <img src="img/index/city_04.jpg" alt="Ottawa"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city05">
-                            <p class="img">
-                                <a href="#" title="Montreal">
-                                    <img src="img/index/city_05.jpg" alt="Montreal"/>
-                                </a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                -->
-                <div id="city">
-                    
-
                     
                 </div>
                 <div id="city_ul">
                     <ul>
-                        <li class="city00">
-                            <p class="img">
-                                <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_00.jpg" alt="Yellowknife"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city01">
-                            <p class="img">
-                                <a href="#" title="Quebec">
-                                    <img src="img/index/city_01.jpg" alt="Quebec"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city02">
-                            <p class="img">
-                                <a href="#" title="Vancouver">
-                                    <img src="img/index/city_02.jpg" alt="Vancouver"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city03">
-                            <p class="img">
-                                <a href="#" title="Toronto">
-                                    <img src="img/index/city_03.jpg" alt="Toronto"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city04">
-                            <p class="img">
-                                <a href="#" title="Ottawa">
-                                    <img src="img/index/city_04.jpg" alt="Ottawa"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city05">
-                            <p class="img">
-                                <a href="#" title="Montreal">
-                                    <img src="img/index/city_05.jpg" alt="Montreal"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city06">
-                            <p class="img">
-                                <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_06.jpg" alt="Yellowknife"/>
-                                </a>
-                            </p>
-                        </li>
-                        <li class="city07">
-                            <p class="img">
-                                <a href="#" title="Yellowknife">
-                                    <img src="img/index/city_08.jpg" alt="Yellowknife"/>
-                                </a>
-                            </p>
-                        </li>
+                        <li class="city00"><a href="#none" title="city00">city00</a></li>
+                        <li class="city01"><a href="#none" title="city01">city00</a></li>
+                        <li class="city02"><a href="#none" title="city02">city00</a></li>
+                        <li class="city03"><a href="#none" title="city03">city00</a></li>
+                        <li class="city04"><a href="#none" title="city04">city00</a></li>
+                        <li class="city05"><a href="#none" title="city05">city00</a></li>
+                        <li class="city06"><a href="#none" title="city06">city00</a></li>
+                        <li class="city07"><a href="#none" title="city07">city00</a></li>
+                        
                     </ul>
                 </div>
             </section>
