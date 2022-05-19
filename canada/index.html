@@ -13,7 +13,8 @@
 		*{margin:0; padding:0;}
         li{list-style-type:none;}
         a:link,a:visited{text-decoration:none; color:#333;}
-        body{font-family: 'Indie Flower', cursive;}      
+        a:hover, a:focus{text-decoration:none; color:#f00; outline:none;}
+        body{font-family: 'Indie Flower', cursive; overflow-x:hidden;}      
 
         /*######### wrap #########*/
             #wrap{min-width:1025px; width:100%;}
@@ -21,38 +22,6 @@
             
         /*########### header ##########*/
             #headerWrap{width:1903px;}
-
-        /* fixnav */
-        
-            #fixnav{width:1603px; padding:0 150px; height:84px; margin:0 auto;position:fixed; width:100%; height:84px; background-color:#fff; left:0; top:-84px; z-index:2;}
-            #fixnav .logo{width:60px; height:62px; padding-top:22px; float:left;}
-            /* 84-39(로고높이) ==45 /2 == 22 or 23 */
-            #fixnav a img{width:100%;}
-            #fixnav .text {width:203px; padding-top:26px; height:58px; float:left;}
-            #fixnav .text p{width:90px; font-size:12px; margin:0 auto;}
-            #fixnav .gnb{width:1340px; height:84px; float:left;}
-            #fixnav .gnb .main{width:1100px; height:100%; float:left; position:relative;}
-            #fixnav .gnb .main ul{width:700px; height:100%; position:absolute; top:0; right:0;}
-            #fixnav .gnb .main li{width:120px; height:100%; line-height:84px; float:left; text-align:center;}
-            #fixnav .gnb .main li a{text-transform:uppercase; font-size:14px; font-weight:700;}
-
-            #fixnav .gnb .main li:hover{border-bottom:2px solid #f00;}
-
-            #fixnav .gnb .search{width:50px; height:52px; padding-top:32px; padding-left:20px; float:left;}
-            /* 84-20 == 64 / 2 == 32 */
-            #fixnav .gnb .search p{width:20px;}
-            #fixnav .gnb .search a img{width:100%;}
-
-            #fixnav .gnb .langArea{width:170px; height:40px; float:left; padding-top:20px;}
-            #fixnav .langArea .lang{width:100%; height:100%; text-align:center; }
-            
-            #fixnav .langArea .lang p{width:100%; line-height:40px; border:1px solid #ccc; border-bottom:none;}
-            #fixnav .langArea .lang ul{width:100%;  line-height:40px; border:1px solid #ccc; border-top:none;}
-            #fixnav .langArea .lang li{width:100%; border-top:1px solid #ccc;}*/
-
-            #fixnav .langArea .lang:hover ul{display:block;}
-            #fixnav .langArea .lang:hover li{ background-color:#fff; }
-
 
 
         /*####### 실제사용영역 / 로고 ########*/
@@ -66,9 +35,9 @@
         /*####### gnb / main #######*/
             #gnb{width:1340px; height:84px; float:left;}
             #gnb .main{width:1100px; height:100%; float:left; position:relative;}
-            #gnb .main ul{width:700px; height:100%; position:absolute; top:0; right:0;}
-            #gnb .main li{width:120px; height:100%; line-height:84px; float:left; text-align:center;}
-            #gnb .main li a{text-transform:uppercase; font-size:14px; font-weight:700;}
+            #gnb .main ul{width:840px; height:100%; position:absolute; top:0; right:0;}
+            #gnb .main li{height:100%; line-height:84px; float:left; text-align:center;}
+            #gnb .main li a{padding:0 30px; text-transform:uppercase; font-size:16px; font-weight:700;}
 
         /* 기능만들기 */
             #gnb .main li:hover{border-bottom:2px solid #f00;}
@@ -91,6 +60,8 @@
       
             #langArea .lang:hover ul{display:block;}
             #langArea .lang:hover li{ background-color:#fff; }
+
+            .fixed{position:fixed; top:0; width:1280px; background-color:rgba(200,0,100,0.5); z-index:2;}
 
         /*######### container #########*/
             #container{width:100%;}
@@ -144,7 +115,7 @@
 
 
         /*######## mapArea ##########*/
-            #mapArea{width:100%;}
+            #mapArea{width:100%; padding:100px 0;}
             #map{width:1200px; height:505px; margin:0 auto;}
 
             /*######## map / pro_name #########*/
@@ -155,19 +126,15 @@
 
             /*######## map / city_info #########*/
             #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
-            #map .city_info .title{width:100%; height:75px; line-height:75px; font-size:30px;}
 
             /* city_info 안의 city_image 설계*/
-            #map .city_info .city_image{width:100%; height:430px; overflow:hidden;}
+            #map .city_info .city_image{width:100%; height:505px; overflow:hidden;}
             #map .city_info .city_image a{width:100%;}
             #map .city_image img{width:100%;} 
-
-
 
             /*######## map / map_img #########*/
             #map .map_img{width:600px; height:505px; float:left;}
             #map .map_img a iframe{width:100%; height:100%; border:0;}
-
 
 
         /*######## season ##########*/
@@ -223,9 +190,9 @@
             #city_ul li{width:150px; height:150px; float:left; overflow:hidden; margin-left:20px;
             border-radius:0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
             background-repeat:no-repeat; background-size:100%;
-            background-position:center 50%; /*transition:border-radius 0.5s linear;*/  
+            background-position:center 50%; 
         }
-            #city_ul ul li a{display:block; height:150px;text-indent:-9999px;}
+            #city_ul ul li a{display:block; height:150px; text-indent:-9999px;}
 
 
             #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
@@ -240,7 +207,7 @@
             #city_ul .city05{transition:margin 1.5s linear 3s,border-radius 0.3s linear; background-image:url("img/index/city_05.jpg");}
             #city_ul .city06{transition:margin 1.5s linear 3.5s,border-radius 0.3s linear; background-image:url("img/index/city_06.jpg");}
             #city_ul .city07{transition:margin 1.5s linear 4s,border-radius 0.3s linear; background-image:url("img/index/city_07.jpg");}
-            /*#city_ul li{transition:,border-radius 0.5s linear;}*/
+            
 
 
             #city_ul ul:after{content:""; display:block; clear:both;}
@@ -367,7 +334,58 @@
     <script>
         $(document).ready(function(){
             // header
-            /*
+
+            /* nav 띄우기 */
+            header = $("header");
+
+            wrapMarginT = parseInt($("#wrap").css("marginTop"));
+
+            // 03) header의 높이값 가져오기
+            headerH = $("header").height();
+            headH = wrapMarginT + headerH;
+
+
+            $(window).scroll(function(){
+                
+                var nowScroll = $(document).scrollTop();
+
+                if(headH <= nowScroll){
+                    header.addClass("fixed");
+                } else{
+                    header.removeClass("fixed");
+                }
+
+            })
+
+            // scroll focus 부분
+
+
+            $("#gnb .main li a:eq(0)").bind("click focus",function(){
+                var natural = $("#naturalArea").offset().top;
+                $("body,html").animate({scrollTop:natural},500);
+            });
+            $("#gnb .main li a:eq(1)").bind("click focus",function(){
+                var map = $("#mapArea").offset().top;
+                $("body,html").animate({scrollTop:map},500);
+            });
+            $("#gnb .main li a:eq(2)").bind("click focus",function(){
+                var season = $("#seaArea").offset().top;
+                $("body,html").animate({scrollTop:season},500);
+            });
+            $("#gnb .main li a:eq(3)").bind("click focus",function(){
+                var city = $("#cityArea").offset().top;
+                $("body,html").animate({scrollTop:city},500);
+            });
+            $("#gnb .main li a:eq(4)").bind("click focus",function(){
+                var festival = $("#festivalArea").offset().top;
+                $("body,html").animate({scrollTop:festival},500);
+            });
+            $("#gnb .main li a:eq(5)").bind("click focus",function(){
+                var sns = $("#snsArea").offset().top;
+                $("body,html").animate({scrollTop:sns},500);
+            });
+
+            // header 언어선택영역
             $("#langArea .lang ul").hide();
             $("#langArea .lang p").css({"borderBottom":"1px solid #ccc"});
 
@@ -380,31 +398,10 @@
                 $("#langArea .lang p").css({"borderBottom":"1px solid #ccc"});
                 $("#langArea .lang ul").stop().slideUp(1);
             });
-            */
-
-            $("#langArea .lang ul,#fixnav .lang ul").hide();
-            $("#langArea .lang p,#fixnav .lang p").css({"borderBottom":"1px solid #ccc"});
-
-            $("#langArea .lang p,#fixnav .lang p").mouseover(function(){
-                $(this).css({"borderBottom":"none"});
-                $("#langArea .lang ul,#fixnav .lang ul").stop().slideDown(1);
-            });
             
-            $("#langArea .lang,#fixnav .lang").mouseleave(function(){
-                $("#langArea .lang p,#fixnav .lang p").css({"borderBottom":"1px solid #ccc"});
-                $("#langArea .lang ul,#fixnav .lang ul").stop().slideUp(1);
-            });
 
-            $(window).scroll(function(){
-                var nowScroll = $(document).scrollTop();
-                console.log(nowScroll);
+            
 
-                if(nowScroll>0){
-                    $("#fixnav").stop().animate({top:"0"},100);
-                } else{
-                    $("#fixnav").stop().animate({top:"-84px"},100);
-                }
-		});
 
 
 
@@ -415,14 +412,6 @@
             })
 			
             // city
-/*
-			$("#city .img a img").click(function(){
-				$("#cityArea").css({"backgroundImage":"url("+$(this).attr('src')+")","backgroundSize":"50% 100%"});
-
-				return false;
-			});
-            
-*/
 
             $("#cityArea").mouseover(function(){
                 $("#city_ul li").css({"marginTop":"0px"});
@@ -461,47 +450,52 @@
 
             //map
             var mapLi = $("#map .pro_name li");
-			var cityImg = $("#map .city_info .city_image a img");
+			var cityImg = $("#map .city_info .city_image a");
             var mapImg = $("#map .map_img a iframe");
-
 
 			// 지도 좌표
 			
 			var maps= ["map0","map1","map2"];
 
 
-			maps[0] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6908834.548220139!2d-141.3306530451577!3d64.99117237921472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51178198b4528b89%3A0x2e149cd561cc96ea!2z7LqQ64KY64ukIOycoOy9mCDthYzrpqzthqDrpqw!5e0!3m2!1sko!2skr!4v1651647435405!5m2!1sko!2skr"; 
+			maps[0] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9396226.024147233!2d-144.52043111176556!3d65.26172809109086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51178198b4528b89%3A0x2e149cd561cc96ea!2sYukon%2C%20Canada!5e0!3m2!1sen!2skr!4v1652943494799!5m2!1sen!2skr"; 
 
 
-			maps[1] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28756542.23686375!2d-123.5315432503485!3d63.9018759248234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d0823492a24a5ed%3A0xffd371054ff1a9b6!2z7LqQ64KY64ukIOuIhOuCmOu2gO2KuA!5e0!3m2!1sko!2skr!4v1651647752695!5m2!1sko!2skr"; 
+			maps[1] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5429338.981162124!2d-91.56668671547217!3d51.81751491297181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x70f8425629621e09!2sOntario%2C%20Canada!5e0!3m2!1sen!2skr!4v1652943271987!5m2!1sen!2skr"; 
 
-			mapLi.click(function(){
-				
-				mapLi.css({"backgroundColor":"#fff","textIndent":"0"});
-				$(this).css({"backgroundColor":"#ff0","textIndent":"16px"});
+            maps[2] ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9816344.89198383!2d-76.88985232588163!3d50.4769282778385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c58b5349fd1a8a1%3A0x1040cadae4d0020!2sQuebec%2C%20Canada!5e0!3m2!1sen!2skr!4v1652943432453!5m2!1sen!2skr"; 
 
-				return false;
 			
-			});
+            
 
-            mapLi.click(function () {
-            //mapLi:eq(2).click(function () {
-                //cityImg.attr("src", "img/index/map1.jpg");
-                // $(mapImg).attr("src", "");
+            mapLi.click(function(){
+
+                var mapIndex = $(this).index();
+				
+				mapLi.css({"backgroundColor":"#fff","textIndent":"0","fontSize":"16px","lineHeight":"35px","height":"35px"});
+				$(this).css({"backgroundColor":"#d00","textIndent":"16px","fontSize":"35px","lineHeight":"60px","height":"60px"});
+
+                mapLi.children("a").css({"color":"#000"});
+				$(this).children("a").css({"color":"#fff"});
 
                 var title = $(this).find("a").attr("title");
-				alert(title);
 
 				if(title == "Yukon"){
 					mapImg.attr("src", maps[0]);
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
 				}
-				else if(title == "Nunavut"){
+				else if(title == "Ontario"){
 					mapImg.attr("src", maps[1]);
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
+				}
+                else if(title == "Quebec"){
+					mapImg.attr("src", maps[2]);
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
 				}
 
 
 				return false;
-            });
+			});
 
 			// season
             $("#season .cont  a .img").css({"width":"200px","float":"left","overflow":"hidden","transition":"transform 0.5s ease-in","transform":"translatex(50px)"});
@@ -538,52 +532,7 @@
  <body>
     <div id="wrap">
         <div id="headerWrap">
-            <div id="fixnav">
-                <p class="logo">
-                    <a href="https://www.spain.info/en/" title="캐나다 로고">
-                        <img src="img/index/header_logo.png" alt="캐나다 로고 이미지"/>
-                    </a>
-                </p>
-                <div class="text"><p>Canada's official tourism website</p></div>
-                <div class="gnb">
-                    <div class="main">
-                        <ul>
-                            <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
-                            <li><a href="#" title="What to do"><span>What to do</span></a></li>
-                            <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
-                            <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="search">
-                        <p>
-                            <a href="https://www.spain.info/en/" title="돋보기">
-                                <img src="img/index/search.png" alt="돋보기 이미지"/>
-                            </a>
-                        </p>
-                    </div>
-    
-                    <div class="langArea">
-                        <div class="lang">
-                            
-                            <p><a href="#" title="English">English</a></p>
-                            <ul>
-                                <li><a href="#" title="Español">Español</a></li>
-                                <li><a href="#" title="Deutsch">Deutsch</a></li>
-                                <li><a href="#" title="Français">Français</a></li>
-                                <li><a href="#" title="Italiano">Italiano</a></li>
-                                <li><a href="#" title="Português">Português</a></li>
-                                <li><a href="#" title="русский">русский</a></li>
-                                <li><a href="#" title="日本語">日本語</a></li>
-                                <li><a href="#" title="中国">中国</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
+            
             <header id="header">
                 <h1>
                     <a href="https://www.spain.info/en/" title="캐나다 로고">
@@ -594,10 +543,12 @@
                 <nav id="gnb">
                     <div class="main">
                         <ul>
-                            <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
                             <li><a href="#" title="What to do"><span>What to do</span></a></li>
+                            <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
                             <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
                             <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
+                            <li><a href="#" title="festival"><span>festival</span></a></li>
+                            <li><a href="#" title="sns"><span>sns</span></a></li>
                         </ul>
                     </div>
                     <div class="search">
@@ -723,14 +674,14 @@
                     <div class="pro_name">
                         <ul>
                             <li class="first"><a href="#" title="Yukon">Yukon</a></li>
+                            <li><a href="#" title="Ontario">Ontario</a></li>
+                            <li><a href="#" title="Quebec">Quebec</a></li>
                             <li><a href="#" title="Northwest_Territories">Northwest Territories</a></li>
                             <li><a href="#" title="Nunavut">Nunavut</a></li>
                             <li><a href="#" title="British_Columbia">British Columbia</a></li>
                             <li><a href="#" title="Alberta">Alberta</a></li>
                             <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
                             <li><a href="#" title="Manitoba">Manitoba</a></li>
-                            <li><a href="#" title="Ontario">Ontario</a></li>
-                            <li><a href="#" title="Quebec">Quebec</a></li>
                             <li><a href="#" title="Newfoundland">Newfoundland<!--and Laprador--></a></li>
                             <li><a href="#" title="Newbrunswick">Newbrunswick</a></li>
                             <li><a href="#" title="Nova Scotia">Nova Scotia</a></li>
@@ -738,9 +689,6 @@
                         </ul>
                     </div>
                     <div class="city_info">
-                        <a href="#" title="Yukon" class="title">
-                            Yukon
-                        </a>
                         <p class="city_image">
                             <a href="#" title="Yukon">
                                 <img src="img/index/map0.jpg" alt="유콘이미지"/>
@@ -843,13 +791,13 @@
                 <div id="city_ul">
                     <ul>
                         <li class="city00"><a href="#none" title="city00">city00</a></li>
-                        <li class="city01"><a href="#none" title="city01">city00</a></li>
-                        <li class="city02"><a href="#none" title="city02">city00</a></li>
-                        <li class="city03"><a href="#none" title="city03">city00</a></li>
-                        <li class="city04"><a href="#none" title="city04">city00</a></li>
-                        <li class="city05"><a href="#none" title="city05">city00</a></li>
-                        <li class="city06"><a href="#none" title="city06">city00</a></li>
-                        <li class="city07"><a href="#none" title="city07">city00</a></li>
+                        <li class="city01"><a href="#none" title="city01">city01</a></li>
+                        <li class="city02"><a href="#none" title="city02">city02</a></li>
+                        <li class="city03"><a href="#none" title="city03">city03</a></li>
+                        <li class="city04"><a href="#none" title="city04">city04</a></li>
+                        <li class="city05"><a href="#none" title="city05">city05</a></li>
+                        <li class="city06"><a href="#none" title="city06">city06</a></li>
+                        <li class="city07"><a href="#none" title="city07">city07</a></li>
                         
                     </ul>
                 </div>
@@ -1219,7 +1167,7 @@
             <div id="img"><img src="img/index/sea.jpg" alt="푸터이미지"/></div>
             <div id="side_map">
                 <div class="wide">
-                    <p><img src="img/index/map.png" alt="지도"/></p>
+                    <p><img src="img/footer/map.png" alt="지도"/></p>
                 </div>
             </div>
             <div id="main">
@@ -1251,7 +1199,6 @@
                             <li><a href="#" title="cookie policy">cookie policy</a></li>
                             <li><a href="#" title="accessibility">accessibility</a></li>
                         </ul>
-                        <!--#ced4da #dee2e6-->
                     </div>
 
                 </div>
