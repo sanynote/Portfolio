@@ -1,6 +1,7 @@
 # Portfolio_canada
-[index](http://sanynote.github.io/Portfolio_canada/canada/index.html)
+[canada_index](http://sanynote.github.io/Portfolio_canada/canada/index.html)
 
+[lush_index](http://sanynote.github.io/Portfolio_canada/lush/index.html)
 
 사니의 포트폴리오
 ```
