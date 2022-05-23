@@ -1,18 +1,12 @@
 # Portfolio
 
-[canada_index](http://sanynote.github.io/Portfolio/canada/index.html)
+[canada](http://sanynote.github.io/Portfolio/canada/index.html)
 
-[canada_deserve](http://sanynote.github.io/Portfolio/canada/deserve.html)
-
-
-
-[lush_index](http://sanynote.github.io/Portfolio/lush/index.html)
-
-[lush_cal](http://sanynote.github.io/Portfolio/lush/cal.html)
+[lush](http://sanynote.github.io/Portfolio/lush/index.html)
 
 [invitation](http://sanynote.github.io/Portfolio/marry/index.html)
 
-[log_in](http://sanynote.github.io/Portfolio/marry/log_in.html)
+
 
 
 사니의 포트폴리오
@@ -32,3 +26,12 @@
 >휴강(2022.03.08) | 헤더 푸터 만들기 
 
 >DAY45(2022.03.11) | html5 버전으로 전환 시작
+
+
+[canada_deserve](http://sanynote.github.io/Portfolio/canada/deserve.html)
+
+
+[lush_cal](http://sanynote.github.io/Portfolio/lush/cal.html)
+
+
+[log_in](http://sanynote.github.io/Portfolio/marry/log_in.html)
