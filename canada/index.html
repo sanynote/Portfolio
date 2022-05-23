@@ -13,7 +13,7 @@
 		*{margin:0; padding:0;}
         li{list-style-type:none;}
         a:link,a:visited{text-decoration:none; color:#333;}
-        a:hover, a:focus{text-decoration:none; color:#f00; outline:none;}
+        a:hover, a:focus{text-decoration:none; outline:none;}
         body{font-family: 'Indie Flower', cursive; overflow-x:hidden;}      
 
         /*######### wrap #########*/
@@ -25,7 +25,7 @@
 
 
         /*####### 실제사용영역 / 로고 ########*/
-            #header{width:1603px; padding:0 150px; height:84px; margin:0 auto; background-color:transparent; }
+            #header{width:1603px; padding:0 150px; height:84px; margin:0 auto; /*background-color:#fff;transparent;*/ }
             #header h1{width:60px; height:62px; padding-top:22px; float:left;}
             /* 84-39(로고높이) ==45 /2 == 22 or 23 */
             #header a img{width:100%;}
@@ -38,6 +38,7 @@
             #gnb .main ul{width:840px; height:100%; position:absolute; top:0; right:0;}
             #gnb .main li{height:100%; line-height:84px; float:left; text-align:center;}
             #gnb .main li a{padding:0 30px; text-transform:uppercase; font-size:16px; font-weight:700;}
+            #gnb .main .out{text-indent:-9999px;}
 
         /* 기능만들기 */
             #gnb .main li:hover{border-bottom:2px solid #f00;}
@@ -61,14 +62,14 @@
             #langArea .lang:hover ul{display:block;}
             #langArea .lang:hover li{ background-color:#fff; }
 
-            .fixed{position:fixed; top:0; width:1280px; background-color:rgba(200,0,100,0.5); z-index:2;}
+            .fixed{position:fixed; top:0; width:1280px; z-index:2; background-color:#fff;}
 
         /*######### container #########*/
             #container{width:100%;}
 
         /*######## visual ##########*/     
             #visual{width:100%; height:800px; background-image:url("img/index/visual_08.jpg");
-            background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
+            background-repeat:no-repeat; background-size:100%; background-position:center 50%;  padding:100px 0;}
 
             #visual .textBox{width:410px; position:absolute; left:-2000px; top:340px;
 			transition:left 0.7s linear; font-family: 'Dancing Script', cursive;}
@@ -277,7 +278,7 @@
 
 
         /*########## footer ##########*/
-            #footer{width:1903px; background-color:#F7F7F7; margin:0 auto;}
+            #footer{width:1903px; background-color:#F7F7F7; margin:0 auto; padding:100px auto 0;}
             #title{font-size:60px; width:100%; text-align:center;}
 
         /*######### 이미지영역 ########*/
@@ -360,29 +361,38 @@
             // scroll focus 부분
 
 
+
             $("#gnb .main li a:eq(0)").bind("click focus",function(){
+                var visual = $("#visual").offset().top;
+                $("body,html").animate({scrollTop:visual},500);
+            });
+            $("#gnb .main li a:eq(1)").bind("click focus",function(){
                 var natural = $("#naturalArea").offset().top;
                 $("body,html").animate({scrollTop:natural},500);
             });
-            $("#gnb .main li a:eq(1)").bind("click focus",function(){
+            $("#gnb .main li a:eq(2)").bind("click focus",function(){
                 var map = $("#mapArea").offset().top;
                 $("body,html").animate({scrollTop:map},500);
             });
-            $("#gnb .main li a:eq(2)").bind("click focus",function(){
+            $("#gnb .main li a:eq(3)").bind("click focus",function(){
                 var season = $("#seaArea").offset().top;
                 $("body,html").animate({scrollTop:season},500);
             });
-            $("#gnb .main li a:eq(3)").bind("click focus",function(){
+            $("#gnb .main li a:eq(4)").bind("click focus",function(){
                 var city = $("#cityArea").offset().top;
                 $("body,html").animate({scrollTop:city},500);
             });
-            $("#gnb .main li a:eq(4)").bind("click focus",function(){
+            $("#gnb .main li a:eq(5)").bind("click focus",function(){
                 var festival = $("#festivalArea").offset().top;
                 $("body,html").animate({scrollTop:festival},500);
             });
-            $("#gnb .main li a:eq(5)").bind("click focus",function(){
+            $("#gnb .main li a:eq(6)").bind("click focus",function(){
                 var sns = $("#snsArea").offset().top;
                 $("body,html").animate({scrollTop:sns},500);
+            });
+            $("#gnb .main li a:eq(7)").bind("click focus",function(){
+                var footer = $("#footer").offset().top;
+                $("body,html").animate({scrollTop:footer},500);
             });
 
             // header 언어선택영역
@@ -543,12 +553,14 @@
                 <nav id="gnb">
                     <div class="main">
                         <ul>
+                            <li class="out"><a href="#" title="visual"><span>visual</span></a></li>
                             <li><a href="#" title="What to do"><span>What to do</span></a></li>
                             <li><a href="#" title="Where to go"><span>Where to go</span></a></li>
                             <li><a href="#" title="4 seasons"><span>4 seasons</span></a></li>
                             <li><a href="#" title="Plan your trip"><span>Plan your trip</span></a></li>
                             <li><a href="#" title="festival"><span>festival</span></a></li>
                             <li><a href="#" title="sns"><span>sns</span></a></li>
+                            <li class="out"><a href="#" title="visual"><span >footer</span></a></li>
                         </ul>
                     </div>
                     <div class="search">
