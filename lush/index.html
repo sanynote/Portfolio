@@ -506,6 +506,18 @@
         overflow: hidden;
       }
 
+      #bgArea .bg .textBox{
+        width:35%; 
+        height:300px;
+        border:1px solid red;
+        text-align:center;
+        margin:120px auto 0;
+      }
+
+      #bgArea .bg .textBox h4{font-size:35px; font-weight:700; padding-top:15px; color:#efefef;}
+      #bgArea .bg .textBox .desc{padding:30px;}
+      #bgArea .bg .textBox #news{width:350px; height:40px; background-color:red;}
+
       /*#################### forMe ###################*/
       #meArea {
         width: 100%;
@@ -984,7 +996,11 @@
 
       <div id="bgArea">
         <div class="bg">
-          
+          <div class="textBox">
+            <h4>Join our Newsletter</h4>
+            <p class="desc">Stay up to date with product launches, events and more. We won't share your information with any third parties and you can unsubscribe at any time. For more information see our Privacy Notice and Terms and Conditions.</p>
+            <input id="news" type="text" name="news" placeholder="email"/>
+          </div>
         </div>
 
       </div>
