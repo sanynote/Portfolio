@@ -516,7 +516,7 @@
       #bgArea .bg .textBox h4{font-size:35px; font-weight:700; padding-top:15px; color:#efefef;}
       #bgArea .bg .textBox .desc{padding:30px; font-size:20px;}
       #bgArea .bg .textBox #news{display:inline-block;width:360px; height:45px; text-indent:15px; font-size:20px; padding:0;}
-      #bgArea .bg .textBox #btn{display:inline-block;width:40px;height:45px;}
+      #bgArea .bg .textBox #btn{display:inline-block;width:85px;height:49px; font-size:20px;}
 
       /*#################### forMe ###################*/
       #meArea {
@@ -595,7 +595,11 @@
     </style>
 
     <script>
-      
+      function bgBtn() {
+        var news = document.getElementById("news");
+        var email = news.value;
+        alert("welcome to LUSH :-D \n \n we'll send newsletter to " + email + "!");
+      }
     </script>
   </head>
 
@@ -773,7 +777,7 @@
             <ul>
               <li>
                 <div class="product">
-                  <a href="cal.html" title="상품공간">
+                  <a href="cal.html" title="수량페이지">
                     <em class="img">
                       <img src="img/index/sleep00.avif" alt="" />
                     </em>
@@ -784,7 +788,7 @@
                   </a>
                 </div>
                 <div class="bag">
-                  <a href="#none" title="장바구니">
+                  <a href="cal.html" title="장바구니">
                     <span class="img"
                       ><img src="img/index/basket.png" alt="장바구니"
                     /></span>
@@ -1003,7 +1007,7 @@
             <h4>Join our Newsletter</h4>
             <p class="desc">Stay up to date with product launches, events and more. We won't share your information with any third parties and you can unsubscribe at any time. For more information see our Privacy Notice and Terms and Conditions.</p>
             <input id="news" type="text" name="news" placeholder="email"/>
-            <input id="btn" type="button" name="btn" value="submit"/>
+            <input id="btn" type="button" name="btn" value="submit" onclick="bgBtn();"/>
           </div>
         </div>
 
@@ -1050,9 +1054,7 @@
                   inventions, packed with ingredients straight from the field
                 </p>
                 <p class="link">
-                  <a href="#" title="더보기 링크"
-                    >We'll bring you flowers in the pouring rain</a
-                  >
+                  <a href="#" title="더보기 링크">We'll bring you flowers in the pouring rain</a>
                 </p>
               </div>
             </li>
