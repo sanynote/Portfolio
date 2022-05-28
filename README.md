@@ -4,10 +4,6 @@
 
 [lush](http://sanynote.github.io/Portfolio/lush/index.html)
 
-[react](http://sanynote.github.io/Portfolio/react/react.html)
-
-
-
 
 사니의 포트폴리오
 ```
