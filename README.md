@@ -2,7 +2,13 @@
 
 [canada](http://sanynote.github.io/Portfolio/canada/index.html)
 
+[canada video](http://sanynote.github.io/Portfolio/canada/deserve.html)
+
 [lush](http://sanynote.github.io/Portfolio/lush/index.html)
+
+[lush 증감문](http://sanynote.github.io/Portfolio/lush/cal.html)
+
+[lush 로그인](http://sanynote.github.io/Portfolio/lush/log_in.html)
 
 
 사니의 포트폴리오
