@@ -4,6 +4,8 @@
 
 [canada video](http://sanynote.github.io/Portfolio/canada/deserve.html)
 
+[canada mobile](http://sanynote.github.io/Portfolio/canada/canada_320/index.html)
+
 [lush](http://sanynote.github.io/Portfolio/lush/index.html)
 
 [lush 증감문](http://sanynote.github.io/Portfolio/lush/cal.html)
