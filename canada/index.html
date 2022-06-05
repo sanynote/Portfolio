@@ -127,9 +127,8 @@
 
             /*######## map / pro_name #########*/
             #map .pro_name{width:200px; height:100%; float:left;}
-            #map .pro_name ul{width:100%; height:100%;}
+            #map .pro_name ul{width:100%; height:100%; margin:20px 0;}
             #map .pro_name li{width:100%; height:34px; line-height:34px; font-size:18px; transition:all 0.5s linear; float:left;}
-            #map .pro_name .first{margin-top:40px;}
 
             /*######## map / city_info #########*/
             #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
@@ -149,7 +148,7 @@
             #season{width:1400px; height:680px; margin:0 auto; border-top:5px dotted #eee; border-bottom:5px dotted #eee; padding:100px 0 60px; font-family: 'M PLUS Rounded 1c', sans-serif;}
 
             /* season / title */
-            #season .title{width:350px; height:640px; background-color:#efefef; float:left;}
+            #season .title{width:310px; height:640px; padding-left:40px; float:left;}
             #season .title h3{font-size:30px;}
             #season .title h3 span{font-size:60px; font-weight:700;}
             #season .title p{font-size:20px; line-height:100px; color:#a00;}
@@ -245,7 +244,7 @@
             #festival .textBox .name{width:100%; height:25px; line-height:25px; font-size:12px;}
 
             #fesBtn p{width:100px; height:100px;  position:absolute; top:50%;
-            transform:translatey(-50%); z-index:1; cursor:pointer; opacity:0.4; /*left:0;*/}
+            transform:translatey(-50%); z-index:1; cursor:pointer; }
             #fesBtn p img{width:100%; height:100%;}
 
             #fesBtn .prevBtn{left:360px;}
@@ -340,19 +339,10 @@
 
     <script>
         window.onload = function(){
-	
-            /*
-            var view = document.getElementById("view");
-
-            var index = Math.ceil(Math.random()*6);
-
-            view.innerHTML="<img src='img/image0"+index+".jpg' alt='이미지'/>";
-*/
 
             var vis = document.getElementById("randomImg");
             var random = Math.ceil(Math.random()*6);
             vis.innerHTML="<p class='img'><img src='img/index/visual_0"+random+".jpg' alt='이미지'/></p>";
-
 
         }
 
@@ -431,12 +421,6 @@
                 $("#langArea .lang p").css({"borderBottom":"1px solid #ccc"});
                 $("#langArea .lang ul").stop().slideUp(1);
             });
-            
-
-            
-
-
-
 
             //visual
             $("#visual").mouseover(function(){
@@ -475,11 +459,6 @@
 				});
 			
 			});
-
-            $("#fesBtn p").click(function(){
-                $("#fesBtn p").css({"opacity":"0.4"})
-                $(this).css({"opacity":"1"})
-            })
 
             //map
             var mapLi = $("#map .pro_name li");
