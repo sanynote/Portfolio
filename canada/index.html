@@ -185,7 +185,7 @@
 
 
         /*######## city ##########*/
-            #cityArea{width:100%; height:900px; position:relative; padding:100px auto 0;}
+            #cityArea{width:100%; height:1200px; position:relative; padding:100px auto 0;}
 
             #city{width:1800px; height:100%; margin:0 auto; background-color:#C4D5E6;}
             
@@ -193,26 +193,26 @@
             /* 각 li 270px + margin-left:20 == 290 * 6 ==1740 +20 ==1760 */
             #city_ul{width:100%; position:absolute; left:0; top:150px;}
             #city_ul ul{width:1360px; margin:0 auto; }
-            #city_ul li{width:150px; height:150px; float:left; overflow:hidden; margin-left:20px;
-            border-radius:0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
-            background-repeat:no-repeat; background-size:100%;
-            background-position:center 50%; 
+            #city_ul li{width:150px; height:150px; float:left; overflow:hidden; margin-left:20px; border-radius:0; box-shadow:0 0 0 rgba(255,255,255,0); margin-top:600px;
+            
         }
-            #city_ul ul li a{display:block; height:150px; text-indent:-9999px;}
-
+            #city_ul ul li a{display:block; width:150px; height:150px; }
+            #city_ul ul li a img{height:100%;}
 
             #city_ul li:hover{border-radius:75px; box-shadow:10px 10px 30px rgba(0,0,0,0.3);}
 
+            #city_ul .window{width:500px; height:200px; margin:40px auto 0;}
+            #city_ul .window a{display:block;}
 
             /* li delay 개별작업 */
-            #city_ul .city00{transition:margin 1.5s linear 0.5s,border-radius 0.3s linear; background-image:url("img/index/city_00.jpg");}
-            #city_ul .city01{transition:margin 1.5s linear 1s,border-radius 0.3s linear; background-image:url("img/index/city_01.jpg");}
-            #city_ul .city02{transition:margin 1.5s linear 1.5s,border-radius 0.3s linear; background-image:url("img/index/city_02.jpg");}
-            #city_ul .city03{transition:margin 1.5s linear 2s,border-radius 0.3s linear; background-image:url("img/index/city_03.jpg");}
-            #city_ul .city04{transition:margin 1.5s linear 2.5s,border-radius 0.3s linear; background-image:url("img/index/city_04.jpg");}
-            #city_ul .city05{transition:margin 1.5s linear 3s,border-radius 0.3s linear; background-image:url("img/index/city_05.jpg");}
-            #city_ul .city06{transition:margin 1.5s linear 3.5s,border-radius 0.3s linear; background-image:url("img/index/city_06.jpg");}
-            #city_ul .city07{transition:margin 1.5s linear 4s,border-radius 0.3s linear; background-image:url("img/index/city_07.jpg");}
+            #city_ul .city00{transition:margin 1.5s linear 0.5s,border-radius 0.3s linear;}
+            #city_ul .city01{transition:margin 1.5s linear 1s,border-radius 0.3s linear;}
+            #city_ul .city02{transition:margin 1.5s linear 1.5s,border-radius 0.3s linear;}
+            #city_ul .city03{transition:margin 1.5s linear 2s,border-radius 0.3s linear;}
+            #city_ul .city04{transition:margin 1.5s linear 2.5s,border-radius 0.3s linear;}
+            #city_ul .city05{transition:margin 1.5s linear 3s,border-radius 0.3s linear;}
+            #city_ul .city06{transition:margin 1.5s linear 3.5s,border-radius 0.3s linear;}
+            #city_ul .city07{transition:margin 1.5s linear 4s,border-radius 0.3s linear;}
 
 
             #city_ul ul:after{content:""; display:block; clear:both;}
@@ -516,6 +516,25 @@
 				$(this).children(".img").css({"transform":"translatex(0)"});
 			});
 
+
+            // 내가 가 본 여행지 소개
+            $("ul li").click(function(){
+                
+                var num = $(this).find("img").attr("src").substring(16,17);
+
+                $(".window").html("<a href='deserve.html' title='비디오페이지'><img src='img/index/city_0"+num+".jpg' alt='이미지'/></a>");
+                
+
+                imgW = $(".window img").width();
+                imgH = $(".window img").height();
+
+
+                console.log(imgW);
+                // console.log(imgH);
+                $(".window").css({"width":imgW, "height":imgH, "boxShadow":"5px 5px 10px rgba(0,0,0,0.5)"});
+
+                return false;
+            })
         
             // sns 모달팝업
 
@@ -619,7 +638,7 @@
                     <ul>
                         <li class="big">
                             <p class="img">
-                                <a href="https://www.viator.com/tours/Yellowknife/Aurora-Tour/d23637-107890P1?m=28353&supag=68732029897&supca=1939178107&supsc=dsa-650389793948&supai=420120885798&supdv=c&supnt=g&suplp=1009871&supli=&supti=dsa-650389793948&tsem=true&supci=dsa-650389793948&supap1=&supap2=&gclid=Cj0KCQjwz7uRBhDRARIsAFqjull7tw1N0xkuNgO8JwrYOurqPdhV2Axww5kQkhHoXp1wpL5OvAoxTFUaAslOEALw_wcB" title="">
+                                <a href="#none" title="aurora">
                                     <img src="img/index/nat_00.jpg" alt="오로라 이미지"/>
                                 </a>
                             </p>
@@ -632,7 +651,7 @@
                         </li>
                         <li class="big">
                             <p class="img">
-                                <a href="https://www.viator.com/en-CA/tours/Banff/Lake-Louise-and-the-Icefield-Parkway-sightseeing-tour/d611-47552P2" title="banff">
+                                <a href="#none" title="banff">
                                     <img src="img/index/nat_01.jpg" alt="밴프 이미지"/>
                                 </a>
                             </p>
@@ -652,7 +671,7 @@
                             <div class="box">
                                 <p class="title">rocky</p>
                                 <p class="desc">
-                                    The Rocky Mountaineer runs along four different routes. The Coastal Passage route runs from Seattle in the US to Vancouver in British Columbia, and on to the Canadian Rockies. The Rainforest to Gold Rush route runs from Vancouver through Whistler, Quesnel, and on to Jasper. <!--The Journey Through the Clouds route departs from Vancouver and travels through the Coast Mountains and Fraser Canyon, passing through Kamloops en route to Jasper. The final route, First Passage to the West, connects Vancouver to Banff and Lake Louise, passing through Kamloops on the way.-->
+                                    The Rocky Mountaineer runs along four different routes. The Coastal Passage route runs from Seattle in the US to Vancouver in British Columbia, and on to the Canadian Rockies. The Rainforest to Gold Rush route runs from Vancouver through Whistler, Quesnel, and on to Jasper. 
                                 </p>
                             </div>
                         </li>
@@ -665,7 +684,7 @@
                             <div class="box">
                                 <p class="title">niagara falls</p>
                                 <p class="desc">
-                                    With limited time at Niagara Falls, this half-day tour ensures you take in all the highlights. Enjoy spectacular views of Niagara Falls on a Hornblower boat cruise and sail close to the mighty American Falls. Then, follow the Niagara River to landmarks such as the Whirlpool ... <!--Rapids, the Floral Clock, and Fort George, and have free time to explore Niagara-on-the-Lake.-->
+                                    With limited time at Niagara Falls, this half-day tour ensures you take in all the highlights. Enjoy spectacular views of Niagara Falls on a Hornblower boat cruise and sail close to the mighty American Falls. Then, follow the Niagara River to landmarks such as the Whirlpool ...
                                 </p>
                             </div>
                         </li>
@@ -678,7 +697,7 @@
                             <div class="box">
                                 <p class="title">polar bear</p>
                                 <p class="desc">
-                                    The polar bear Ursus americanus is one of the most familiar wild animals in North America today. The polar bear is a bulky and thickset mammal. Approximately 150 cm long and with a height at the shoulder that varies from 100 to 120 cm, an adult polar bear has ... <!--a moderate-sized head with a rather straight facial profile and a tapered nose with long nostrils. The ears are rounded and the eyes small. The tail is very short and inconspicuous. A polar bear has feet that are well furred on which it can walk. Each foot has five curved claws, which the bear cannot sheathe, or hide. These are very strong and are used for digging and tearing out roots, stumps, and old logs when searching for food.-->
+                                    The polar bear Ursus americanus is one of the most familiar wild animals in North America today. The polar bear is a bulky and thickset mammal. Approximately 150 cm long and with a height at the shoulder that varies from 100 to 120 cm, an adult polar bear has ... 
                                 </p>
                             </div>
                         </li>
@@ -700,7 +719,7 @@
                             <li><a href="#" title="Alberta">Alberta</a></li>
                             <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
                             <li><a href="#" title="Manitoba">Manitoba</a></li>
-                            <li><a href="#" title="Newfoundland">Newfoundland<!--and Laprador--></a></li>
+                            <li><a href="#" title="Newfoundland">Newfoundland</a></li>
                             <li><a href="#" title="Newbrunswick">Newbrunswick</a></li>
                             <li><a href="#" title="Nova Scotia">Nova Scotia</a></li>
                             <li><a href="#" title="Prince Edward Island">Prince Edward Island</a></li>
@@ -808,16 +827,53 @@
                 </div>
                 <div id="city_ul">
                     <ul>
-                        <li class="city00"><a href="#none" title="city00">city00</a></li>
-                        <li class="city01"><a href="#none" title="city01">city01</a></li>
-                        <li class="city02"><a href="#none" title="city02">city02</a></li>
-                        <li class="city03"><a href="#none" title="city03">city03</a></li>
-                        <li class="city04"><a href="#none" title="city04">city04</a></li>
-                        <li class="city05"><a href="#none" title="city05">city05</a></li>
-                        <li class="city06"><a href="#none" title="city06">city06</a></li>
-                        <li class="city07"><a href="deserve.html" title="city07">city07</a></li>
+                        <li class="city00">
+                            <a href="#none" title="이미지링크0">
+                                <img src="img/index/city_00.jpg" alt="이미지0"/>
+                            </a>
+                        </li>
+                        <li class="city01">
+                            <a href="#none" title="이미지링크1">
+                                <img src="img/index/city_01.jpg" alt="이미지1"/>
+                            </a>
+                        </li>
+                        <li class="city02">
+                            <a href="#none" title="이미지링크2">
+                                <img src="img/index/city_02.jpg" alt="이미지2"/>
+                            </a>
+                        </li>
+                        <li class="city03">
+                            <a href="#none" title="이미지링크3">
+                                <img src="img/index/city_03.jpg" alt="이미지3"/>
+                            </a>
+                        </li>
+                        <li class="city04">
+                            <a href="#none" title="이미지링크4">
+                                <img src="img/index/city_04.jpg" alt="이미지4"/>
+                            </a>
+                        </li>
+                        <li class="city05">
+                            <a href="#none" title="이미지링크5">
+                                <img src="img/index/city_05.jpg" alt="이미지5"/>
+                            </a>
+                        </li>
+                        <li class="city06">
+                            <a href="#none" title="이미지링크6">
+                                <img src="img/index/city_06.jpg" alt="이미지6"/>
+                            </a>
+                        </li>
+                        <li class="city07">
+                            <a href="#none" title="이미지링크7">
+                                <img src="img/index/city_07.jpg" alt="이미지7"/>
+                            </a>
+                        </li>
+                        
                         
                     </ul>
+                    <div class="window">
+                        <a href="deserve.html" title="이미지링크7">
+                        </a>
+                    </div>
                 </div>
             </section>
 
