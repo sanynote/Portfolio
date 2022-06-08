@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+	<title>join</title>
+	<meta charset="utf-8"/>
+    <style>
+        *{margin:0; padding:0;}
+		body{color:#111; font-family: Helvetica Now Display, Helvetica, helvetica, sans-serif !important;}
+
+        a:link,a:visited{text-decoration:none; color:#333;}
+        a:hover, a:focus{text-decoration:underline;}
+
+        #wrap{width:100%; height:865px; background-image:url("img/index/log.webp");
+        background-repeat:no-repeat; background-size:100%; background-position:center 50%;}
+
+        #headerArea{width:100%; height:100px; background-color:#000;}
+        #header{height:100%; line-height:100px; text-align:center; font-size:40px; font-weight:900; color:#fff; }
+
+		#container{width:100%;}
+        form{margin:0 auto; width:680px; height:570px; padding:50px 80px; background-color:#fff;}
+        fieldset{border:none;}
+        legend{width:100%; text-transform:capitalize; text-align:center; font-weight:900; font-size:45px; font-family:"Avenir Next", Avenir, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif}
+
+        input{width:100%; height:85px; text-indent:15px; font-size:medium; margin-top:23px; outline:none;}
+        input[type="button"]{text-align:center; background-color:#000; color:#fff; font-size:20px;}
+        input[type="button"]:hover{opacity:0.8;}
+
+        /* 아이디 중복 체크 */
+        #idChkDesc{width:90%; height:20px; float:left; text-align:center; padding:10px 5px; text-align:right;}
+
+		/*아이디 중복 체크 옆에 버튼*/
+		#idChkBtn{width:70px; height:20px; text-align:center; text-indent:0; border-left:1px solid #ccc; margin:5px 0; font-size:12px;}
+
+        #container .lost{margin-top:30px;text-align:center; font-size:25px; }
+
+
+
+    </style>
+
+
+<script>
+    function idChkBtns(){
+        
+        /*
+            1) userid 공간을 id 객체로 만들기
+            2) idChkDesc	공간을 id 객체로 만들기
+
+            :: 각각의 공간이 console 창에 잘 출력되는지 확인하기
+        */
+
+        var userid = document.getElementById("userid");
+        
+        // span 태그
+        var idChkDesc = document.getElementById("idChkDesc");
+        // console.log(idChkDesc);
+
+        /*
+            3) userid 공간이 비어 있다면 , 알림창으로 아이디가 비어 있습니다. 띄우기
+            4) 해당하는 userid 공간으로 커서가 이동 되어 있도록 만들기
+        */
+
+        if(userid.value =="" ){
+            alert("아이디가 비어있습니다.");
+            userid.focus();
+            idChkDesc.innerHTML="<strong style='color:red;'>아이디 필수입력</strong>";
+        }
+        else{
+            
+            /*
+                [해야 할 일]
+                    
+                    1) 아이디가 중복되었다면 사용이 불가능한 아이디 입니다. 문구 출력받기
+                    2) 아이디가 중복되지 않았다면 사용이 가능한 아이디 입니다. 문구 출력받기
+
+                [javascript를 이용한 서버사용 (ajax) 정리]
+                    
+                    : form안에서 form을 사용할 경우 action 끼리 충돌이 발생함!
+                    : form을 여러개 사용해야 할 경우에는 분해해서 사용해야 함!
+
+                    : id 중복을 확인하는 form을 따로 만들고, 회원가입용 form을 따로 만든다면 문제 없이 사용할 수 있음!
+                    : form을 분해하지 않고 사용하기 위하여 비동기식 방법인 ajax를 사용함!
+                        (javascript을 사용하여 서버 사용가능, jQuery 버전이 많이 사용됨!)
+            */
+
+            xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.open("GET","02_idDouble.php?q="+userid.value,true);
+
+            xmlhttp.onreadystatechange = function(){
+                
+                if(xmlhttp.readyState == 4 && xmlhttp.status ==200){
+                    
+                    idChkDesc.innerHTML = xmlhttp.responseText;
+                }
+            
+            };
+            
+            xmlhttp.send();
+        }
+    }
+</script>
+
+ </head>
+
+ <body>
+    <div id="wrap">
+        <header id="headerArea">
+            <div id="header">
+                LUSH
+            </div>
+        </header>
+        <div id="container">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <p>
+                        <input id="userid" type="text" name="userid" placeholder="welcome to the LUSH world !"/>
+                        <span id="idChkDesc">※ 아이디 중복체크</span>
+			            <input id="idChkBtn" type="button" value="중복체크" onclick="idChkBtns();"/>
+                    </p>
+                    <p>
+                        <input id="userpass" type="password" name="userpass" placeholder="password plz :-)"/>
+                    </p>
+                    <p>
+                        <input id="username" type="text" name="username"/>
+                    </p>
+                    <p>
+                        <input id="useremail" type="email" name="useremail" />
+                    </p>
+
+                    <p class="lost">
+                        <a href="#none" title="비밀번호분실">
+                            Don't remember your password?
+                        </a>
+                    </p>
+
+                    <p>
+                        <input id="signUp" type="button" name="signUp" value="Sign Up"/>
+                    </p>
+                    <p>
+                        <input id="logIn" type="button" name="logIn" value="Log In"/>
+                    </p>
+                    
+                    
+                </fieldset>
+                
+
+            </form>
+        </div>
+    </div>
+ </body>
+</html>
