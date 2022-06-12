@@ -128,10 +128,10 @@
             /*######## map / pro_name #########*/
             #map .pro_name{width:200px; height:100%; float:left;}
             #map .pro_name ul{width:100%; height:100%; margin:20px 0;}
-            #map .pro_name li{width:100%; height:34px; line-height:34px; font-size:18px; transition:all 0.5s linear; float:left;}
+            #map .pro_name li{width:100%; height:45px; line-height:45px; font-size:18px; transition:all 0.5s linear; float:left;}
 
             /*######## map / city_info #########*/
-            #map .city_info{width:400px; height:100%; text-align:center; float:left; background-color:#cfc;}
+            #map .city_info{width:400px; height:100%; text-align:center; float:left;}
 
             /* city_info 안의 city_image 설계*/
             #map .city_info .city_image{width:100%; height:505px; overflow:hidden;}
@@ -484,25 +484,25 @@
 
                 var mapIndex = $(this).index();
 				
-				mapLi.css({"backgroundColor":"#fff","textIndent":"0","fontSize":"16px","lineHeight":"35px","height":"35px"});
-				$(this).css({"backgroundColor":"#d00","textIndent":"16px","fontSize":"35px","lineHeight":"60px","height":"60px"});
+				mapLi.css({"backgroundColor":"#fff","textIndent":"0","fontSize":"20px","lineHeight":"45px","height":"45px"});
+				$(this).css({"backgroundColor":"#d00","textIndent":"10px","fontSize":"25px","lineHeight":"60px","height":"60px"});
 
                 mapLi.children("a").css({"color":"#000"});
 				$(this).children("a").css({"color":"#fff"});
 
                 var title = $(this).find("a").attr("title");
 
-				if(title == "Yukon"){
+				if(title == "Yukon" || title == "PEI"|| title == "Alberta"|| title == "Newfoundland"){
 					mapImg.attr("src", maps[0]);
-                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지0'/>")
 				}
-				else if(title == "Ontario"){
+				else if(title == "Ontario" || title == "Nunavut"|| title == "Saskatchewan"){
 					mapImg.attr("src", maps[1]);
-                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지1'/>")
 				}
-                else if(title == "Quebec"){
+                else if(title == "Quebec" || title == "BC"|| title == "Manitoba"){
 					mapImg.attr("src", maps[2]);
-                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='유콘이미지'/>")
+                    $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지2'/>")
 				}
 
 
@@ -713,16 +713,13 @@
                             <li class="first"><a href="#" title="Yukon">Yukon</a></li>
                             <li><a href="#" title="Ontario">Ontario</a></li>
                             <li><a href="#" title="Quebec">Quebec</a></li>
-                            <li><a href="#" title="Northwest_Territories">Northwest Territories</a></li>
+                            <li><a href="#" title="PEI">PEI</a></li>
                             <li><a href="#" title="Nunavut">Nunavut</a></li>
-                            <li><a href="#" title="British_Columbia">British Columbia</a></li>
+                            <li><a href="#" title="BC">British Columbia</a></li>
                             <li><a href="#" title="Alberta">Alberta</a></li>
                             <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
                             <li><a href="#" title="Manitoba">Manitoba</a></li>
                             <li><a href="#" title="Newfoundland">Newfoundland</a></li>
-                            <li><a href="#" title="Newbrunswick">Newbrunswick</a></li>
-                            <li><a href="#" title="Nova Scotia">Nova Scotia</a></li>
-                            <li><a href="#" title="Prince Edward Island">Prince Edward Island</a></li>
                         </ul>
                     </div>
                     <div class="city_info">
