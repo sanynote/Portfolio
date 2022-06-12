@@ -198,15 +198,15 @@
 
             //console.log(price);console.log(upDown);
 
-            number = parseInt(upDown.value);
+            var number = parseInt(upDown.value);
             console.log(number);
                     
             upDown.value = number-1;
-            price.value = price.value - 30000;
+            price.value = price.value - 6;
                     
             if(number==1){
                 upDown.value = 1;
-                price.value = 30000;
+                price.value = 6;
             }
         }
 
@@ -221,14 +221,14 @@
             console.log(number);
                     
             upDown.value = number+1;
-            price.value = 30000*upDown.value;
+            price.value = 6*upDown.value;
                     
             if(number==5){
                 upDown.value = 5;
-                price.value = 30000*upDown.value;
+                price.value = 6*upDown.value;
             }
         }
-        
+  
 
     </script>
 
@@ -328,12 +328,12 @@
                 <div class="cal">
                     <div>
                         <button onclick="minusBtn();">-</button>
-                        <p id="upDown">1</p>
+                        <p id="upDown"></p>
                         <button onclick="plusBtn();">+</button>
                     </div>
                     <button class="add">
                         <a href="#none" title="추가">
-                            Add to bag   £ <span id="price">3.00</span>
+                            Add to bag   £ <span id="price"></span>
                         </a>
                     </button>
                     <p class="more">Pay later in 3 with Klarna. <a href="#none" title="more">Learn more</a></p>
