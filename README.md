@@ -1,10 +1,8 @@
+
 # Portfolio
 
-[canada](http://sanynote.github.io/Portfolio/canada/index.html)
+[포트폴리오 링크 all](http://sanynote.github.io/Portfolio/index.html)
 
-[canada video](http://sanynote.github.io/Portfolio/canada/deserve.html)
-
-[canada mobile](http://sanynote.github.io/Portfolio/canada/mediaQuery/index.html)
 
 
 사니의 포트폴리오
@@ -26,10 +24,4 @@
 >DAY45(2022.03.11) | html5 버전으로 전환 시작
 
 
-[canada_deserve](http://sanynote.github.io/Portfolio/canada/deserve.html)
 
-
-[lush_cal](http://sanynote.github.io/Portfolio/lush/cal.html)
-
-
-[log_in](http://sanynote.github.io/Portfolio/marry/log_in.html)
