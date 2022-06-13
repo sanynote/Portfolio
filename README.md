@@ -1,7 +1,7 @@
 
 # Portfolio
 
-[포트폴리오 링크 모아둔 페이지](http://sanynote.github.io/Portfolio/index.html)
+[포트폴리오 링크 all](http://sanynote.github.io/Portfolio/index.html)
 
 
 
