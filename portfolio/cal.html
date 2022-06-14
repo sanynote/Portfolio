@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+	<title>lush_cal</title>
+	<meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        @font-face {
+        font-family: "Lush";
+        src: url("font/Lush.ttf");
+        }
+
+        *{margin:0; padding:0;}
+        body{margin:0; padding:0;}
+        li{list-style-type:none;}
+        a:link, a:visited{color:#000; text-decoration:none;}
+        a:hover, a:focus{text-decoration:none;}
+
+
+        /*###################### header #######################*/
+        #headerWrap {width: 100%;}
+        #header {width: 1700px;margin: 0 auto;}
+        #header h1 {width: 180px;float: left;padding-top: 8px;}
+        #header h1 a img {width: 100%;}
+
+        #header form {
+        width: 1200px;
+        height: 73px;
+        padding-top: 12px;
+        border: none;
+        float: left;
+        position: relative;
+        }
+        #header form #search {
+        width: 100%;
+        height: 60px;
+        outline: none;
+        border-bottom: 1px solid #ccc;
+        text-indent: 20px;
+        font-size: 25px;
+        }
+        #header form #schBtn {
+        width: 50px;
+        position: absolute;
+        right: 12px;
+        top: 15px;
+        }
+        #header #more {
+        width: 210px;
+        height: 67px;
+        float: left;
+        }
+        #header #more p {
+        width: 50px;
+        height: 50px;
+        margin-top: 17px;
+        margin-left: 15px;
+        float: left;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+        }
+
+        #header #more .login {
+        background-image: url("img/header/smile.png");
+        }
+        #header #more .uk {
+        background-image: url("img/header/uk.png");
+        }
+        #header #more .basket {
+        background-image: url("img/header/basket.png");
+        }
+
+        #header:after {
+        display: block;
+        clear: both;
+        content: "";
+        }
+
+        
+        /*##################### main ######################*/
+
+        #container{width:1700px; margin:0 auto;}
+        #main{width:1050px; float:left;}
+
+            
+        #main .img{width:1050px; margin-bottom:80px;}
+        #main .img img{width:100%;}
+
+        #main .content{width:800px; padding:0 125px;}
+        #main .content ul {width:100%; margin:40px 0;}
+        #main .content ul li {
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            background-color: #efefef;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            margin-left: 10px;
+        }
+        #main .content ul li a {
+            padding: 0 17px;
+            font-size:18px;
+        }
+
+        #main .content ul li:hover {
+            border: 1px solid rgba(0, 0, 0, 1);
+        }
+
+        /*##################### main / desc ######################*/
+        #main .content .desc{font-size:18px; }
+        #main .content .desc p{font-weight:700; font-size:20px; padding:30px 0 10px;}
+        #main .content .gray{width:96%; padding:4%; background-color:#ccc; margin:50px 0;}
+        #main .content h4{font-size:20px; padding:15px 0;}
+
+
+
+        /*#################### side ##################*/
+
+            /*#################### side / product ##################*/
+            #side {width:450px; padding:0 100px; float:left;}
+            #side #product {width: 100%;}
+
+            #product .text{width:250px; float:left;}
+            #product .text .name {font-family: "Lush"; font-size: 35px; font-weight:700;}
+            #product .text .type {padding: 10px 0; font-size: 20px;}
+            #product .text .desc {font-size: 20px; padding:20px 0 30px;}
+            #product .text .price {font-size:25px; font-weight: 700; }
+            #product .text .price span {font-size:18px; font-weight: 400; padding:0 20px; color:#aaa;}
+            #product .text .select{font-weight: 400; font-size:14px; color:#aaa; padding:30px 0;}
+
+            #product .img{width:200px; float:left;}
+            #product .img img{width:100%;}
+
+            #product:after{content:""; display:block; clear:both;}
+
+            #side .round{width:100%; padding-bottom:15px;}
+            #side .round p{display:inline-block; width:70px; height:40px; line-height:37px; cursor:pointer; border-radius:20px; color:#fff; text-align:center; background-color:#000;}
+
+            /*#################### side / cal ##################*/
+
+            #side .cal {width:100%;}
+            #side .cal div{width:410px; height:50px; padding: 20px;}
+            #side .cal div button{width:140px; height:100%; font-weight:400; font-size:20px; cursor:pointer; border:3px solid #fff; background-color:#fff; float:left;}
+            #side .cal div input{display:block; width:96px; height:48px;  line-height:50px; text-align:center; border:1px solid #000; margin:0 15px; float:left;}
+
+            #side .cal .add{width:100%; height:70px; text-align:center; background-color:#000; cursor:pointer; font-size:22px;}
+            #side .cal .add a{color:#fff;}
+            
+            #side .cal .more{width:100%; padding:10px 0 30px; text-align:center;}
+            #side .cal .more a{text-decoration:underline;}
+
+            #side .cal div:after{content:""; display:block; clear:both;}
+
+            /*#################### side / cal ##################*/
+
+            #side .store{width:90%; padding:5%; background-color:#efefef;}
+            #side .store p{width:100%; height:40px; font-size:18px; font-weight:700;}
+            #side .store form{width:425px; border:1px solid #000;}
+            input[type=text]{width:332px; height:70px; text-indent:15px; font-size:20px; font-weight:700; border:none; outline:none; float:left;}
+            #side .store form button{width:93px; height:70px; background-color:#000; color:#fff; font-size:18px; font-weight:700; text-align:center; float:left;}
+
+            .fixed{position:fixed; top:0; right:100px; width:650px;}
+
+            #side .store form:after{content:""; display:block; clear:both;}
+
+
+        #container:after{content:""; display:block; clear:both;}
+
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+
+            side = $("#side");
+
+            $(window).scroll(function(){
+                
+                var nowScroll = $(document).scrollTop();
+                
+                if(80 < nowScroll){
+                    side.addClass("fixed");
+                } else{
+                    side.removeClass("fixed");
+                }
+            })
+
+            
+
+        })
+
+
+        // 마이너스 버튼
+        function minusBtn(){
+        
+            let number = parseInt(upDown.value);
+                    
+            if(number<2){
+                return false;
+            }
+            
+            document.getElementById("upDown").value = number-1;
+            document.getElementById("price").innerText = (5.50*upDown.value).toFixed(2);
+        }
+
+        // 플러스 버튼
+        function plusBtn(){
+            
+            let number = parseInt(upDown.value);
+                    
+            if(number>9){
+                return false;
+            }
+            
+            document.getElementById("upDown").value = number+1;
+            document.getElementById("price").innerText = (5.50*upDown.value).toFixed(2);
+        }
+
+
+    </script>
+
+	
+ </head>
+
+ <body>
+    <div id="wrap">
+        <div id="header">
+            <div id="headerWrap">
+                <header id="header">
+                    <h1>
+                    <a href="#" title="로고영역"
+                        ><img src="img/header/logo.webp" alt="러쉬 로고 이미지"
+                    /></a>
+                    </h1>
+                    <form>
+                    <input
+                        id="search"
+                        name="search"
+                        type="text"
+                        placeholder="Search & Shop"
+                    />
+                    <input
+                        id="schBtn"
+                        type="image"
+                        name="schBtn"
+                        src="img/header/search.png"
+                        alt="돋보기 이미지"
+                        title="돋보기 이미지"
+                    />
+                    </form>
+                    <div id="more">
+                    <p class="login"></p>
+                    <p class="uk"></p>
+                    <p class="basket"></p>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div id="container">
+            <div id="main">
+                <p class="img">
+                    <img src="img/cal/sleep00.webp" alt="큰이미지"/>
+                </p>
+                <div class="content">
+                    <ul>
+                        <li><a href="#" title="메뉴선택">Bubble Bath Bars</a></li>
+                        <li><a href="#" title="메뉴선택">Vegan</a></li>
+                        <li><a href="#" title="메뉴선택">Vegan Bath Products</a></li>
+                        <li><a href="#" title="메뉴선택">Beaty Sleep</a></li>
+                        <li><a href="#" title="메뉴선택">Bath Bams</a></li>
+                    </ul>
+                    <div class="desc">
+                        "I absolutely love the scent of american cream, and my hair smells delicious whenever I use this! I find it is better if I leave it to rest on my hair for a little bit, leaves my hair feeling very soft!" - hiyaitsbecky_72
+
+                        "I now understand why this is a bestseller. Worth the money. Definitely gives my curls a new life. I have been using this one for a while and can say that did not find a better conditioner yet. I leave it longer, like a mask, and it does a perfect job. My curls don't look dull anymore. Recommend for curly hair people to try it." - LovelyLushFan
+
+                        "Smells incredible. I have been using this conditioner for over a year. The smell lasts for days, and leaves your hair feeling super soft." - krystigalpin
+
+                        <p>How to use:</p>
+
+                        After shampooing, squeeze out excess water before sweeping a desired amount through the mid-lengths and ends of your hair. 
+
+                        <p>How to store:</p>
+
+                        Keep your kiss secreted in a cool, dry location, before and between uses.
+
+                        <p>Ingredients</p>
+                        Water (Aqua), Vanilla Pod Infusion, Propylene Glycol, Whole Fresh Orange, Cetearyl Alcohol & Sodium Lauryl Sulfate, Fresh Strawberries, Perfume, Cetearyl Alcohol, Honey, Lanolin, Vanilla Absolute, Clary Sage Oil, Lavender Oil, Benzoin Resinoid, Cetrimonium Chloride, Phenoxyethanol, Benzyl Alcohol, Alpha-Isomethyl Ionone, Coumarin
+                    </div>
+                    <div class="gray">
+                        <h4>FIGHTING ANIMAL TESTING</h4>
+                        We have been fighting against animal testing since before we opened our first shop, and the fight continues today. We test products on humans and promote, fund and use human biology relevant testing methods entirely animal and animal-product free. Find out more
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+                <div id="product">
+                    <div class="text">
+                        <p class="name">A French Kiss</p>
+                        <p class="type">BUBBLE BAR</p>
+                        <p class="desc">A calming kiss goodnight</p>
+                        <p class="price">from £5.50<span>125g</span></p>
+                        <p class="select">SELECT SIZE</p>
+                    </div>
+                    <p class="img">
+                        <img src="img/index/sleep00.avif" alt="이미지" />
+                    </p>
+                </div>
+                
+                <div class="round">
+                    <p>125g</p>
+                </div>
+                <div class="cal">
+                    <div>
+                        <button onclick="minusBtn();">-</button>
+                        <input id="upDown" value="1"></input>
+                        <button onclick="plusBtn();">+</button>
+                    </div>
+                    <button class="add">
+                        <a href="#none" title="추가">
+                            Add to bag   £ <span id="price">5.50</span>
+                        </a>
+                    </button>
+                    <p class="more">Pay later in 3 with Klarna. <a href="#none" title="more">Learn more</a></p>
+                </div>
+
+                <div class="store">
+                    <p>Click and collect Pay online, collect in-store</p>
+                    <form action="#none" method="get" >
+                        <input id="search" type="text" name="search" placeholder="Search by city or post code"/>
+                        <button>Find</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </body>
+</html>
