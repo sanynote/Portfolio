@@ -11,7 +11,7 @@
 
 [러쉬 증감문](http://sunnyjuice94.dothome.co.kr/lush/cal.html)
 
-[포폴](http://sanynote.github.io/Portfolio/url_all.html)
+[포폴](http://sanynote.github.io/Portfolio/canada/url_all.html)
 
 
 
