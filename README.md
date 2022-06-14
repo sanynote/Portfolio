@@ -1,18 +1,8 @@
 
 # Portfolio
 
-[캐나다 인덱스](http://sanynote.github.io/Portfolio/canada/index.html)
+[포폴 소개 페이지](http://sanynote.github.io/Portfolio/portfolio/aboutMe.html)
 
-[러쉬 인덱스](http://sunnyjuice94.dothome.co.kr/lush/index.php)
-
-[러쉬 회원가입](http://sunnyjuice94.dothome.co.kr/lush/01_join_form.php)
-
-[러쉬 로그인](http://sunnyjuice94.dothome.co.kr/lush/03_login.php)
-
-[러쉬 증감문](http://sunnyjuice94.dothome.co.kr/lush/cal.html)
-
-[포폴](http://sanynote.github.io/Portfolio/canada/url_all.html)
-[포폴](http://sanynote.github.io/Portfolio/url_all.html)
 
 
 사니의 포트폴리오
