@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+	<title>deserve</title>
+	<meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style-type:none;}
+        a:link, a:visited{text-decoration:none;}
+
+        /*###### 전체사용영역 ######*/
+            #wrap{min-width:1025px; width:100%;}
+            #container{width:100%;}
+            #deserve{width:1895px; overflow:hidden;}
+            h2{width:1px; height:1px; line-height:0; font-size:1px; position:absolute; left:-9999px;}
+            
+        /*######### visual ########*/
+            #visual{width:100%; height:850px; background-image:url("img/deserve/bg.jpg"); position:relative;}
+            #visual .textBox{width:670px; color:orange; font-size:50px; font-weight:700; position:absolute; left:600px; top:300px;}
+            #visual .textBox .small{width:100%; text-align:right;}
+            #visual .textBox .big{width:100%; font-size:200px; text-align:center;}
+
+            #visual .side{width:400px; position:absolute; left:700px; bottom:150px; color:#fff;}
+
+        /*################## ulArea ###############*/
+            #ulArea{width:7580px;}
+            #ulArea .liArea{width:1895px; float:left;}
+            #ulArea:after{content:""; display:block; clear:both;}
+
+        /*################## 버튼 만들기 ##################*/
+
+            #btn p{width:80px; height:80px; position:absolute; top:190%;
+            transform:translatey(-50%); opacity:0.7;}
+            #btn p img{width:100%; height:100%;}
+
+            #btn .prevBtn{left:3%;}
+            #btn .nextBtn{right:3%;}
+
+        /*########### videoArea ##########*/
+            .videoArea{width:100%; height:700px;}
+            .video{width:50%; height:100%; background-color:pink; float:left;}
+            .video video{width:100%; height:100%;}
+        
+        /*######### desc #########*/
+            .descArea{width:50%; height:100%; color:#fff; float:left; position:relative;}
+            .desc{position:absolute; left:100px; top:200px;}
+
+            .desc .title{width:400px; margin:0 auto; font-size:45px; font-weight:700; opacity:0; 
+			transition:opacity 0.5s linear;}
+			.descArea:hover .title{opacity:1;}
+
+            .desc .text{width:750px; padding-top:30px;  opacity:0; transition:opacity 0.5s linear 0.3s;}
+			.descArea:hover .text{opacity:1;}
+
+            
+        /*######## middle ########*/
+            .middle{width:100%; height:100px; line-height:100px; font-weight:700; font-size:40px; color:#fff; text-align:center;}
+
+        /*######## content #########*/
+            .content{width:100%; height:700px; padding-top:50px;}
+            .content ul{width:1470px; margin:0 auto;}
+            /* 각 li 450 + margin-left 30 == 480 * 3 == 1440 + 30 == 1470 */
+            .content li{width:450px; height:650px; font-size:24px; font-weight:700; float:left; margin-left:30px; border-radius:40px; overflow:hidden; border:2px solid #fff; transition:box-shadow 0.5s linear;}
+	
+            .content .img{width:100%; height:340px; overflow:hidden;}
+            .content .img img{width:100%; transform:scale(1); transition:transform 0.5s linear;}
+
+			.content li:hover .img img{transform:scale(1.1);}
+
+            .content li .more:hover{background-color:#fff; }
+			.content li .more:hover a{color:#999;}
+            
+
+            .content h3{width:370px; height:160px; text-decoration:uppercase; padding:30px 40px;}
+            .content h3 a{color:#fff;}
+
+            .content .more{width:70%; height:50px; line-height:45px; text-align:center; border-radius:30px; border:1px solid #fff; margin:0 auto; transition:background-color 0.7s linear 0.2s;}
+            .content .more a{color:#fff; font-size:18px;}
+
+            .content ul:after{content:""; display:block; clear:both;}
+    </style>
+    <script>
+		$(document).ready(function(){
+
+            $("#ulArea").children("li").eq(0).css({"backgroundColor":"#6774E4"})
+            $("#ulArea").children("li").eq(1).css({"backgroundColor":"#FFCC66"})
+            $("#ulArea").children("li").eq(2).css({"backgroundColor":"#66CCFF"})
+            $("#ulArea").children("li").eq(3).css({"backgroundColor":"#FF6666"})
+
+			
+			$("#ulArea").prepend($(".liArea:last"));
+			$("#ulArea").css({"marginLeft":"-1895px"})
+
+			$(".nextBtn").click(function(){
+				$("#ulArea").animate({"marginLeft":"-=1895px"},500,"swing",function(){
+					
+					$("#ulArea").append( $(".liArea:eq(0)") );
+					
+					$("#ulArea").css({"marginLeft":"-1895px"});
+				});
+			
+			});
+
+			
+			$(".prevBtn").click(function(){
+				$("#ulArea").animate({"marginLeft":"+=1895px"},500,"swing",function(){
+			
+					$("#ulArea").prepend( $(".liArea:last") );
+
+					$("#ulArea").css({"marginLeft":"-1895px"});
+				});
+			
+			});
+
+
+		
+		});
+	</script>
+	
+ </head>
+
+ <body>
+    <div id="wrap">
+        <div id="container">
+            <section id="deserve">
+                <h2>deserve</h2>
+                <div id="visual">
+                    <div class="textBox">
+                        <p class="small">you deserve</p> 
+                        <p class="big">canada</p>
+                    </div>
+                    <div class="side">This year, more than ever, you deserve a real holiday. You deserve Spain.</div>
+                </div>
+                <ul id="ulArea">
+                    <li class="liArea">
+                        <div class="videoArea">
+                            <div class="video">
+                                <video controls poster="img/02.jpg" autoplay muted loop>
+                                    <!--<source src="img/deserve/video00.mp4" type="video/mp4"/>-->
+                                    <source src="img/deserve/heart.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="descArea">
+                                <div class="desc">
+                                    <p class="title">
+                                        OUR BEACHES ARE WAITING FOR YOU
+                                    </p>
+                                    <p class="text">After spending so many days within the same four walls, you deserve to bathe in the sun and the sea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="middle"><h3>discover what canada has to offer</h3></section>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach0.jpg" alt="해변이미지0"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">canada : enjoy world class beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach1.jpg" alt="해변이미지1"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Two seas and an ocean for enjoying the coast</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach2.jpg" alt="해변이미지2"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Laze on some of Canada’s most pristine beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liArea">
+                        <div class="videoArea">
+                            <div class="video">
+                                <video controls poster="img/02.jpg" autoplay muted loop>
+                                    <source src="img/deserve/video00.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="descArea">
+                                <div class="desc">
+                                    <p class="title">
+                                        OUR BEACHES ARE WAITING FOR YOU
+                                    </p>
+                                    <p class="text">After spending so many days within the same four walls, you deserve to bathe in the sun and the sea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="middle"><h3>discover what canada has to offer</h3></section>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach0.jpg" alt="해변이미지0"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">canada : enjoy world class beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach1.jpg" alt="해변이미지1"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Two seas and an ocean for enjoying the coast</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach2.jpg" alt="해변이미지2"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Laze on some of Canada’s most pristine beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liArea">
+                        <div class="videoArea">
+                            <div class="video">
+                                <video controls poster="img/02.jpg" autoplay muted loop>
+                                    <source src="img/deserve/video00.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="descArea">
+                                <div class="desc">
+                                    <p class="title">
+                                        OUR BEACHES ARE WAITING FOR YOU
+                                    </p>
+                                    <p class="text">After spending so many days within the same four walls, you deserve to bathe in the sun and the sea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="middle"><h3>discover what canada has to offer</h3></section>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach0.jpg" alt="해변이미지0"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">canada : enjoy world class beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach1.jpg" alt="해변이미지1"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Two seas and an ocean for enjoying the coast</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach2.jpg" alt="해변이미지2"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Laze on some of Canada’s most pristine beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="liArea">
+                        <div class="videoArea">
+                            <div class="video">
+                                <video controls poster="img/02.jpg" autoplay muted loop>
+                                    <source src="img/deserve/video00.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="descArea">
+                                <div class="desc">
+                                    <p class="title">
+                                        OUR BEACHES ARE WAITING FOR YOU
+                                    </p>
+                                    <p class="text">After spending so many days within the same four walls, you deserve to bathe in the sun and the sea.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="middle"><h3>discover what canada has to offer</h3></section>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach0.jpg" alt="해변이미지0"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">canada : enjoy world class beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach1.jpg" alt="해변이미지1"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Two seas and an ocean for enjoying the coast</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                                <li>
+                                    <p class="img"><img src="img/deserve/beach2.jpg" alt="해변이미지2"/></p>
+                                    <h3>
+                                        <a href="https://www.spain.info/youdeservespain.html" title="beaches">Laze on some of Canada’s most pristine beaches</a>
+                                    </h3>
+                                    <div class="more"><a href="#" title="Find out more">Find out more</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <div id="btn">
+                    <p class="nextBtn">
+                        <img src="img/deserve/btn0.png" alt="다음버튼"/>
+                    </p>
+                    <p class="prevBtn">
+                        <img src="img/deserve/btn1.png" alt="이전버튼"/>
+                    </p>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+ </body>
+</html>
