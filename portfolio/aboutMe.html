@@ -8,39 +8,75 @@
         *{margin:0; padding:0;}
         li{list-style-type:none;}
         a:link, a:visited{text-decoration:none; color:blue;}
+        #wrap{width:100%;}
+        #container{width:100%; background-color: pink;}
+        h2{text-align:center; height:130px; line-height:130px; font-size: 25px;}
+        h3{font-size:20px; font-weight:400; color:#d00; padding:12px 0;}
+
         /*body{overflow-x:hidden;}*/
 
-        /*###### 전체사용영역 ######*/
+        #content{width:1895px; margin:0 auto; background-color:#efefef;}
 
-            #wrap{width:100%;}
-            #container{width:100%;}
-            h2{text-align:center; height:130px; line-height:130px; font-size: 25px;}
-            h3{font-size:20px; font-weight:400; color:#d00; padding:12px 0;}
+        #sunny{width:1500px; padding-top:5%;margin:0 auto; }
+        #sunny p{float:left;}
+        #sunny .img{width:33%;}
+        #sunny .img img{width:100%;}
+        #sunny .text{width:60%; padding-left:7%; padding-top:3%; font-size:18px;}
 
-            #content{width:1895px; margin:0 auto; background-color:#efefef;}
+        #sunny:after{display:block; content:""; clear:both;}
 
-            #sunny{width:1500px; padding-top:5%;margin:0 auto; }
+
+        #port{width:1650px; padding-top:100px; margin:0 auto;}
+        #port li{width:500px; margin:0 25px; float:left; outline:1px solid #ccc;}
+        #port li .img{width:70%; padding:15%; padding-bottom:0; height:240px;}
+        #port li .img img{width:100%;}
+
+        #port li .text{width:80%; padding:10%;}
+        #port li .title,#port li .desc{font-size:18px; line-height:30px; color:#d00;}
+
+        #port li .url{width:80%; padding:10%; padding-top: 0;}
+
+        #port:after{display:block; content:""; clear:both;}
+
+
+        /*############### 태블릿 pc버전 #################*/
+        @media all and (min-width:768px) and (max-width:1024px){
+            
+        }
+
+        /*############### 스마트폰 가로버전 #################*/
+		@media all and (min-width:481px) and (max-width:767px){
+            
+            
+        }
+
+
+        /*############### 스마트폰 세로버전 #################*/
+		@media all and (min-width:320px) and (max-width:480px){
+            #content{width:370px; margin:0 auto; background-color:#efefef;}
+
+            #sunny{width:370px;margin:0 auto; }
             #sunny p{float:left;}
-            #sunny .img{width:33%;}
+            #sunny .img{width:100%;}
             #sunny .img img{width:100%;}
-            #sunny .text{width:60%; padding-left:7%; padding-top:3%; font-size:18px;}
+            #sunny .text{width:100%; padding:0; font-size:12px;}
 
             #sunny:after{display:block; content:""; clear:both;}
 
 
-            #port{width:1650px; padding-top:100px; margin:0 auto;}
-            #port li{width:500px; margin:0 25px; float:left; outline:1px solid #ccc;}
-            #port li .img{width:70%; padding:15%; padding-bottom:0; height:240px;}
+            #port{width:370px; padding-top:30px; margin:0 auto;}
+            #port li{width:100%; margin:0;}
+            #port li .img{width:70%; padding:15%; padding-bottom:0; height:200px;}
             #port li .img img{width:100%;}
 
-            #port li .text{width:80%; padding:10%;}
-            #port li .title,#port li .desc{font-size:18px; line-height:30px; color:#d00;}
+            #port li .text{width:90%; padding:5%;}
+            #port li .title,#port li .desc{font-size:12px; line-height:20px; color:#d00;}
 
             #port li .url{width:80%; padding:10%; padding-top: 0;}
 
             #port:after{display:block; content:""; clear:both;}
-
             
+            }
         
     </style>
 	
