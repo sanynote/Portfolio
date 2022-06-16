@@ -128,7 +128,7 @@
 
             /*######## map / pro_name #########*/
             #map .pro_name{width:200px; height:100%; float:left;}
-            #map .pro_name ul{width:100%; height:100%; margin:20px 0;}
+            #map .pro_name ul{width:100%; height:90%; padding-top:25%;}
             #map .pro_name li{width:100%; height:45px; line-height:45px; font-size:18px; transition:all 0.5s linear; float:left;}
 
             /*######## map / city_info #########*/
@@ -367,9 +367,9 @@
             #map{width:100%; height:200px; margin:0 auto;}
 
             /*######## map / pro_name #########*/
-            #map .pro_name{width:100%; float:left;}
-            #map .pro_name ul{width:90%; padding-left:10%; height:85%; margin:20px 0;}
-            #map .pro_name li{width:30%; height:45px; line-height:45px; font-size:15px; transition:all 0.5s linear; float:left;}
+            #map .pro_name{width:100%; height:145px; float:left;}
+            #map .pro_name ul{width:90%; padding:0; padding-left:10%;}
+            #map .pro_name li{width:30%; height:45px; line-height:45px; font-size:16px; transition:all 0.5s linear; float:left;}
 
             /*######## map / city_info #########*/
             #map .city_info{display:none;}
@@ -381,7 +381,7 @@
             /* # seasonM */
                 #seaArea{width:100%; padding:0;}
                 #season{display:none;}
-                #seasonM{display:block; width:100%; padding-top:50px;}
+                #seasonM{display:block; width:100%;}
                 #seasonM ul{width:370px; margin:0 auto;}
                 #seasonM li{width:50%; height:185px; float:left; position:relative;}
                 #seasonM .img{width:100%;}
@@ -402,7 +402,15 @@
             #snsArea{display:none;}
             #footer{display:none;}
 
+            /* festival */
+            #festivalArea{width:100vw; overflow:hidden; padding:50px 0;}
+            #festival{width:100%; height:450px; margin:0 auto; font-family: 'M PLUS Rounded 1c', sans-serif; position:relative;}
 
+            #festival ul{width:2980px; height:100%;}
+            #festival li{width:330px; height:100%; float:left; margin-right:20px; margin-left:20px; position:relative;}
+
+            #fesBtn .prevBtn{left:0;}
+            #fesBtn .nextBtn{right:0;}
         
         }
             
@@ -556,8 +564,8 @@
 
                 var mapIndex = $(this).index();
 				
-				mapLi.css({"backgroundColor":"#fff","textIndent":"0","fontSize":"20px","lineHeight":"45px","height":"45px"});
-				$(this).css({"backgroundColor":"#d00","textIndent":"10px","fontSize":"25px","lineHeight":"60px","height":"60px"});
+				mapLi.css({"backgroundColor":"#fff","textIndent":"0","lineHeight":"45px","height":"45px"});
+				$(this).css({"backgroundColor":"#d00","textIndent":"10px","lineHeight":"45px","height":"45px"});
 
                 mapLi.children("a").css({"color":"#000"});
 				$(this).children("a").css({"color":"#fff"});
