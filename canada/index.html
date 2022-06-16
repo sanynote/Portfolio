@@ -3,6 +3,7 @@
  <head>
 	<title>canada</title>
 	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=M+PLUS+Rounded+1c:wght@300;500&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
         body{font-family: 'Indie Flower', cursive; overflow-x:hidden;}      
 
         /*######### wrap #########*/
-            #wrap{min-width:1025px; width:100%;}
+
             h2{position:absolute; left:-9999px; width:1px; height:1px; line-height:0; font-size:1px; overflow:hidden;}
             
         /*########### header ##########*/
@@ -145,6 +146,7 @@
 
         /*######## season ##########*/
             #seaArea{width:100%; padding:100px 0;}
+            #seasonM{display:none;}
             #season{width:1400px; height:680px; margin:0 auto; border-top:5px dotted #eee; border-bottom:5px dotted #eee; padding:100px 0 60px; font-family: 'M PLUS Rounded 1c', sans-serif;}
 
             /* season / title */
@@ -333,6 +335,76 @@
             #center .copyright a{color:#eee;}
 
             #center .copyright li:hover a{color:#aaa;}
+
+
+        /*############### 스마트폰 세로버전 #################*/
+		@media all and (min-width:320px) and (max-width:480px){
+            
+            #wrap{width:100%;}
+            /*########### header ##########*/
+            #headerWrap{width:100vw;}
+            #header{width:175px; margin:0 auto; padding:0;}
+            #header .text{width:115px; padding-top:22px;}
+            
+            #gnb{display:none;}
+            .fixed{display:none;}
+
+            /*######## visual ##########*/ 
+        
+            #visual{width:100%; height:200px;}
+            /* 비주얼영역 랜덤이미지*/
+            #randomImg{width:100%; height:200px;}
+            #randomImg .img{width:100%; overflow:hidden;}
+            #randomImg .img img{width:100%;}
+
+            /* 비주얼영역 텍스트박스 */
+            #visual .textBox{display:none;}
+
+            #naturalArea{display:none;}
+
+            /*######## mapArea ##########*/
+            #mapArea{width:100%; height:500px; padding:0;}
+            #map{width:100%; height:200px; margin:0 auto;}
+
+            /*######## map / pro_name #########*/
+            #map .pro_name{width:100%; float:left;}
+            #map .pro_name ul{width:90%; padding-left:10%; height:85%; margin:20px 0;}
+            #map .pro_name li{width:30%; height:45px; line-height:45px; font-size:15px; transition:all 0.5s linear; float:left;}
+
+            /*######## map / city_info #########*/
+            #map .city_info{display:none;}
+
+            /*######## map / map_img #########*/
+            #map .map_img{width:100%; height:300px; float:left;}
+            #map .map_img a iframe{width:100%; height:100%; border:0;}
+
+            /* # seasonM */
+                #seaArea{width:100%; padding:0;}
+                #season{display:none;}
+                #seasonM{display:block; width:100%; padding-top:50px;}
+                #seasonM ul{width:370px; margin:0 auto;}
+                #seasonM li{width:50%; height:185px; float:left; position:relative;}
+                #seasonM .img{width:100%;}
+                #seasonM .img img{width:100%;}
+                #seasonM .text{width:165px; height:165px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; display:none;}
+                #seasonM li:hover .text{display:block;}
+                
+                #seasonM .text .name{font-size:25px; padding-bottom:3px; color:#efefef;}
+                #seasonM .text .title{font-size:15px; color:#efefef; }
+                #seasonM .text .desc{width:100%; font-size:13px; color:#efefef; padding-top:15px; font-weight:500;}
+                #seasonM .text .icon{width:20px; position:absolute; left:10px; top:10px;}
+                #seasonM .text .icon img{width:100%;}
+
+                #seasonM ul:after{display:block; clear:both; overflow:hidden;}
+
+            /* city */
+            #cityArea{display:none;}
+            #snsArea{display:none;}
+            #footer{display:none;}
+
+
+        
+        }
             
 
 	</style>
@@ -492,15 +564,15 @@
 
                 var title = $(this).find("a").attr("title");
 
-				if(title == "Yukon" || title == "PEI"|| title == "Alberta"|| title == "Newfoundland"){
+				if(title == "Yukon" || title == "PEI"|| title == "Alberta"){
 					mapImg.attr("src", maps[0]);
                     $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지0'/>")
 				}
-				else if(title == "Ontario" || title == "Nunavut"|| title == "Saskatchewan"){
+				else if(title == "Ontario" || title == "Nunavut"|| title == "Sas"){
 					mapImg.attr("src", maps[1]);
                     $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지1'/>")
 				}
-                else if(title == "Quebec" || title == "BC"|| title == "Manitoba"){
+                else if(title == "Quebec" || title == "BC"|| title == "New"){
 					mapImg.attr("src", maps[2]);
                     $(cityImg).html("<img src='img/index/map"+mapIndex+".jpg' alt='맵이미지2'/>")
 				}
@@ -715,11 +787,10 @@
                             <li><a href="#" title="Quebec">Quebec</a></li>
                             <li><a href="#" title="PEI">PEI</a></li>
                             <li><a href="#" title="Nunavut">Nunavut</a></li>
-                            <li><a href="#" title="BC">British Columbia</a></li>
+                            <li><a href="#" title="BC">BC</a></li>
                             <li><a href="#" title="Alberta">Alberta</a></li>
-                            <li><a href="#" title="Saskatchewan">Saskatchewan</a></li>
-                            <li><a href="#" title="Manitoba">Manitoba</a></li>
-                            <li><a href="#" title="Newfoundland">Newfoundland</a></li>
+                            <li><a href="#" title="Sas">Sas</a></li>
+                            <li><a href="#" title="New">New</a></li>
                         </ul>
                     </div>
                     <div class="city_info">
@@ -739,6 +810,67 @@
 
             <section id="seaArea">
                 <h2>season</h2>
+                <div id="seasonM">
+                    <h3>4 seasons of canada</h3>
+                    <ul>
+                        <li>
+                            <p class="img">
+                                <img src="img/index/season0.jpg" alt="spring"/>
+                            </p>
+                            <div class="text">
+                                <p class="name">spring</p>
+                                <p class="title">&lt;Tulips in bloom&gt;</p>
+                                <p class="desc">
+                                    all Canadians wait for this season.  
+                                    now we can see beautiful colours everywhere
+                                </p>
+                                <p class="icon"><img src="img/index/i0.png" alt="spring"/></p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <img src="img/index/season1.jpg" alt="summer"/>
+                            </p>
+                            <div class="text">
+                                <p class="name">summer</p>
+                                <p class="title">&lt;Hot, humid weather&gt;</p>
+                                <p class="desc">
+                                    the temperature can rise and fall dramatically. It can be really hot 
+                                    during the day and as the sun goes down
+                                </p>
+                                <p class="icon"><img src="img/index/i1.png" alt="summer"/></p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <img src="img/index/season2.jpg" alt="fall"/>
+                            </p>
+                            <div class="text">
+                                <p class="name">fall</p>
+                                <p class="title">&lt;Good time to travel&gt;</p>
+                                <p class="desc">
+                                    Every fall I'm excited to watch the changing colors of green 
+                                    leaves into orange, red and brown carpet.
+                                </p>
+                                <p class="icon"><img src="img/index/i2.png" alt="fall"/></p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="img">
+                                <img src="img/index/season3.jpg" alt="winter"/>
+                            </p>
+                            <div class="text">
+                                <p class="name">winter</p>
+                                <p class="title">&lt;Lots of snow&gt;</p>
+                                <p class="desc">
+                                    I have learned that to enjoy the cold weather in canada
+                                    you have to learn how to love it. 
+                                </p>
+                                <p class="icon"><img src="img/index/i3.png" alt="winter"/></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div id="season">
                     <div class="title">
                         <h3><span>4 seasons</span><br/> of Canada</h3>
