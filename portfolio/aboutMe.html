@@ -12,14 +12,14 @@
         body{ background-color:#efefef;}
         #wrap{width:100%;}
         #container{width:100%;}
-        h2{text-align:center; height:130px; line-height:130px; font-size: 25px;}
-        h3{font-size:20px; font-weight:400; color:#d00; padding:12px 0;}
+        h2{text-align:center; height:100px; line-height:100px; font-size:25px;}
+        h3{width:100%; text-align:center; line-height:25px; font-size:20px;}
 
         /*body{overflow-x:hidden;}*/
 
         #content{width:1895px; margin:0 auto;}
 
-        #sunny{width:1500px; padding-top:5%;margin:0 auto; }
+        #sunny{width:1500px; padding-top:2%;margin:0 auto; }
         #sunny p{float:left;}
         #sunny .img{width:33%;}
         #sunny .img img{width:100%;}
@@ -28,13 +28,14 @@
         #sunny:after{display:block; content:""; clear:both;}
 
 
-        #port{width:1650px; padding-top:100px; margin:0 auto;}
-        #port li{width:500px; margin:0 25px; float:left; outline:1px solid #ccc;}
-        #port li .img{width:70%; padding:15%; padding-bottom:0; height:240px;}
+        #port{width:1650px; padding:100px 0; margin:0 auto;}
+        #port li{width:500px; margin:0 25px; float:left; background-color:#F8F8F8;}
+        #port li .main{width:100%; height:100px;}
+        #port li .img{width:70%; padding:10% 15%; height:240px;}
         #port li .img img{width:100%;}
 
         #port li .text{width:80%; padding:10%;}
-        #port li .title,#port li .desc{font-size:18px; line-height:30px; color:#d00;}
+        #port li .title{font-size:18px; font-weight:700; line-height:30px; color:#d00;}
 
         #port li .url{width:80%; padding:10%; padding-top: 0;}
 
@@ -43,16 +44,19 @@
 
         /*############### 태블릿 pc버전 #################*/
         @media all and (min-width:768px) and (max-width:1024px){
-            h3{font-size:15px; font-weight:400; color:#d00;}
+            h2{text-align:center; height:100px; line-height:100px; font-size:25px;}
+            h3{width:100%; text-align:center; line-height:25px; font-size:16px;}
+
             #content{width:100vw; margin:0 auto; background-color:#efefef; font-size:13px;}
 
             #sunny{width:100vw; margin:0 auto; }
             #sunny .img{width:30%; padding:0 5%;}
             #sunny .text{width:50%; padding:0 5%; font-size:14px;}
+            #port li .title{font-weight:700; font-size:14px; line-height:25px; color:#d00;}
 
 
             #port{width:100vw; padding-top:50px; margin:0 auto;}
-            #port li{width:27%; padding: 0.1em; float:left; outline:1px solid #ccc;}
+            #port li{width:26%; padding: 0.1em; float:left; outline:1px solid #ccc;}
             #port li .img{width:70%; padding:15%; padding-bottom:0; height:140px;}
 
 
@@ -62,17 +66,17 @@
         /*############### 스마트폰 가로버전 #################*/
 		@media all and (min-width:481px) and (max-width:767px){
             h2{height:50px; line-height:50px; font-size: 18px;}
-            h3{font-size:15px; font-weight:400; color:#d00;}
+
             #content{width:100vw; margin:0 auto; background-color:#efefef;font-size:14px;}
 
             #sunny{width:100vw; margin:0 auto; }
-            #sunny .img{width:80%; padding:0 10%;}
+            #sunny .img{width:70%; padding:0 15%;}
             #sunny .text{width:90%; padding:5%; font-size:14px;}
 
 
             #port{width:100vw; padding-top:30px; margin:0 auto;}
             #port li{width:80%; padding:10%; margin:0; outline:none; border-top:2px dotted #d00;}
-            #port li .img{width:70%; padding:15%; padding-bottom:0; height:230px;}
+            #port li .img{width:56%; padding:10% 22%; padding-bottom:0; height:230px;}
 
             #port li .text{width:90%; padding:5%;}
             #port li .title,#port li .desc{font-size:14px; line-height:22px; color:#d00;}
@@ -88,7 +92,8 @@
         /*############### 스마트폰 세로버전 #################*/
 		@media all and (min-width:320px) and (max-width:480px){
             h2{height:50px; line-height:50px; font-size: 18px;}
-            h3{font-size:15px; font-weight:400; color:#d00;}
+            h3{font-size:16px;}
+
             #content{width:100vw; margin:0 auto; background-color:#efefef;}
 
             #sunny{width:100vw; margin:0 auto; }
@@ -141,12 +146,17 @@
                         <p class="img">
                             <img src="img/canada.png" alt="캐나다 관광청 이미지"/>
                         </p>
+                        <div class="main">
+                            <h3>마크업</h3>
+                            <h3>반응형 페이지</h3>
+                            <h3>jQuery</h3>
+                        </div>
                         <p class="text">
                             <span class="title">주제 : 캐나다 관광청 </span><br/>
                             캐나다 관광청을 주제로 한 페이지입니다.<br/>
                             html과 css 기능을 위주로 제작하였으며, 제이쿼리와 자바스크립트 기능들도 들어간 페이지입니다. 페이지에 대한 관심도를 보여드리기 위해서 대부분 직접 찍은 사진과 영상으로 구성하였습니다.<br/><br/>
 
-                            <span class="desc">기술 상세설명: </span><br/>
+                            <span class="title">기술 상세설명: </span><br/>
                             - header tab으로 영역이동 (웹접근성 높이기)<br/>
                             - 비쥬얼영역 랜덤이미지 (onload 할때마다)<br/>
                             - map 영역 클릭하면 지역과 연동된 지도 나옴<br/>
@@ -155,9 +165,8 @@
 
                         </p>
                         <div class="url">
-                            <h3>* url 링크</h3>
-                            <p><a href="https://sanynote.github.io/Portfolio/canada/index.html" title="캐나다관광청 인덱스">캐나다 인덱스</a></p>
-                            <p><a href="https://sanynote.github.io/Portfolio/canada/mediaQuery/index.html" title="캐나다관광청 반응형">캐나다 반응형(모바일 세로,가로, 태블릿PC)</a></p>
+                            <p class="title">* url 링크</p>
+                            <p><a href="https://sanynote.github.io/Portfolio/canada/index.html" title="캐나다관광청 인덱스">캐나다 반응형 페이지</a></p>
                         </div> 
 
                     </li>
@@ -166,12 +175,17 @@
                         <p class="img">
                             <img src="img/lush.jpg" alt="LUSH 이미지"/>
                         </p>
+                        <div class="main">
+                            <h3>증감문</h3>
+                            <h3>로그인</h3>
+                            <h3>회원가입</h3>
+                        </div>
                         <p class="text">
                             <span class="title">주제 : LUSH </span><br/>
                             웹사이트에서 빠질 수 없는 로그인,회원가입과 상품선택시 가격이 달라지는 증감문을 주제로 한 페이지입니다.<br/>
                             javascript와 php를 위주로 제작하였습니다.<br/><br/>
 
-                            <span class="desc">기술 상세설명: </span><br/>
+                            <span class="title">기술 상세설명: </span><br/>
                             - newsletter 이메일 입력하고 확인<br/>
                             - 회원가입을 위한 아이디 중복체크<br/>
                             - 회원가입 후, 로그인 시 인덱스에 로그인 표시<br/>
@@ -181,7 +195,7 @@
 
                         </p>
                         <div class="url">
-                            <h3>* url 링크</h3>
+                            <p class="title">* url 링크</p>
                             <p><a href="http://sunnyjuice94.dothome.co.kr/lush/index.php" title="러쉬 인덱스">러쉬 인덱스</a></p>
                             <p><a href="http://sunnyjuice94.dothome.co.kr/lush/03_login.php" title="러쉬 로그인">러쉬 로그인</a></p>
                             <p><a href="http://sunnyjuice94.dothome.co.kr/lush/01_join_form.php" title="러쉬 회원가입">러쉬 회원가입</a></p>
@@ -192,20 +206,27 @@
                     </li>
 
                     <li>
+                        
                         <p class="img">
-                            <img src="https://velopert.com/wp-content/uploads/2016/03/react.png" alt="react 이미지"/>
+                            <img src="img/react.jpg" alt="react 이미지"/>
                         </p>
+                        <div class="main">
+                            <h3>리액트 프레임워크</h3>
+                            <h3>백엔드와 협업</h3>
+                            <h3>카카오 api 연동</h3>
+                            <h3>정보 연동</h3>
+                        </div>
                         <p class="text">
                             <span class="title">주제 : react를 활용한 백엔드와의 협업</span><br/>
                             react, git을 활용하여 백엔드와 협업한 모바일 청첩장 제작 페이지로, 리액트라는 새로운 프레임워크에 대한 이해와 접근을 주 목적으로 진행중인 사이드 프로젝트입니다. 카카오에서 key를 발급받고 카카오지도 api 연동했습니다. 현재는 데이터연동 테스트 진행상태이고 데이터구조에 맞게 crud를 구현해 볼 예정입니다. <br/><br/>
 
-                            <span class="desc">기술 상세설명: </span><br/>
+                            <span class="title">기술 상세설명: </span><br/>
                             - 전화번호와 이메일로 login<br/>
                             - 고객이 정보를 기입하는 information<br/>
                             - 입력된 정보로 완성되는 invitation
                         </p>
                         <div class="url">
-                            <h3>* url 링크</h3>
+                            <p class="title">* url 링크</p>
                             <p><a href="#none" title="리액트">리액트</a></p>
 
                         </div> 
