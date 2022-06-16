@@ -17,6 +17,12 @@
         a:hover, a:focus{text-decoration:none; outline:none;}
         body{font-family: 'Indie Flower', cursive; overflow-x:hidden;}      
 
+        /* 모바일용 꺼놓기 */
+        #seasonM{display:none;}
+        #topTen{display:none;}
+        #cityM{display:none;}
+        #footerM{display:none;}
+
         /*######### wrap #########*/
 
             h2{position:absolute; left:-9999px; width:1px; height:1px; line-height:0; font-size:1px; overflow:hidden;}
@@ -146,7 +152,6 @@
 
         /*######## season ##########*/
             #seaArea{width:100%; padding:100px 0;}
-            #seasonM{display:none;}
             #season{width:1400px; height:680px; margin:0 auto; border-top:5px dotted #eee; border-bottom:5px dotted #eee; padding:100px 0 60px; font-family: 'M PLUS Rounded 1c', sans-serif;}
 
             /* season / title */
@@ -397,10 +402,30 @@
 
                 #seasonM ul:after{display:block; clear:both; overflow:hidden;}
 
-            /* city */
+            /* topTen */
             #cityArea{display:none;}
-            #snsArea{display:none;}
-            #footer{display:none;}
+            #topTen{display:block; width:100vw; padding-top:30px;}
+            #topTen ul{width:100vw;}
+            #topTen li{width:100vw; height:40px; font-size:12px; margin-bottom:5px; border-bottom:1px solid #ccc;}
+
+            /*####### img 영역 ########*/
+            #topTen a{display:block; position:relative;}
+            #topTen a .img{display:block; width:50px; height:40px; margin-left:20px; overflow:hidden; float:left;}
+            #topTen a .img img{width:100%;}
+
+
+            /*####### name 영역 ########*/
+            #topTen a .name{width:230px; height:100%; font-size:14px; line-height:40px; padding-left:10px; float:left;}
+
+            #topTen a .rank{width:30px; height:40px; line-height:40px; position:absolute; right:0; top:0; color:#d00;}
+
+
+            /* citym */
+            #cityM{display:block;}
+            #cityM{width:100%; font-size:14px; padding:15px 0 25px;}
+            #cityM ul{width:80%; margin:0 auto;}
+            #cityM li{background-color:#caf; height:30px; line-height:25px; border-radius:15px; margin-top:5px; display:inline-block;}
+            #cityM li a{padding:0 13px; font-size:11px; text-transform:uppercase;}
 
             /* festival */
             #festivalArea{width:100vw; overflow:hidden; padding:50px 0;}
@@ -411,6 +436,23 @@
 
             #fesBtn .prevBtn{left:0;}
             #fesBtn .nextBtn{right:0;}
+
+            #snsArea{display:none;}
+            #footer{display:none;}
+
+            /* footerM */
+
+            #footerM{display:block; width:100%;}
+            #footerM .top{width:100%;}
+            #footerM .top li{display:block; height:40px; line-height:40px; text-align:center; border-bottom:1px solid #ccc;}
+            #footerM .top li a{line-height:30px; padding:0 7px;}
+            #footerM .logoArea{width:100%; padding:50px 0 30px;}
+            #footerM .logoArea .img{width:70px; margin:0 auto;}
+            #footerM .logoArea .img img{width:100%;}
+            #footerM .logoArea h4{font-weight:600; font-size:16px; text-align:center;}
+            #footerM .question{width:100%; height:30px; margin:10px 0;}
+            #footerM .question p{width:45%; height:100%; margin-left:10px; border:1px solid #ccc; float:left;}
+            #footerM .question p a{display:block; text-align:center; line-height:30px;}
         
         }
             
@@ -957,6 +999,58 @@
                 </div>
             </section>
 
+            <div id="topTen">
+                <h3>Top 10</h3>
+                <ul>
+                    <li>
+                        <a href="#" title="탑텐0">
+                            <span class="img"><img src="img/index/sns0.jpg" alt="Yukon"/></span>
+                            <span class="name">1. Yukon</span>
+                            <span class="rank">new</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="탑텐1">
+                            <span class="img"><img src="img/index/sns1.jpg" alt="Northwest Territories"/></span>
+                            <span class="name">2. Northwest Territories</span>
+                            <span class="rank">new</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="탑텐2">
+                            <span class="img"><img src="img/index/sns2.jpg" alt="Nunavut"/></span>
+                            <span class="name">3. Nunavut</span>
+                            <span class="rank">new</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="탑텐3">
+                            <span class="img"><img src="img/index/sns3.jpg" alt="British Columbia"/></span>
+                            <span class="name">4. British Columbia</span>
+                            <span class="rank">new</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="탑텐4">
+                            <span class="img"><img src="img/index/sns4.jpg" alt="Alberta"/></span>
+                            <span class="name">5. Alberta</span>
+                            <span class="rank">new</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="cityM">
+                <ul>
+                    <li><a href="#" title="해시태그0">#vancouver</a></li>
+                    <li><a href="#" title="해시태그1">#toronto</a></li>
+                    <li><a href="#" title="해시태그2">#quebec</a></li>
+                    <li><a href="#" title="해시태그3">#montreal</a></li>
+                    <li><a href="#" title="해시태그4">#ottawa</a></li>
+                    <li><a href="#" title="해시태그5">#yellowknife</a></li>
+                </ul>
+                
+            </div>
+
             <section id="cityArea">
                 <h2>city</h2>
                 <div id="city">
@@ -1177,6 +1271,7 @@
                     
                 </div>
             </section>
+
 
             <section id="snsArea">
                 <h2>sns</h2>
@@ -1416,6 +1511,27 @@
             </div>
 
         </footer>
+        <div id="footerM">
+            <ul class="top">
+                <li><a href="#" title="login">log-in</a></li>
+                <li><a href="#" title="menu">menu</a></li>
+                <li><a href="#" title="about us">about us</a></li>
+                <li><a href="#" title="contact">contact</a></li>
+            </ul>
+            <div class="logoArea">
+                <p class="img"><img src="img/footer/foo_logo.png" alt="캐나다 로고 이미지"/></p>
+                <h4>Canada's official tourism website</h4>
+            </div>
+            <div class="question">
+                <p>
+                    <a href="#" title="chat">1:1 chat</a>
+                </p>
+                <p>
+                    <a href="#" title="faq">FAQ</a>
+                </p>
+            </div>
+        
+        </div>
     </div>
  </body>
 </html>
