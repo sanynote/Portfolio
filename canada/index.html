@@ -25,7 +25,7 @@
 
         /*######### wrap #########*/
 
-            h2{position:absolute; left:-9999px; width:1px; height:1px; line-height:0; font-size:1px; overflow:hidden;}
+            h2{line-height:100px; text-align:center; font-size:35px;}
             
         /*########### header ##########*/
             #headerWrap{width:1903px; margin:0 auto;}
@@ -344,7 +344,7 @@
 
         /*############### 스마트폰 세로버전 #################*/
 		@media all and (min-width:320px) and (max-width:480px){
-            
+            h2{line-height:50px; text-align:center; font-size:20px; background-color:#efefef;}
             #wrap{width:100%;}
             /*########### header ##########*/
             #headerWrap{width:100vw;}
@@ -384,23 +384,23 @@
             #map .map_img a iframe{width:100%; height:100%; border:0;}
 
             /* # seasonM */
-                #seaArea{width:100%; padding:0;}
-                #season{display:none;}
-                #seasonM{display:block; width:100%;}
-                #seasonM ul{width:370px; margin:0 auto;}
-                #seasonM li{width:50%; height:185px; float:left; position:relative;}
-                #seasonM .img{width:100%;}
-                #seasonM .img img{width:100%;}
-                #seasonM .text{width:165px; height:165px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; display:none;}
-                #seasonM li:hover .text{display:block;}
-                
-                #seasonM .text .name{font-size:25px; padding-bottom:3px; color:#efefef;}
-                #seasonM .text .title{font-size:15px; color:#efefef; }
-                #seasonM .text .desc{width:100%; font-size:13px; color:#efefef; padding-top:15px; font-weight:500;}
-                #seasonM .text .icon{width:20px; position:absolute; left:10px; top:10px;}
-                #seasonM .text .icon img{width:100%;}
+            #seaArea{width:100%; padding:0;}
+            #season{display:none;}
+            #seasonM{display:block; width:100%;}
+            #seasonM ul{width:370px; margin:0 auto;}
+            #seasonM li{width:50%; height:185px; float:left; position:relative;}
+            #seasonM .img{width:100%;}
+            #seasonM .img img{width:100%;}
+            #seasonM .text{width:165px; height:165px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; display:none;}
+            #seasonM li:hover .text{display:block;}
+            
+            #seasonM .text .name{font-size:25px; padding-bottom:3px; color:#efefef;}
+            #seasonM .text .title{font-size:15px; color:#efefef; }
+            #seasonM .text .desc{width:100%; font-size:13px; color:#efefef; padding-top:15px; font-weight:500;}
+            #seasonM .text .icon{width:20px; position:absolute; left:10px; top:10px;}
+            #seasonM .text .icon img{width:100%;}
 
-                #seasonM ul:after{display:block; clear:both; overflow:hidden;}
+            #seasonM ul:after{display:block; clear:both; content:"";}
 
             /* topTen */
             #cityArea{display:none;}
@@ -453,6 +453,231 @@
             #footerM .question{width:100%; height:30px; margin:10px 0;}
             #footerM .question p{width:45%; height:100%; margin-left:10px; border:1px solid #ccc; float:left;}
             #footerM .question p a{display:block; text-align:center; line-height:30px;}
+        
+        }
+
+        /*############### 스마트폰 가로버전 #################*/
+		@media all and (min-width:481px) and (max-width:767px){
+            h2{line-height:60px; text-align:center; font-size:25px; background-color:#efefef;}
+            #wrap{width:100%;}
+            /*########### header ##########*/
+            #headerWrap{width:100vw;}
+            #header{width:175px; margin:0 auto; padding:0;}
+            #header .text{width:115px; padding-top:22px;}
+            
+            #gnb{display:none;}
+            .fixed{display:none;}
+
+            /*######## visual ##########*/ 
+        
+            #visual{width:100%; height:250px;}
+            /* 비주얼영역 랜덤이미지*/
+            #randomImg{width:100%; height:250px;}
+            #randomImg .img{width:100%; overflow:hidden;}
+            #randomImg .img img{width:100%;}
+
+            #visual .textBox{display:none;}
+            #naturalArea{display:none;}
+
+            /*######## mapArea ##########*/
+            #mapArea{width:100%; height:500px; padding:0;}
+            #map{width:100%; height:200px; margin:0 auto;}
+
+            /*######## map / pro_name #########*/
+            #map .pro_name{width:100%; height:145px; float:left;}
+            #map .pro_name ul{width:90%; padding:0; padding-left:10%;}
+            #map .pro_name li{width:30%; height:45px; line-height:45px; font-size:16px; transition:all 0.5s linear; float:left;}
+
+            /*######## map / city_info #########*/
+            #map .city_info{display:none;}
+
+            /*######## map / map_img #########*/
+            #map .map_img{width:100%; height:300px; float:left;}
+            #map .map_img a iframe{width:100%; height:100%; border:0;}
+
+            /* # seasonM */
+            #seaArea{width:100%; padding:0;}
+            #season{display:none;}
+            #seasonM{display:block; width:100%;}
+            #seasonM ul{width:480px; margin:0 auto;}
+            #seasonM li{width:50%; height:240px; float:left; position:relative;}
+            #seasonM .img{width:100%;}
+            #seasonM .img img{width:100%;}
+            #seasonM .text{width:220px; height:220px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; display:none;}
+            #seasonM li:hover .text{display:block;}
+            
+            #seasonM .text .name{font-size:35px; padding-bottom:3px; color:#efefef;}
+            #seasonM .text .title{font-size:20px; color:#efefef; }
+            #seasonM .text .desc{width:100%; font-size:16px; color:#efefef; padding-top:15px; font-weight:500;}
+            #seasonM .text .icon{width:20px; position:absolute; left:10px; top:10px;}
+            #seasonM .text .icon img{width:100%;}
+
+            #seasonM ul:after{display:block; clear:both; content:"";}
+
+            /* topTen */
+            #cityArea{display:none;}
+            #topTen{display:block; width:100vw; padding-top:30px;}
+            #topTen ul{width:100vw; margin-top:20px;}
+            #topTen li{width:100vw; height:50px; font-size:12px; margin-bottom:12px; border-bottom:1px solid #ccc;}
+
+            /*####### img 영역 ########*/
+            #topTen a{display:block; position:relative;}
+            #topTen a .img{display:block; width:80px; height:50px; margin-left:20px; overflow:hidden; float:left;}
+            #topTen a .img img{width:100%;}
+
+
+            /*####### name 영역 ########*/
+            #topTen a .name{width:350px; height:100%; font-size:16px; line-height:50px; padding-left:20px; float:left;}
+
+            #topTen a .rank{width:30px; height:50px; line-height:50px; position:absolute; right:10px; top:0; color:#d00; font-size:18px;}
+
+
+            /* citym */
+            #cityM{display:block;}
+            #cityM{width:100%; font-size:17px; padding:15px 0 25px;}
+            #cityM ul{width:80%; margin:0 auto;}
+            #cityM li{background-color:#caf; height:35px; line-height:35px; border-radius:20px; margin-top:10px; display:inline-block;}
+            #cityM li a{padding:0 17px; font-size:14px; text-transform:uppercase;}
+
+            /* festival */
+            #festivalArea{width:100vw; overflow:hidden; padding:50px 0;}
+            #festival{width:100%; height:450px; margin:0 auto; font-family: 'M PLUS Rounded 1c', sans-serif; position:relative;}
+
+            #festival ul{width:2980px; height:100%;}
+            #festival li{width:330px; height:100%; float:left; margin-right:20px; margin-left:20px; position:relative;}
+
+            #fesBtn .prevBtn{left:0;}
+            #fesBtn .nextBtn{right:0;}
+
+            #snsArea{display:none;}
+            #footer{display:none;}
+
+            /* footerM */
+
+            #footerM{display:block; width:100%;}
+            #footerM .top{width:100%;}
+            #footerM .top li{display:block; height:40px; line-height:40px; text-align:center; border-bottom:1px solid #ccc;}
+            #footerM .top li a{line-height:30px; padding:0 7px;}
+            #footerM .logoArea{width:100%; padding:50px 0 30px;}
+            #footerM .logoArea .img{width:70px; margin:0 auto;}
+            #footerM .logoArea .img img{width:100%;}
+            #footerM .logoArea h4{font-weight:600; font-size:16px; text-align:center;}
+            #footerM .question{width:100%; height:40px; margin:10px 0;}
+            #footerM .question p{width:45%; height:100%; margin-left:4%; border:1px solid #ccc; float:left;}
+            #footerM .question p a{display:block; text-align:center; line-height:40px; font-size:17px;}
+        
+        }
+
+        /*############### 태블릿 PC 버전 #################*/
+		@media all and (min-width:768px) and (max-width:1024px){
+            
+            #wrap{width:100%;}
+            /*########### header ##########*/
+            #headerWrap{width:100vw;}
+            #header{width:175px; margin:0 auto; padding:0;}
+            #header .text{width:115px; padding-top:22px;}
+            
+            #gnb{display:none;}
+            .fixed{display:none;}
+            h3{line-height:70px; padding-left:30px; font-size:35px;}
+
+            /*######## visual ##########*/ 
+        
+            #visual{width:100%; height:500px;}
+            /* 비주얼영역 랜덤이미지*/
+            #randomImg{width:100%; height:500px;}
+            #randomImg .img{width:100%; overflow:hidden;}
+            #randomImg .img img{width:100%;}
+
+            #visual .textBox{display:none;}
+            #naturalArea{display:none;}
+
+            /*######## mapArea ##########*/
+            #mapArea{width:100%; padding:0;}
+            #map{width:100%; margin:0 auto;}
+
+            /*######## map / pro_name #########*/
+            #map .pro_name{width:100%; height:100px; float:left;}
+            #map .pro_name ul{width:90%; padding:0; padding-left:10%;}
+            #map .pro_name li{width:20%; height:45px; line-height:45px; font-size:20px; transition:all 0.5s linear; float:left;}
+
+            /*######## map / city_info #########*/
+            #map .city_info{display:none;}
+
+            /*######## map / map_img #########*/
+            #map .map_img{width:100%; height:400px; float:left;}
+            #map .map_img a iframe{width:100%; height:100%; border:0;}
+
+            /* # seasonM */
+            #seaArea{width:100%; padding:0;}
+            #season{display:none;}
+            #seasonM{display:block; width:100%;}
+            #seasonM ul{width:760px; margin:0 auto;}
+            #seasonM li{width:50%; height:360px; float:left; position:relative;}
+            #seasonM .img{width:100%;}
+            #seasonM .img img{width:100%;}
+            #seasonM .text{width:360px; height:360px; padding:10px; text-align:center; background-color:rgba(0,0,0,0.5); position:absolute; left:0; top:0; display:none;}
+            #seasonM li:hover .text{display:block;}
+            
+            #seasonM .text .name{font-size:35px; padding-bottom:3px; color:#efefef;}
+            #seasonM .text .title{font-size:20px; color:#efefef; }
+            #seasonM .text .desc{width:100%; font-size:16px; color:#efefef; padding-top:15px; font-weight:500;}
+            #seasonM .text .icon{width:20px; position:absolute; left:10px; top:10px;}
+            #seasonM .text .icon img{width:100%;}
+
+            #seasonM ul:after{display:block; clear:both; content:"";}
+
+            /* topTen */
+            #cityArea{display:none;}
+            #topTen{display:block; width:100vw; padding-top:30px;}
+            #topTen ul{width:100vw;}
+            #topTen li{width:100vw; height:70px; font-size:16px; margin-bottom:10px; border-bottom:2px solid #ccc;}
+
+            /*####### img 영역 ########*/
+            #topTen a{display:block; position:relative;}
+            #topTen a .img{display:block; width:100px; height:70px; margin-left:30px; overflow:hidden; float:left;}
+            #topTen a .img img{width:100%;}
+
+
+            /*####### name 영역 ########*/
+            #topTen a .name{width:450px; height:100%; font-size:25px; line-height:70px; padding-left:20px; float:left;}
+
+            #topTen a .rank{width:60px; height:70px; line-height:70px; position:absolute; right:25px; top:0; color:#d00;font-size:20px;}
+
+
+            /* citym */
+            #cityM{display:block;}
+            #cityM{width:100%; font-size:14px; padding:15px 0 25px;}
+            #cityM ul{width:80%; margin:0 auto;}
+            #cityM li{background-color:#caf; height:50px; line-height:48px; border-radius:30px; margin-top:15px; display:inline-block;}
+            #cityM li a{padding:0 25px; font-size:20px; font-weight:700; text-transform:uppercase;}
+
+            /* festival */
+            #festivalArea{width:100vw; overflow:hidden; padding:50px 0;}
+            #festival{width:100%; height:450px; margin:0 auto; font-family: 'M PLUS Rounded 1c', sans-serif; position:relative;}
+
+            #festival ul{width:2980px; height:100%;}
+            #festival li{width:330px; height:100%; float:left; margin-right:20px; margin-left:20px; position:relative;}
+
+            #fesBtn .prevBtn{left:0;}
+            #fesBtn .nextBtn{right:0;}
+
+            #snsArea{display:none;}
+            #footer{display:none;}
+
+            /* footerM */
+
+            #footerM{display:block; width:100%;}
+            #footerM .top{width:100%;}
+            #footerM .top li{display:block; height:60px; line-height:60px; text-align:center; border-bottom:1px solid #ccc;}
+            #footerM .top li a{line-height:60px; padding:0 15px; font-size:25px;}
+            #footerM .logoArea{width:100%; padding:50px 0 30px;}
+            #footerM .logoArea .img{width:70px; margin:0 auto;}
+            #footerM .logoArea .img img{width:100%;}
+            #footerM .logoArea h4{font-weight:600; font-size:16px; text-align:center;}
+            #footerM .question{width:100%; height:60px; margin:10px 0;}
+            #footerM .question p{width:45%; height:100%; margin-left:4%; border:1px solid #ccc; float:left;}
+            #footerM .question p a{display:block; text-align:center; line-height:60px; font-size:25px;}
         
         }
             
@@ -1000,7 +1225,7 @@
             </section>
 
             <div id="topTen">
-                <h3>Top 10</h3>
+                <h2>Top 10</h2>
                 <ul>
                     <li>
                         <a href="#" title="탑텐0">
