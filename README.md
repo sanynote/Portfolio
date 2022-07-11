@@ -9,7 +9,7 @@
 
 [포트폴리오 1](https://dqoibm8jt1mrt.cloudfront.net)
 [리액트를 사용한 모바일 청첩장 프로젝트]<br/>
-* 로그인 페이지->인포메이션 페이지->인비테이션 페이지로 연결됨
+* 로그인 -> 인포메이션 -> 인비테이션 페이지로 DB를 가지고 연결됨
 
 <img width="304" alt="스크린샷 2022-07-07 오전 2 02 24" src="https://user-images.githubusercontent.com/97968488/177987089-fee61f2b-340b-4a85-b2a3-771e55158f52.png">
 
