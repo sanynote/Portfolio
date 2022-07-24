@@ -1,8 +1,6 @@
 
 # Portfolio
 
-[포트폴리오1,2,3 소개](http://sanynote.github.io/Portfolio/portfolio/aboutMe.html)
-
 ```
 포트폴리오 주제별 간단한 정리
 ```
